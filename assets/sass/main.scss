@@ -1,0 +1,216 @@
+@import 'compass';
+
+$color_primary: #7ac142; /* Color Default */
+$color_second: #686868; /* Color fonts */
+$color_tertiary: #c18942; /* Color some buttons */
+$color_quaternary: #1c1b1b; /* Color titles */
+$color_quinary: #427ac1; /* Color download button */
+$color_senary: #fff; 
+$bg: $color_senary;
+$font_size: 1.3em; /* BG */
+
+$h1: 26px;
+$h2: 18px;
+$h3: 16px;
+$h4: 14px;
+$h5: 12px;
+
+body {
+	background: $bg;
+	font-family: 'Droid Sans', sans-serif;
+	font-size: $font_size;
+}
+
+a{
+	text-decoration: none;
+	color: $color_second;
+}
+
+a:hover, 
+a:hover > strong{
+	text-decoration: underline;
+	color: $color_primary;
+}
+
+a > strong {
+	color: $color_quaternary;
+}
+
+#page-bar-loader{
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	height: 3px;
+	background: $color_primary;
+}
+
+/* HEADER */
+/*............................................................................................................................*/
+
+header#header h1#logo {
+	width: 120px;
+	height: 72px;
+	text-indent: -9999999px;
+	background: url('../images/sprite.png') no-repeat;
+	font-size: 1px;
+	margin: 5px 0px;
+}
+
+/* Menu */
+
+header#header #bx-menu {
+	text-align: right;
+}
+
+header#header ul#menu {
+	list-style: none;
+	margin-top: 22px;
+	margin-bottom: 5px;
+}
+
+header#header ul#menu > li {
+	display: inline-block;
+	padding: 10px
+}
+
+/* Menu */
+
+
+/* CONTENT */
+/*............................................................................................................................*/
+
+
+/* BANNER */
+/*............................................................................................................................*/
+div#banner {
+   background: url('../images/bg-hyena-beta.jpg') no-repeat center top;
+   @include background-size(cover);
+   width: 100%;
+   position: relative;
+}
+
+div#banner > .container > .row > hgroup {
+	padding-top: 170px;
+}
+
+div#banner > .container > .row > hgroup > h1 {
+	color: $color_senary;
+	margin-bottom: 0px;
+}
+
+div#banner > .container > .row > hgroup > h1 > span > span > b {
+   color: $color_primary;
+}
+
+div#banner > .container > .row > hgroup > h1 > span {
+     display: inline-block;
+}
+
+div#banner > .container > .row > hgroup > h1 > span > strong {
+	display: block;
+	font-size: 0.3em;
+	font-weight: 100!important;
+}
+
+div#banner > .container > .row > hgroup > h2 {
+	color: $color_senary;
+	font-size: 1.5em;
+	font-weight: 100;
+}
+
+div#banner > .container > .row > hgroup > h2 > span {
+	color: $color_primary;
+}
+
+a.btn-download {
+    background-color: $color_quinary;
+    display: inline-block;
+    color: $color_senary;
+    font-size: 1.5em;
+    font-weight: bold;
+    position: relative;
+    width: 270px;
+}
+
+a.btn-download > span{
+    display: inline-block;
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
+
+a.btn-download > span + span {
+	background-color: darken($color_quinary, 10%);
+	height: 100%;
+	width: 80px;
+    right: 0px;
+    top: 0px;
+    position: absolute;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+a.btn-download > span + span i {
+	margin-top: 3px;
+	float: left;
+	position: relative;
+}
+
+a.btn-download > span > span {
+    display: block;
+    font-size: 0.6em;
+    font-weight: 100;
+}
+
+a.btn-download:hover {
+	text-decoration: none;
+	background-color: tint($color_quinary, 5%);
+	/*tint($color, $percentage)*/
+}
+
+#bx-download-button {
+	margin-bottom: 8px;
+}
+
+.bx-button-github{
+    margin-bottom: 190px;
+}
+
+a.btn-github {
+	width: 270px;
+	height: 118px;
+	display: inline-block;
+	background: url('../images/sprite.png') no-repeat -396px -15px;
+	font-size: 1px;
+	text-indent: -9999px
+}
+
+a.btn-github:hover {
+	text-decoration: none;
+	@include opacity(.8);
+}
+
+div.bx-cretids-bg-image {
+	background-color: rgba(0,0,0,.5);
+	text-align: center;
+	color: $color_senary;
+	padding: 10px 0px;
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+}
+
+div.bx-cretids-bg-image a {
+	color: $color_senary;
+	text-decoration: underline;
+}
+
+div.bx-cretids-bg-image a:hover {
+	color: $color_primary;
+}
+
+/* FOOTER */
+/*............................................................................................................................*/
+
+
+/* CREDITS */
+/*............................................................................................................................*/
