@@ -38,32 +38,52 @@ a > strong {
   background: #7ac142;
 }
 
+/* line 47, ../sass/main.scss */
+.clearfix {
+  clear: both;
+}
+
+/* line 51, ../sass/main.scss */
+figure {
+  margin: 0px;
+}
+
+/* line 55, ../sass/main.scss */
+div#wrapper {
+  padding-bottom: 15px;
+}
+
 /* HEADER */
 /*............................................................................................................................*/
-/* line 50, ../sass/main.scss */
+/* line 62, ../sass/main.scss */
 header#header h1#logo {
-  width: 120px;
-  height: 72px;
-  text-indent: -9999999px;
-  background: url("../images/sprite.png") no-repeat;
-  font-size: 1px;
   margin: 5px 0px;
 }
 
+/* line 66, ../sass/main.scss */
+header#header h1#logo > a {
+  background: url("../images/sprite.png") no-repeat;
+  width: 120px;
+  height: 72px;
+  text-indent: -9999999px;
+  font-size: 1px;
+  display: block;
+}
+
 /* Menu */
-/* line 61, ../sass/main.scss */
+/* line 77, ../sass/main.scss */
 header#header #bx-menu {
   text-align: right;
 }
 
-/* line 65, ../sass/main.scss */
+/* line 81, ../sass/main.scss */
 header#header ul#menu {
   list-style: none;
   margin-top: 22px;
   margin-bottom: 5px;
 }
 
-/* line 71, ../sass/main.scss */
+/* line 87, ../sass/main.scss */
 header#header ul#menu > li {
   display: inline-block;
   padding: 10px;
@@ -72,9 +92,92 @@ header#header ul#menu > li {
 /* Menu */
 /* CONTENT */
 /*............................................................................................................................*/
+/* line 97, ../sass/main.scss */
+#content > .content-info-about {
+  background: #f5f5f5;
+  text-align: center;
+  padding: 20px 0px;
+}
+
+/* line 103, ../sass/main.scss */
+#content > .content-info-about > .container > .row > article > hgroup > h1 {
+  font-size: 2.5em;
+  color: #7ac142;
+}
+
+/* line 108, ../sass/main.scss */
+#content > .content-info-about > .container > .row > article > hgroup > h2 {
+  font-size: 1.3em;
+  color: #686868;
+  font-weight: 100;
+}
+
+/* line 114, ../sass/main.scss */
+.ico-grass {
+  background: url("../images/sprite.png") no-repeat -702px -34px;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 10px auto;
+}
+
+/* line 121, ../sass/main.scss */
+.content-widget > .container > .row > article {
+  padding: 40px 0px;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+/* line 126, ../sass/main.scss */
+.content-widget > .container > .row > article:last-child {
+  border: none;
+}
+
+/* line 130, ../sass/main.scss */
+.content-widget > .container > .row > article > div > hgroup > h1 {
+  font-size: 2em;
+  color: #1c1b1b;
+  margin-top: 20px;
+}
+
+/* line 136, ../sass/main.scss */
+.content-widget > .container > .row > article > div > hgroup > h1:before {
+  content: "";
+  background: url("../images/sprite.png") no-repeat -351px -16px;
+  -moz-background-size: 500px;
+  -o-background-size: 500px;
+  -webkit-background-size: 500px;
+  background-size: 500px;
+  width: 30px;
+  height: 30px;
+  float: left;
+  position: relative;
+  margin-top: -6px;
+  margin-right: 10px;
+}
+
+/* line 148, ../sass/main.scss */
+.content-widget > .container > .row > article > div > hgroup + p {
+  color: #686868;
+  font-size: 1.2em;
+}
+
+/* line 153, ../sass/main.scss */
+a.btn-docs {
+  border: 1px solid #686868;
+  color: #686868;
+  padding: 10px 20px;
+  font-size: 1.3em;
+  text-decoration: none;
+}
+
+/* line 161, ../sass/main.scss */
+a.btn-docs:hover {
+  border-color: #7ac142;
+  color: #7ac142;
+}
+
 /* BANNER */
 /*............................................................................................................................*/
-/* line 85, ../sass/main.scss */
+/* line 168, ../sass/main.scss */
 div#banner {
   background: url("../images/bg-hyena-beta.jpg") no-repeat center top;
   -moz-background-size: cover;
@@ -85,47 +188,47 @@ div#banner {
   position: relative;
 }
 
-/* line 92, ../sass/main.scss */
+/* line 175, ../sass/main.scss */
 div#banner > .container > .row > hgroup {
-  padding-top: 170px;
+  padding-top: 180px;
 }
 
-/* line 96, ../sass/main.scss */
+/* line 179, ../sass/main.scss */
 div#banner > .container > .row > hgroup > h1 {
   color: #fff;
   margin-bottom: 0px;
 }
 
-/* line 101, ../sass/main.scss */
+/* line 184, ../sass/main.scss */
 div#banner > .container > .row > hgroup > h1 > span > span > b {
   color: #7ac142;
 }
 
-/* line 105, ../sass/main.scss */
+/* line 188, ../sass/main.scss */
 div#banner > .container > .row > hgroup > h1 > span {
   display: inline-block;
 }
 
-/* line 109, ../sass/main.scss */
+/* line 192, ../sass/main.scss */
 div#banner > .container > .row > hgroup > h1 > span > strong {
   display: block;
   font-size: 0.3em;
   font-weight: 100 !important;
 }
 
-/* line 115, ../sass/main.scss */
+/* line 198, ../sass/main.scss */
 div#banner > .container > .row > hgroup > h2 {
   color: #fff;
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: 100;
 }
 
-/* line 121, ../sass/main.scss */
+/* line 204, ../sass/main.scss */
 div#banner > .container > .row > hgroup > h2 > span {
   color: #7ac142;
 }
 
-/* line 125, ../sass/main.scss */
+/* line 208, ../sass/main.scss */
 a.btn-download {
   background-color: #427ac1;
   display: inline-block;
@@ -136,14 +239,14 @@ a.btn-download {
   width: 270px;
 }
 
-/* line 135, ../sass/main.scss */
+/* line 218, ../sass/main.scss */
 a.btn-download > span {
   display: inline-block;
   padding: 10px 15px;
   box-sizing: border-box;
 }
 
-/* line 141, ../sass/main.scss */
+/* line 224, ../sass/main.scss */
 a.btn-download > span + span {
   background-color: #33629d;
   height: 100%;
@@ -155,55 +258,59 @@ a.btn-download > span + span {
   text-align: center;
 }
 
-/* line 152, ../sass/main.scss */
+/* line 235, ../sass/main.scss */
 a.btn-download > span + span i {
   margin-top: 3px;
   float: left;
   position: relative;
 }
 
-/* line 158, ../sass/main.scss */
+/* line 241, ../sass/main.scss */
 a.btn-download > span > span {
   display: block;
   font-size: 0.6em;
   font-weight: 100;
 }
 
-/* line 164, ../sass/main.scss */
+/* line 247, ../sass/main.scss */
 a.btn-download:hover {
   text-decoration: none;
   background-color: #4b81c4;
   /*tint($color, $percentage)*/
 }
 
-/* line 170, ../sass/main.scss */
+/* line 253, ../sass/main.scss */
 #bx-download-button {
   margin-bottom: 8px;
 }
 
-/* line 174, ../sass/main.scss */
+/* line 257, ../sass/main.scss */
 .bx-button-github {
-  margin-bottom: 190px;
+  margin-bottom: 240px;
 }
 
-/* line 178, ../sass/main.scss */
+/* line 261, ../sass/main.scss */
 a.btn-github {
-  width: 270px;
-  height: 118px;
+  width: 135px;
+  height: 59px;
   display: inline-block;
-  background: url("../images/sprite.png") no-repeat -396px -15px;
+  background: url("../images/sprite.png") no-repeat -198px -5px;
+  -moz-background-size: 500px;
+  -o-background-size: 500px;
+  -webkit-background-size: 500px;
+  background-size: 500px;
   font-size: 1px;
   text-indent: -9999px;
 }
 
-/* line 187, ../sass/main.scss */
+/* line 271, ../sass/main.scss */
 a.btn-github:hover {
   text-decoration: none;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
 }
 
-/* line 192, ../sass/main.scss */
+/* line 276, ../sass/main.scss */
 div.bx-cretids-bg-image {
   background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
@@ -214,18 +321,50 @@ div.bx-cretids-bg-image {
   width: 100%;
 }
 
-/* line 202, ../sass/main.scss */
+/* line 286, ../sass/main.scss */
 div.bx-cretids-bg-image a {
   color: #fff;
   text-decoration: underline;
 }
 
-/* line 207, ../sass/main.scss */
+/* line 291, ../sass/main.scss */
 div.bx-cretids-bg-image a:hover {
   color: #7ac142;
 }
 
 /* FOOTER */
 /*............................................................................................................................*/
+/* line 297, ../sass/main.scss */
+footer#footer {
+  background: url("../images/ico-grass.jpg") repeat-x 0 top #7ac142;
+  padding: 80px 0px 10px 0px;
+}
+
+/* line 302, ../sass/main.scss */
+footer#footer #logo {
+  background: url("../images/sprite.png") no-repeat -145px -4px;
+  width: 230px;
+  height: 140px;
+  text-indent: -9999px;
+  font-size: 1px;
+}
+
+/* line 310, ../sass/main.scss */
+footer#footer .bx-button-github {
+  margin: 30px 0px 10px 10px;
+}
+
+/* line 314, ../sass/main.scss */
+footer#footer .footer-bx-right {
+  text-align: right;
+}
+
+/* line 318, ../sass/main.scss */
+#credits > .container > .row > #bx-credits {
+  font-size: 0.9em;
+  color: #1c1b1b;
+  padding: 15px 0px 0px 0px;
+}
+
 /* CREDITS */
 /*............................................................................................................................*/

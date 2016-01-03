@@ -9,11 +9,11 @@ $color_senary: #fff;
 $bg: $color_senary;
 $font_size: 1.3em; /* BG */
 
-$h1: 26px;
-$h2: 18px;
-$h3: 16px;
-$h4: 14px;
-$h5: 12px;
+$h1: 2.5em;
+$h2: 2em;
+$h3: 1em;
+$h4: 1em;
+$h5: 1em;
 
 body {
 	background: $bg;
@@ -44,16 +44,32 @@ a > strong {
 	background: $color_primary;
 }
 
+.clearfix {
+	clear: both;
+}
+
+figure {
+	margin: 0px;
+}
+
+div#wrapper {
+	padding-bottom: 15px;
+}
+
 /* HEADER */
 /*............................................................................................................................*/
 
-header#header h1#logo {
-	width: 120px;
+header#header h1#logo{
+	margin: 5px 0px;
+}
+
+header#header h1#logo > a{
+   	background: url('../images/sprite.png') no-repeat;
+   	width: 120px;
 	height: 72px;
 	text-indent: -9999999px;
-	background: url('../images/sprite.png') no-repeat;
 	font-size: 1px;
-	margin: 5px 0px;
+	display: block;
 }
 
 /* Menu */
@@ -78,7 +94,74 @@ header#header ul#menu > li {
 
 /* CONTENT */
 /*............................................................................................................................*/
+#content > .content-info-about {
+	background: #f5f5f5;
+	text-align: center;
+	padding: 20px 0px;
+}
 
+#content > .content-info-about > .container > .row > article > hgroup > h1{
+   font-size: $h1;
+   color: $color_primary;
+}
+
+#content > .content-info-about > .container > .row > article > hgroup > h2{
+   font-size: 1.3em;
+   color: $color_second;
+   font-weight: 100;
+}
+
+.ico-grass{
+	background: url('../images/sprite.png') no-repeat -702px -34px;
+	width: 60px;
+	height: 60px;
+	margin: 0 auto 10px auto;
+}
+
+.content-widget > .container > .row > article {
+	padding: 40px 0px;
+	border-bottom: 1px solid #f5f5f5;
+}
+
+.content-widget > .container > .row > article:last-child {
+	border: none;
+}
+
+.content-widget > .container > .row > article > div > hgroup > h1 {
+	font-size: $h2;
+    color: $color_quaternary;
+    margin-top: 20px;
+}
+
+.content-widget > .container > .row > article > div > hgroup > h1:before {
+	content:"";
+	background: url('../images/sprite.png') no-repeat -351px -16px;
+	@include background-size(500px);
+	width: 30px;
+	height: 30px;
+	float: left;
+	position: relative;
+	margin-top: -6px;
+	margin-right: 10px;
+}
+
+.content-widget > .container > .row > article > div > hgroup + p{
+	color: $color_second;
+	font-size: 1.2em;
+}
+
+a.btn-docs {
+	border: 1px solid $color_second;
+	color: $color_second;
+	padding: 10px 20px;
+	font-size: 1.3em;
+	text-decoration: none;
+}
+
+a.btn-docs:hover{
+   border-color: $color_primary;
+   color: $color_primary;
+}
 
 /* BANNER */
 /*............................................................................................................................*/
@@ -90,7 +173,7 @@ div#banner {
 }
 
 div#banner > .container > .row > hgroup {
-	padding-top: 170px;
+	padding-top: 180px;
 }
 
 div#banner > .container > .row > hgroup > h1 {
@@ -114,7 +197,7 @@ div#banner > .container > .row > hgroup > h1 > span > strong {
 
 div#banner > .container > .row > hgroup > h2 {
 	color: $color_senary;
-	font-size: 1.5em;
+	font-size: $h2;
 	font-weight: 100;
 }
 
@@ -172,14 +255,15 @@ a.btn-download:hover {
 }
 
 .bx-button-github{
-    margin-bottom: 190px;
+    margin-bottom: 240px;
 }
 
 a.btn-github {
-	width: 270px;
-	height: 118px;
+	width: 135px;
+	height: 59px;
 	display: inline-block;
-	background: url('../images/sprite.png') no-repeat -396px -15px;
+	background: url('../images/sprite.png') no-repeat -198px -5px;
+	@include background-size(500px);
 	font-size: 1px;
 	text-indent: -9999px
 }
@@ -210,7 +294,32 @@ div.bx-cretids-bg-image a:hover {
 
 /* FOOTER */
 /*............................................................................................................................*/
+footer#footer {
+	background: url('../images/ico-grass.jpg') repeat-x 0 top $color_primary;
+	padding: 80px 0px 10px 0px;
+}
 
+footer#footer #logo{
+	background: url('../images/sprite.png') no-repeat -145px -4px;
+	width: 230px;
+	height: 140px;
+	text-indent: -9999px;
+	font-size: 1px;
+}
+
+footer#footer .bx-button-github{
+    margin: 30px 0px 10px 10px;
+}
+
+footer#footer .footer-bx-right{
+    text-align: right;
+}
+
+#credits > .container > .row > #bx-credits {
+   font-size: 0.9em;
+   color: $color_quaternary;
+   padding: 15px 0px 0px 0px;
+}
 
 /* CREDITS */
 /*............................................................................................................................*/
