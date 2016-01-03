@@ -36,12 +36,21 @@ a > strong {
 	color: $color_quaternary;
 }
 
+p {
+    margin-bottom: 1em;
+}
+
 #page-bar-loader{
-	width: 100%;
+	width: 10%;
 	position: absolute;
 	top: 0px;
 	height: 3px;
 	background: $color_primary;
+	display: none;
+}
+
+#page-bar-loader.incr{
+   	@include transition(transform 0.5s ease-in-out);
 }
 
 .clearfix {
@@ -87,6 +96,25 @@ header#header ul#menu {
 header#header ul#menu > li {
 	display: inline-block;
 	padding: 10px
+}
+
+#menu-mobile {
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	z-index: 9999;
+	margin-top: -12px;
+	cursor: pointer;
+	display: none;
+}
+
+#menu-mobile i {
+	font-size: 2em;
+	color: $color_primary;
+}
+
+#menu-mobile i:hover {
+	color: darken($color_primary, 10%);
 }
 
 /* Menu */
@@ -197,7 +225,7 @@ div#banner > .container > .row > hgroup > h1 > span > strong {
 
 div#banner > .container > .row > hgroup > h2 {
 	color: $color_senary;
-	font-size: $h2;
+	font-size: 1.5em;
 	font-weight: 100;
 }
 
@@ -251,11 +279,11 @@ a.btn-download:hover {
 }
 
 #bx-download-button {
-	margin-bottom: 8px;
+	margin-bottom: 20px;
 }
 
 .bx-button-github{
-    margin-bottom: 240px;
+    margin-bottom: 235px;
 }
 
 a.btn-github {
@@ -265,7 +293,9 @@ a.btn-github {
 	background: url('../images/sprite.png') no-repeat -198px -5px;
 	@include background-size(500px);
 	font-size: 1px;
-	text-indent: -9999px
+	text-indent: -9999999999px;
+	text-decoration: none!important;
+	overflow: hidden;
 }
 
 a.btn-github:hover {
@@ -286,6 +316,7 @@ div.bx-cretids-bg-image {
 div.bx-cretids-bg-image a {
 	color: $color_senary;
 	text-decoration: underline;
+	font-size: 0.9em;
 }
 
 div.bx-cretids-bg-image a:hover {
@@ -299,7 +330,7 @@ footer#footer {
 	padding: 80px 0px 10px 0px;
 }
 
-footer#footer #logo{
+footer#footer #logo-footer{
 	background: url('../images/sprite.png') no-repeat -145px -4px;
 	width: 230px;
 	height: 140px;
@@ -315,11 +346,140 @@ footer#footer .footer-bx-right{
     text-align: right;
 }
 
+/* CREDITS */
+/*............................................................................................................................*/
+
 #credits > .container > .row > #bx-credits {
    font-size: 0.9em;
    color: $color_quaternary;
    padding: 15px 0px 0px 0px;
 }
 
-/* CREDITS */
+/* DOCS */
 /*............................................................................................................................*/
+
+.get-start-info{
+   background-color: $color_primary;
+   padding: 40px 0px;
+   color: #fff;
+   margin-bottom: 20px;
+}
+
+.get-start-info h1 {
+	font-size: 3.5em;
+}
+
+.get-start-info h2 {
+	font-size: 1.5em;
+}
+
+#content aside {
+	background-color: #f5f5f5;
+	box-sizing: border-box;
+	padding: 20px 10px;
+}
+
+#content aside ul {
+	list-style: none;
+}
+
+#content aside ul li strong {
+   color: $color_primary;
+}
+
+#content aside + .columns h1 {
+	font-size: 2.5em;
+	margin-top: 15px;
+}
+
+#content aside + .columns h2 {
+	font-size: 2em;
+	margin: 10px 0px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+#content aside + .columns article {
+	margin-bottom: 50px;
+}
+
+/* ALERTS */
+/*............................................................................................................................*/
+
+.alert{padding:15px;margin-bottom:20px;border:1px solid transparent;border-radius:4px;}
+.alert-info{color:#31708f;background-color:#d9edf7;border-color:#bce8f1;}
+.alert-success{color:#3c763d;background-color:#dff0d8;border-color:#d6e9c6;}
+.alert-warning{color:#8a6d3b;background-color:#fcf8e3;border-color:#faebcc;}
+.alert-danger{color:#a94442;background-color:#f2dede;border-color:#ebccd1;}
+
+/* Mobile first queries */
+
+/* Larger than desktop */
+@media (max-width: 1000px) {
+	figure > img{
+       width: 100%;
+	}
+}
+
+/* Larger than phablet */
+@media (max-width: 550px) {
+
+	#bx-menu {
+		width: 80%;
+		float: none;
+		position: fixed;
+		background-color: #fff;
+		z-index:9999;
+		left: 0px;
+		top: 0px;
+		display: none;
+		height: 100%;
+		border-right: 1px solid #e5e5e5;
+	}
+
+	#bx-menu ul {
+		margin: 0px 0px 0px 0px!important;
+	}
+
+	#bx-menu ul li{
+		display: block!important;
+		text-align: left;
+		margin: 0px;
+	}
+
+	#bx-menu ul li:hover{
+        background-color: #f5f5f5;
+	}
+
+	#menu-mobile {
+		display: block;
+	}
+
+	div#banner > .container > .row > hgroup {
+	    padding-top: 50px;
+	}
+
+	.bx-button-github {
+	    margin-bottom: 80px;
+	}
+
+	div#banner > .container > .row > hgroup > h1 > span > strong {
+	    font-size: 0.4em;
+	}
+
+	div#banner > .container > .row > hgroup > h2 {
+	    font-size: 1.3em;
+	    margin-top: 10px;
+	}
+
+	footer#footer .footer-bx-right, #credits, #footer {
+	    text-align: center;
+	}
+
+	#footer h1#logo-footer {
+        margin: 0 auto;
+	}
+
+}
+
+
