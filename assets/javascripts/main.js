@@ -44,6 +44,10 @@ var Savana = {
 	controlBtnBodyFadeOut: function(_self){
 		$savana("a.btn-body-fade").on("click", function(e){
            _self.bodyFadeOut();
+           e.preventDefault();
+           setTimeout(function(){
+              savana.redirect($savana(_this).attr("href"));
+           },1300);
 		});
 	}
 }
