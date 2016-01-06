@@ -38,11 +38,12 @@ var Savana = {
 		$savana(_self.selectorMenuMobile).addClass("bounceOutLeft");
 	},
 	bodyFadeOut: function(){
-		$savana("body").removeClass("fadeIn");
-		$savana("body").addClass("fadeOut");
+		$savana(".wrapper").removeClass("fadeIn");
+		$savana(".wrapper").addClass("fadeOut");
 	},
 	controlBtnBodyFadeOut: function(_self){
 		$savana("a.btn-body-fade").on("click", function(e){
+			Savana.showLoaderPage();
            _self.bodyFadeOut();
            e.preventDefault();
            setTimeout(function(){

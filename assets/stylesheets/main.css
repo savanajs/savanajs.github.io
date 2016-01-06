@@ -36,15 +36,14 @@ p {
 
 /* line 43, ../sass/main.scss */
 #page-bar-loader {
-  width: 10%;
+  width: 100%;
   position: absolute;
   top: 0px;
   height: 3px;
   background: #7ac142;
-  display: none;
 }
 
-/* line 52, ../sass/main.scss */
+/* line 51, ../sass/main.scss */
 #page-bar-loader.incr {
   -moz-transition: -moz-transform 0.5s ease-in-out;
   -o-transition: -o-transform 0.5s ease-in-out;
@@ -52,29 +51,29 @@ p {
   transition: transform 0.5s ease-in-out;
 }
 
-/* line 56, ../sass/main.scss */
+/* line 55, ../sass/main.scss */
 .clearfix {
   clear: both;
 }
 
-/* line 60, ../sass/main.scss */
+/* line 59, ../sass/main.scss */
 figure {
   margin: 0px;
 }
 
-/* line 64, ../sass/main.scss */
+/* line 63, ../sass/main.scss */
 div#wrapper {
   padding-bottom: 15px;
 }
 
 /* HEADER */
 /*............................................................................................................................*/
-/* line 71, ../sass/main.scss */
+/* line 70, ../sass/main.scss */
 header#header h1#logo {
-  margin: 5px 0px;
+  margin: 15px 0px;
 }
 
-/* line 75, ../sass/main.scss */
+/* line 74, ../sass/main.scss */
 header#header h1#logo > a {
   background: url("../images/sprite.png") no-repeat;
   width: 120px;
@@ -85,25 +84,25 @@ header#header h1#logo > a {
 }
 
 /* Menu */
-/* line 86, ../sass/main.scss */
+/* line 85, ../sass/main.scss */
 header#header #bx-menu {
   text-align: right;
 }
 
-/* line 90, ../sass/main.scss */
+/* line 89, ../sass/main.scss */
 header#header ul#menu {
   list-style: none;
   margin-top: 22px;
   margin-bottom: 5px;
 }
 
-/* line 96, ../sass/main.scss */
+/* line 95, ../sass/main.scss */
 header#header ul#menu > li {
   display: inline-block;
   padding: 10px;
 }
 
-/* line 101, ../sass/main.scss */
+/* line 100, ../sass/main.scss */
 #menu-mobile {
   position: absolute;
   right: 20px;
@@ -114,13 +113,13 @@ header#header ul#menu > li {
   display: none;
 }
 
-/* line 111, ../sass/main.scss */
+/* line 110, ../sass/main.scss */
 #menu-mobile i {
   font-size: 2em;
   color: #7ac142;
 }
 
-/* line 116, ../sass/main.scss */
+/* line 115, ../sass/main.scss */
 #menu-mobile i:hover {
   color: #629d33;
 }
@@ -128,27 +127,27 @@ header#header ul#menu > li {
 /* Menu */
 /* CONTENT */
 /*............................................................................................................................*/
-/* line 125, ../sass/main.scss */
+/* line 124, ../sass/main.scss */
 #content > .content-info-about {
   background: #f5f5f5;
   text-align: center;
   padding: 20px 0px;
 }
 
-/* line 131, ../sass/main.scss */
+/* line 130, ../sass/main.scss */
 #content > .content-info-about > .container > .row > article > hgroup > h1 {
   font-size: 2.5em;
   color: #7ac142;
 }
 
-/* line 136, ../sass/main.scss */
+/* line 135, ../sass/main.scss */
 #content > .content-info-about > .container > .row > article > hgroup > h2 {
   font-size: 1.3em;
   color: #686868;
   font-weight: 100;
 }
 
-/* line 142, ../sass/main.scss */
+/* line 141, ../sass/main.scss */
 .ico-grass {
   background: url("../images/sprite.png") no-repeat -702px -34px;
   width: 60px;
@@ -156,25 +155,25 @@ header#header ul#menu > li {
   margin: 0 auto 10px auto;
 }
 
-/* line 149, ../sass/main.scss */
+/* line 148, ../sass/main.scss */
 .content-widget > .container > .row > article {
   padding: 40px 0px;
   border-bottom: 1px solid #f5f5f5;
 }
 
-/* line 154, ../sass/main.scss */
+/* line 153, ../sass/main.scss */
 .content-widget > .container > .row > article:last-child {
   border: none;
 }
 
-/* line 158, ../sass/main.scss */
+/* line 157, ../sass/main.scss */
 .content-widget > .container > .row > article > div > hgroup > h1 {
   font-size: 2em;
   color: #1c1b1b;
   margin-top: 20px;
 }
 
-/* line 164, ../sass/main.scss */
+/* line 163, ../sass/main.scss */
 .content-widget > .container > .row > article > div > hgroup > h1:before {
   content: "";
   background: url("../images/sprite.png") no-repeat -351px -16px;
@@ -190,13 +189,13 @@ header#header ul#menu > li {
   margin-right: 10px;
 }
 
-/* line 176, ../sass/main.scss */
+/* line 175, ../sass/main.scss */
 .content-widget > .container > .row > article > div > hgroup + p {
   color: #686868;
   font-size: 1.2em;
 }
 
-/* line 181, ../sass/main.scss */
+/* line 180, ../sass/main.scss */
 a.btn-docs {
   border: 1px solid #686868;
   color: #686868;
@@ -205,7 +204,7 @@ a.btn-docs {
   text-decoration: none;
 }
 
-/* line 189, ../sass/main.scss */
+/* line 188, ../sass/main.scss */
 a.btn-docs:hover {
   border-color: #7ac142;
   color: #7ac142;
@@ -213,7 +212,7 @@ a.btn-docs:hover {
 
 /* BANNER */
 /*............................................................................................................................*/
-/* line 196, ../sass/main.scss */
+/* line 195, ../sass/main.scss */
 div#banner {
   background: url("../images/bg-hyena-beta.jpg") no-repeat center top;
   -moz-background-size: cover;
@@ -224,47 +223,47 @@ div#banner {
   position: relative;
 }
 
-/* line 203, ../sass/main.scss */
+/* line 202, ../sass/main.scss */
 div#banner > .container > .row > hgroup {
   padding-top: 180px;
 }
 
-/* line 207, ../sass/main.scss */
+/* line 206, ../sass/main.scss */
 div#banner > .container > .row > hgroup > h1 {
   color: #fff;
   margin-bottom: 0px;
 }
 
-/* line 212, ../sass/main.scss */
+/* line 211, ../sass/main.scss */
 div#banner > .container > .row > hgroup > h1 > span > span > b {
   color: #7ac142;
 }
 
-/* line 216, ../sass/main.scss */
+/* line 215, ../sass/main.scss */
 div#banner > .container > .row > hgroup > h1 > span {
   display: inline-block;
 }
 
-/* line 220, ../sass/main.scss */
+/* line 219, ../sass/main.scss */
 div#banner > .container > .row > hgroup > h1 > span > strong {
   display: block;
   font-size: 0.3em;
   font-weight: 100 !important;
 }
 
-/* line 226, ../sass/main.scss */
+/* line 225, ../sass/main.scss */
 div#banner > .container > .row > hgroup > h2 {
   color: #fff;
   font-size: 1.5em;
   font-weight: 100;
 }
 
-/* line 232, ../sass/main.scss */
+/* line 231, ../sass/main.scss */
 div#banner > .container > .row > hgroup > h2 > span {
   color: #7ac142;
 }
 
-/* line 236, ../sass/main.scss */
+/* line 235, ../sass/main.scss */
 a.btn-download {
   background-color: #427ac1;
   display: inline-block;
@@ -275,14 +274,14 @@ a.btn-download {
   width: 270px;
 }
 
-/* line 246, ../sass/main.scss */
+/* line 245, ../sass/main.scss */
 a.btn-download > span {
   display: inline-block;
   padding: 10px 15px;
   box-sizing: border-box;
 }
 
-/* line 252, ../sass/main.scss */
+/* line 251, ../sass/main.scss */
 a.btn-download > span + span {
   background-color: #33629d;
   height: 100%;
@@ -294,38 +293,38 @@ a.btn-download > span + span {
   text-align: center;
 }
 
-/* line 263, ../sass/main.scss */
+/* line 262, ../sass/main.scss */
 a.btn-download > span + span i {
   margin-top: 3px;
   float: left;
   position: relative;
 }
 
-/* line 269, ../sass/main.scss */
+/* line 268, ../sass/main.scss */
 a.btn-download > span > span {
   display: block;
   font-size: 0.6em;
   font-weight: 100;
 }
 
-/* line 275, ../sass/main.scss */
+/* line 274, ../sass/main.scss */
 a.btn-download:hover {
   text-decoration: none;
   background-color: #4b81c4;
   /*tint($color, $percentage)*/
 }
 
-/* line 281, ../sass/main.scss */
+/* line 280, ../sass/main.scss */
 #bx-download-button {
   margin-bottom: 20px;
 }
 
-/* line 285, ../sass/main.scss */
+/* line 284, ../sass/main.scss */
 .bx-button-github {
   margin-bottom: 235px;
 }
 
-/* line 289, ../sass/main.scss */
+/* line 288, ../sass/main.scss */
 a.btn-github {
   width: 135px;
   height: 59px;
@@ -341,14 +340,14 @@ a.btn-github {
   overflow: hidden;
 }
 
-/* line 301, ../sass/main.scss */
+/* line 300, ../sass/main.scss */
 a.btn-github:hover {
   text-decoration: none;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
 }
 
-/* line 306, ../sass/main.scss */
+/* line 305, ../sass/main.scss */
 div.bx-cretids-bg-image {
   background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
@@ -359,27 +358,27 @@ div.bx-cretids-bg-image {
   width: 100%;
 }
 
-/* line 316, ../sass/main.scss */
+/* line 315, ../sass/main.scss */
 div.bx-cretids-bg-image a {
   color: #fff;
   text-decoration: underline;
   font-size: 0.9em;
 }
 
-/* line 322, ../sass/main.scss */
+/* line 321, ../sass/main.scss */
 div.bx-cretids-bg-image a:hover {
   color: #7ac142;
 }
 
 /* FOOTER */
 /*............................................................................................................................*/
-/* line 328, ../sass/main.scss */
+/* line 327, ../sass/main.scss */
 footer#footer {
   background: url("../images/ico-grass.jpg") repeat-x 0 top #7ac142;
   padding: 80px 0px 10px 0px;
 }
 
-/* line 333, ../sass/main.scss */
+/* line 332, ../sass/main.scss */
 footer#footer #logo-footer {
   background: url("../images/sprite.png") no-repeat -145px -4px;
   width: 230px;
@@ -388,19 +387,19 @@ footer#footer #logo-footer {
   font-size: 1px;
 }
 
-/* line 341, ../sass/main.scss */
+/* line 340, ../sass/main.scss */
 footer#footer .bx-button-github {
   margin: 30px 0px 10px 10px;
 }
 
-/* line 345, ../sass/main.scss */
+/* line 344, ../sass/main.scss */
 footer#footer .footer-bx-right {
   text-align: right;
 }
 
 /* CREDITS */
 /*............................................................................................................................*/
-/* line 352, ../sass/main.scss */
+/* line 351, ../sass/main.scss */
 #credits > .container > .row > #bx-credits {
   font-size: 0.9em;
   color: #1c1b1b;
@@ -409,7 +408,7 @@ footer#footer .footer-bx-right {
 
 /* DOCS */
 /*............................................................................................................................*/
-/* line 361, ../sass/main.scss */
+/* line 360, ../sass/main.scss */
 .get-start-info {
   background-color: #7ac142;
   padding: 40px 0px;
@@ -417,40 +416,40 @@ footer#footer .footer-bx-right {
   margin-bottom: 20px;
 }
 
-/* line 368, ../sass/main.scss */
+/* line 367, ../sass/main.scss */
 .get-start-info h1 {
   font-size: 3.5em;
 }
 
-/* line 372, ../sass/main.scss */
+/* line 371, ../sass/main.scss */
 .get-start-info h2 {
   font-size: 1.5em;
 }
 
-/* line 376, ../sass/main.scss */
+/* line 375, ../sass/main.scss */
 #content aside {
   background-color: #f5f5f5;
   box-sizing: border-box;
   padding: 20px 10px;
 }
 
-/* line 382, ../sass/main.scss */
+/* line 381, ../sass/main.scss */
 #content aside ul {
   list-style: none;
 }
 
-/* line 386, ../sass/main.scss */
+/* line 385, ../sass/main.scss */
 #content aside ul li strong {
   color: #7ac142;
 }
 
-/* line 390, ../sass/main.scss */
+/* line 389, ../sass/main.scss */
 #content aside + .columns h1 {
   font-size: 2.5em;
   margin-top: 15px;
 }
 
-/* line 395, ../sass/main.scss */
+/* line 394, ../sass/main.scss */
 #content aside + .columns h2 {
   font-size: 2em;
   margin: 10px 0px;
@@ -458,14 +457,14 @@ footer#footer .footer-bx-right {
   border-bottom: 1px solid #e5e5e5;
 }
 
-/* line 402, ../sass/main.scss */
+/* line 401, ../sass/main.scss */
 #content aside + .columns article {
   margin-bottom: 50px;
 }
 
 /* ALERTS */
 /*............................................................................................................................*/
-/* line 409, ../sass/main.scss */
+/* line 408, ../sass/main.scss */
 .alert {
   padding: 15px;
   margin-bottom: 20px;
@@ -473,45 +472,89 @@ footer#footer .footer-bx-right {
   border-radius: 4px;
 }
 
-/* line 410, ../sass/main.scss */
+/* line 409, ../sass/main.scss */
 .alert-info {
   color: #31708f;
   background-color: #d9edf7;
   border-color: #bce8f1;
 }
 
-/* line 411, ../sass/main.scss */
+/* line 410, ../sass/main.scss */
 .alert-success {
   color: #3c763d;
   background-color: #dff0d8;
   border-color: #d6e9c6;
 }
 
-/* line 412, ../sass/main.scss */
+/* line 411, ../sass/main.scss */
 .alert-warning {
   color: #8a6d3b;
   background-color: #fcf8e3;
   border-color: #faebcc;
 }
 
-/* line 413, ../sass/main.scss */
+/* line 412, ../sass/main.scss */
 .alert-danger {
   color: #a94442;
   background-color: #f2dede;
   border-color: #ebccd1;
 }
 
+/* Btn hithub */
+/* .................................................................... */
+/* line 417, ../sass/main.scss */
+.btn-github-top {
+  -moz-box-shadow: 0px 1px 0px 0px #fff6af;
+  -webkit-box-shadow: 0px 1px 0px 0px #fff6af;
+  box-shadow: 0px 1px 0px 0px #fff6af;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffec64), color-stop(1, #ffab23));
+  background: -moz-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+  background: -webkit-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+  background: -o-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+  background: -ms-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+  background: linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec64', endColorstr='#ffab23',GradientType=0);
+  background-color: #ffec64;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  border: 1px solid #ffaa22;
+  display: inline-block;
+  cursor: pointer;
+  color: #333333;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffee66;
+}
+
+/* line 443, ../sass/main.scss */
+.btn-github-top:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffab23), color-stop(1, #ffec64));
+  background: -moz-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+  background: -webkit-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+  background: -o-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+  background: -ms-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+  background: linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffab23', endColorstr='#ffec64',GradientType=0);
+  background-color: #ffab23;
+  color: #333 !important;
+  text-decoration: none !important;
+}
+
 /* Mobile first queries */
 /* Larger than desktop */
 @media (max-width: 1000px) {
-  /* line 419, ../sass/main.scss */
+  /* line 460, ../sass/main.scss */
   figure > img {
     width: 100%;
   }
 }
 /* Larger than phablet */
 @media (max-width: 550px) {
-  /* line 427, ../sass/main.scss */
+  /* line 468, ../sass/main.scss */
   #bx-menu {
     width: 80%;
     float: none;
@@ -525,55 +568,55 @@ footer#footer .footer-bx-right {
     border-right: 1px solid #e5e5e5;
   }
 
-  /* line 440, ../sass/main.scss */
+  /* line 481, ../sass/main.scss */
   #bx-menu ul {
     margin: 0px 0px 0px 0px !important;
   }
 
-  /* line 444, ../sass/main.scss */
+  /* line 485, ../sass/main.scss */
   #bx-menu ul li {
     display: block !important;
     text-align: left;
     margin: 0px;
   }
 
-  /* line 450, ../sass/main.scss */
+  /* line 491, ../sass/main.scss */
   #bx-menu ul li:hover {
     background-color: #f5f5f5;
   }
 
-  /* line 454, ../sass/main.scss */
+  /* line 495, ../sass/main.scss */
   #menu-mobile {
     display: block;
   }
 
-  /* line 458, ../sass/main.scss */
+  /* line 499, ../sass/main.scss */
   div#banner > .container > .row > hgroup {
     padding-top: 50px;
   }
 
-  /* line 462, ../sass/main.scss */
+  /* line 503, ../sass/main.scss */
   .bx-button-github {
     margin-bottom: 80px;
   }
 
-  /* line 466, ../sass/main.scss */
+  /* line 507, ../sass/main.scss */
   div#banner > .container > .row > hgroup > h1 > span > strong {
     font-size: 0.4em;
   }
 
-  /* line 470, ../sass/main.scss */
+  /* line 511, ../sass/main.scss */
   div#banner > .container > .row > hgroup > h2 {
     font-size: 1.3em;
     margin-top: 10px;
   }
 
-  /* line 475, ../sass/main.scss */
+  /* line 516, ../sass/main.scss */
   footer#footer .footer-bx-right, #credits, #footer {
     text-align: center;
   }
 
-  /* line 479, ../sass/main.scss */
+  /* line 520, ../sass/main.scss */
   #footer h1#logo-footer {
     margin: 0 auto;
   }
