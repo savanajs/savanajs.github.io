@@ -127,6 +127,14 @@ header#header ul#menu > li {
 	padding: 20px 0px;
 }
 
+#content aside ul {
+	margin-bottom: 10px;
+}
+
+#content aside ul li {
+	margin-bottom: 0px;
+}
+
 #content > .content-info-about > .container > .row > article > hgroup > h1{
    font-size: $h1;
    color: $color_primary;
@@ -400,6 +408,10 @@ footer#footer .footer-bx-right{
 
 #content aside + .columns article {
 	margin-bottom: 50px;
+}
+
+li.title {
+	margin: 5px 0px!important;
 }
 
 /* ALERTS */
