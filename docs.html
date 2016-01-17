@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
@@ -26,6 +27,11 @@
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon2.ico">
+
+  <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
 </head>
 <body id="docs">
   <!-- Primary Page Layout
@@ -214,20 +220,22 @@
 </pre>
                           </figure>
 
-                          <p><b>Files organization</b></p>
+                          <p><b>Files organization for use</b></p>
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">
 savanajs/
 │ 
 lib/
 ├── css/
 │   ├── animate.min.css
-│   └── savana-x.x.x.min.css
+│   └── savana.min.css
 └── js/
-    └── savana-x.x.x.min.js
+    ├── addEventListener-IE.min.js
+    └── savana.min.js
 </code></pre>
 </figure>
                       </article> 
-
+                      
+                      <!-- Download -->
                       <article class="bx-install">
                           <h2><a name="download">Download</a></h2>
                           <p id="bx-download-button">      
@@ -240,11 +248,11 @@ lib/
                                   <i class="fa fa-cloud-download"></i>
                               </span>
                             </a>             
-                        </p><!-- /#bx-download-button -->
+                          </p><!-- /#bx-download-button -->
                           <p><b>Download Bower</b></p>
                           <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>bower install savanajs</code></pre></figure>
                       </article>   
-
+                      <!-- Compatility -->
                       <article class="bx-install">
                           <h2><a name="compatility">Compatility</a></h2>
                           <table class="u-full-width">
@@ -258,8 +266,8 @@ lib/
                                 <td>Supported</td>  
                               </tr>
                               <tr>
-                                <td><b>IE</b></td>
-                                <td>N/A</td>  
+                                <td><b>IE8 or </b></td>
+                                <td>Supported</td>  
                               </tr>
                               <tr>
                                 <td><b>Opera</b></td>
@@ -271,7 +279,361 @@ lib/
                               </tr>
                             </tbody>
                           </table>
-                      </article>                  
+                      </article> 
+                      <hgroup>
+                        <h1>DOM</h1>
+                      </hgroup>  
+                      <!-- Done -->
+                      <article class="bx-install">
+                          <h2><a target="_blank" href="/savanajs/exemples/DOM/document-done.html" name="Done">Done(callback)</a></h2>
+                          <p>Initiator framework</p>
+
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana(document).done(function(e) {
+  Your code here ...   
+});
+</code>
+</pre>
+</figure>
+                      </article> 
+                      <!-- Onload -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/DOM/onload.html" name="OnLoad">
+                            Onload(callback)</a></h2>
+                          <p>Initiator Framework after the onload window</p>
+
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana(window).onload(function(e){
+  Your code here ...   
+});
+</code>
+</pre>
+</figure>
+                      </article>     
+
+                       <!-- On -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/DOM/on.html" name="On">
+                            On(event, callback)</a></h2>
+                          <p>Call events (click, hover, change, keyup, etc)</p>
+
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana("a").on("click", function(e){
+  $savana(self).content("text");
+});
+</code>
+</pre>
+</figure>
+                      </article>     
+
+                      <!-- Delegate -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/delegate.html" name="Delegate">
+                            Delegate(event, element, callback)</a></h2>
+                          <p>Call events dynamics (click, hover, change, keyup, etc)</p>
+
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana("body").delegate("click", "li" function(e){
+  $savana(self).content("text");
+});
+</code>
+</pre>
+</figure>
+                      </article>      
+
+                      <!-- Content -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/content.html" name="Content">
+                            Content(type, value)</a></h2>
+                          <p>Insert and capture text, HTML or values of elements</p>
+<p><b>Types:</b> html, text e val</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+// Set
+$savana("li").content("text", "New text");
+// Get
+$savana("li").content("text");
+</code>
+</pre>
+</figure>
+                      </article>   
+
+                      <!-- Each -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/each.html" name="Each">
+                            Each(callback)</a></h2>
+                          <p>Get an HTML element set</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana("ul li").each(function(e){
+  $savana(self).content("text");
+});
+</code>
+</pre>
+</figure>
+                      </article>  
+
+                      <!-- Push -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/push.html" name="Push">
+                            Push(content, where, callback)</a></h2>
+                          <p>Get an HTML element set</p>
+                          <p><b>Where:</b> before and after</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana('ul li').push('&lt;li&gt;Nova LI&lt;/li&gt;','after');
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>      
+
+                      <!-- Destroy -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/destroy.html" name="Destroy">
+                             Destroy(element)</a></h2>
+                          <p>Remove HTML elements</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana("ul li:nth-child(1)").destroy();
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>       
+
+                      <!-- AddClass -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/addClass.html" name="addClass">
+                             AddClass(element)</a></h2>
+                          <p>Add a class in the HTML element</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana("ul#list li").addClass("newClass")
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>          
+
+                       <!-- ToogleClass -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/toogleClass.html" name="toogleClass">
+                             ToggleClass(className)</a></h2>
+                          <p>Add or remove a class element if it exists or not</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana("ul li").toggleClass("newClass");
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>   
+
+                       <!-- HasClass -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/hasClass.html" name="hasClass">
+                             HasClass(className)</a></h2>
+                          <p>Add or remove a class in the target elements</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana("ul#list li").toggleClass("no");
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>              
+
+                       <!-- RemoveClass -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/removeClass.html" name="removeClass">
+                             RemoveClass(className)</a></h2>
+                          <p>Remove the element classes</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana("ul#list li:nth-child(1)").removeClass("lista-nova");       
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>    
+
+                      <!-- Attr -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/attr.html" name="attr">
+                             Attr(attribute, value)</a></h2>
+                          <p>Add and get attributes in HTML elements</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+// Get
+$savana("ul#list li:nth-child(1)").attr("rel");   
+// Set
+$savana("ul#list li:nth-child(1)").attr("rel","Test");   
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>   
+
+                      <!-- RemoveAttr -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/removeAttr.html" name="removeAttr">
+                             RemoveAttr(attribute)</a></h2>
+                          <p>Remove attributes in HTML elements</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana("ul#list li:nth-child(1)").removeAttr("rel");
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>  
+
+                      <!-- Styles  -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/styles.html" name="Styles">
+                             Styles(styles)</a></h2>
+                          <p>Add CSS styles of the elements</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana(selector).styles("color:red");
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>  
+
+                      <!-- Parent  -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/parent.html" name="parent">
+                             Parent()</a></h2>
+                          <p>Find the father of one element</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana("ul > li").parent(); 
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>  
+
+                      <!-- Parents  -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/parent.html" name="parent">
+                             Parents(element)</a></h2>
+                          <p>Find the father of one element</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana("ul > li").parents(".all"); 
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- Insert  -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/insert.html" name="insert">
+                             Insert(new_element, where)</a></h2>
+                          <p>Insert HTML content before or after said members</p>
+                          <p><b>Where:</b> before and after</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana("ul>li").insert("&lt;li&gt;Nova LI&lt;/li&gt;", "before"); 
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- Wrap  -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/wrap.html" name="wrap">
+                             Wrap(new_element, where)</a></h2>
+                          <p>Insert a parent element for an element</p>
+                          <p><b>Where:</b> before and after</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana("ul#list").wrap("&lt;div class='all-list'&gt;", "&lt;/div&gt;"); 
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- Exchange  -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/exchange.html" name="exchange">
+                             Exchange(new_html)</a></h2>
+                          <p>Change an HTML element by another HTML element</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana("ul#list").exchange("&lt;ul id='list2'&gt;&lt;/ul&gt;");  
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                       <!-- Copy  -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/copy.html" name="copy">
+                             Copy()</a></h2>
+                          <p>Copy an HTML element</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana("ul#list").copy() 
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
                     </div>
                 </div>
           </div>
