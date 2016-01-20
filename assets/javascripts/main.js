@@ -19,7 +19,7 @@ var Savana = {
 	},
 	controlMenuMobile: function(_self){
         $savana(_self.selectorBtnMenuMobile).on("click", function(){
-        	var $this = $savana(_this);
+        	var $this = $savana(self);
         	$this.toggleClass("active");
         	if($this.hasClass("active")){
                _self.openMenuMobile(_self);
@@ -47,7 +47,7 @@ var Savana = {
            _self.bodyFadeOut();
            e.preventDefault();
            setTimeout(function(){
-              savana.redirect($savana(_this).attr("href"));
+              savana.redirect($savana(self).attr("href"));
            },1300);
 		});
 	}

@@ -634,6 +634,285 @@ $savana("ul#list").copy()
 </figure>
 <!-- &lt;!DOCTYPE html&gt; -->
                       </article>
+
+                      <!-- changeTo()  -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/changeTo.html" name="changeTo">
+                             ChangeTo(element_target, where)</a></h2>
+                          <p>Copy an HTML element</p>
+                          <p><b>Where:</b> After and Before</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana("ul#list").changeTo(".man","before"); 
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- animate()  -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/animate.html" name="animate">
+                             Animate(effect)</a></h2>
+                          <p>Insert class animations in element</p>
+                          <p><b>Effects:</b> bounce, flash, pulse, rubberBand, shake, swing, tada, wobble, jello
+            bounceIn, bounceInDown, bounceInLeft, bounceInRight, bounceInUp, bounceOut
+            bounceOutDown, bounceOutLeft, bounceOutRight, bounceOutUp, fadeIn, fadeInDown
+            fadeInDownBig, fadeInLeft, fadeInLeftBig, fadeInRight, fadeInRightBig, fadeInUp
+            fadeInUpBig, fadeOut, fadeOutDown, fadeOutDownBig, fadeOutLeft, fadeOutLeftBig
+            fadeOutRight, fadeOutRightBig, fadeOutUp, fadeOutUpBig, flipInX, flipInY
+            flipOutX, flipOutY, lightSpeedIn, lightSpeedOut, rotateIn, rotateInDownLeft
+            rotateInDownRight, rotateInUpLeft, rotateInUpRight, rotateOut, rotateOutDownLeft
+            rotateOutDownRight, rotateOutUpLeft, rotateOutUpRight, hinge, rollIn, rollOut
+            zoomIn, zoomInDown, zoomInLeft, zoomInRight, zoomInUp, zoomOut, zoomOutDown
+            zoomOutLeft, zoomOutRight, zoomOutUp, slideInDown, slideInLeft, slideInRight
+            slideInUp, slideOutDown, slideOutLeft, slideOutRight, slideOutUp</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+ $savana("button").animate("fadeIn"); 
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+<div class="warning alert">
+  Plugin CSS by Daniel Eden - <a target="_blank" href="https://daneden.github.io/animate.css/">https://daneden.github.io/animate.css/</a>
+</div>
+                      </article>
+
+                      <!-- hide()  -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/hide.html" name="hide">
+                             Hide()</a></h2>
+                          <p>Hide HTML elements</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana(selector).hide();
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- show()  -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/show.html" name="show">
+                             Show()</a></h2>
+                          <p>Show HTML elements</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana(selector).show();
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- Serialize()  -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/serialize.html" name="serialize">
+                             Serialize(isObject, getAllInpusOfForm, ruleClassValidation)</a></h2>
+                          <p>Capture the values and forms of field names automatically</p>
+                          <p>
+        <b>ruleClassValidation</b>  - Get the input of information listed by class <br />
+        <b>getAllInpusOfForm</b> - Get all form fields (true) <br />
+        <b>getAllInpusOfForm</b> - Get all fields, but only checkbox and radio checked (false) <br />
+        <b>isObject</b> - True or false. Return a object with name and values; <br />
+      </p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana("form").serialize(true, false); //{'name':'John Dalton','email','email@gmail.com'}
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- find()  -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/find.html" name="find">
+                             Find(element)</a></h2>
+                          <p>Search elements within elements</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana("ul").find("li");
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- child()  -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/child.html" name="find">
+                             Child(element)</a></h2>
+                          <p>Search the sons of elements</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana("ul").child("li");
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- eq() -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/eq.html" name="eq">
+                             Eq(position)</a></h2>
+                          <p>Search element by its position</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana("ul > li").eq(1);
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                       <!-- first() -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/first.html" name="first">
+                             First()</a></h2>
+                          <p>Search element in the first position</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana("ul > li").first()
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                       <!-- last() -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/first.html" name="last">
+                             Last()</a></h2>
+                          <p>Search element in the last position</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana("ul > li").last()
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- isChecked -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/isChecked.html" name="isChecked">
+                             isChecked()</a></h2>
+                          <p>Check if a checkbox or radio element is checked</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana(selector).isChecked();
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- isSelected -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/isSelected.html" name="isSelected">
+                             isSelected()</a></h2>
+                          <p>Checks whether a select was selected</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana(selector).isSelected()
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- size -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/size.html" name="size">
+                             Size()</a></h2>
+                          <p>Checks whether a select was selected</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana(selector).size() // {w:"720","h":"500"}
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- position -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/position.html" name="position">
+                             Position()</a></h2>
+                          <p>Returns the X and Y of an element</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana(selector).position() // {x:"720","y":"500"}
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- position -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/position.html" name="position">
+                             IsEmpty(Type)</a></h2>
+                          <p>Returns the X and Y of an element</p>
+                          <p><b>Types:</b> html, text, val</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana(selector).isEmpty("html");
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- clearForm -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/clearForm.html" name="clearForm">
+                             ClearForm(Type)</a></h2>
+                          <p>Reset form fields</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+ $savana("form input").clearForm();
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
                     </div>
                 </div>
           </div>
