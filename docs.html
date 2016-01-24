@@ -122,7 +122,7 @@
                            <li><a href="#isEmpty">isEmpty()</a></li>
                            <li><a href="#delegate">delegate()</a></li>
                            <li class="title"><strong>Helpers - savana.</strong></li>
-                           <li><a href="#removeAllSpaces">removeAllSpaces()</a></li>
+                           <li><a href="#removeAllSpace">removeAllSpace()</a></li>
                            <li><a href="#getNumberOfString">getNumberOfString()</a></li>
                            <li><a href="#debug">debug()</a></li>
                            <li><a href="#toJSON">toJSON()</a></li>
@@ -150,7 +150,6 @@
                            <li><a href="#percent">percent()</a></li>
                            <li><a href="#deleteCookie">deleteCookie()</a></li>
                            <li><a href="#discountPercent">discountPercent()</a></li>
-                           <li><a href="#dateCurrent">dateCurrent()</a></li>
                            <li><a href="#limitLetter">limitLetter()</a></li>
                            <li><a href="#limitWord">limitWord()</a></li>
                            <li><a href="#dialogClose">dialogClose()</a></li>
@@ -184,7 +183,7 @@
                               <h1>Getting Start</h1>
                           </hgroup>  
                           <h2><a name="install">Install</a></h2>
-                          <p class="alert-warning alert">Enter the css file "<b>savana-0.0.1.min.css</b>" the <b>head</b> of your page, and the js file "<b>savana-0.0.1.min.js</b>" at the end of your <b>body</b></p>
+                          <p class="alert-warning alert">Enter the css file "<b>savana.min.css</b>" the <b>head</b> of your page, and the js file "<b>savana.min.js</b>" at the end of your <b>body</b></p>
                           <p class="alert-info alert">The file "<b><a href="http://daneden.me/animate" target="_blank">animate.css</a></b>" is optional!</p>
                           <p><b>Exemple:</b></p>
                           <figure class="highlight">
@@ -266,7 +265,7 @@ lib/
                                 <td>Supported</td>  
                               </tr>
                               <tr>
-                                <td><b>IE8 or </b></td>
+                                <td><b>IE8 and higher</b></td>
                                 <td>Supported</td>  
                               </tr>
                               <tr>
@@ -283,6 +282,7 @@ lib/
                       <hgroup>
                         <h1>DOM</h1>
                       </hgroup>  
+                      <p>DOM (Document Object Model) is the interface between JavaScript language and HTML objects. DOM is the standard method for building rich applications with JavaScript and is widely known and used.</p>
                       <!-- Done -->
                       <article class="bx-install">
                           <h2><a target="_blank" href="/savanajs/exemples/DOM/document-done.html" name="Done">Done(callback)</a></h2>
@@ -913,6 +913,1126 @@ $savana(selector).isEmpty("html");
 </figure>
 <!-- &lt;!DOCTYPE html&gt; -->
                       </article>
+
+                      <hgroup>
+                        <h1>HELPERS</h1>
+                      </hgroup>
+                      <p>Helpers are ready methods to simplify the development of web applications. Some useful helpers that we can find are cookie managers, text limiters, capture parameters in the URL, email validation, custom alert box, modal, loader etc.</p>
+
+                      <!-- removeAllSpace -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/removeAllSpace.html" name="removeAllSpace">RemoveAllSpace(str)</a></h2>
+                          <p>Remove the empty spaces of an occurrence</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.removeAllSpaces("Hello word");
+// Helloword;
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                       <!-- getNumberOfString -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/getNumberOfString.html" name="getNumberOfString">GetNumberOfString(str)</a></h2>
+                          <p>Just pick numbers from one occurrence</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.getNumberOfString("I have 10 dogs");
+// 10;
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- debug -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/debug.html" name="debug">Debug(msg, type)</a></h2>
+                          <p>Displays a message to the developer</p>
+                          <p><b>Types:</b> log, error, debug, info, warn</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.debug("Ola mundo", "log");
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- toJSON -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/toJSON.html" name="toJSON">ToJSON(str)</a></h2>
+                          <p>String conversion JSON</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.toJSON(str);
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- toXML -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/toXML.html" name="toXML">ToXML(str)</a></h2>
+                          <p>String conversion XML</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.toXML(str);
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- async -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/async.html" name="async">Async(configs)</a></h2>
+                          <p>Asynchronous makes access to other files with promise. (Does not work in earlier versions of IE9)</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+var headers = 
+[
+  {'Content-type':'application/x-www-form-urlencoded'} 
+]; 
+
+var data = "name=Rafael&age=27";
+
+var config = {
+              'url': 'test.txt', // URL access
+              'method':'POST', // Shipping method (POST, GET, DELETE ...)
+              'headers': headers, // Headers Info
+              'data': data, // Parameters shipping
+              'type': 'string' // Response type - (json, XML, string)
+}
+</code>
+</pre>
+</figure>
+
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+var promise = savana.async(headers);
+
+promise.then(function(res){
+    // All right with the request
+    $savana.debug(e); // Return of object "XMLHttpRequest"
+}).catch(function(err){
+    // There was an error
+    $savana.debug(err, "error"); // Return of object "XMLHttpRequest"
+});
+</code>
+</pre>
+</figure>
+
+<p><b>AVOIDING CALLBACK HELL - PROMISES</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+var promise = savana.async({
+  'url': 'test.txt',
+  'method':'POST',
+  'headers': headers, 
+  'data': data,
+  'type': 'string'
+});
+
+promise.then(function(string){
+
+    $savana.debug(string); // Return of object "XMLHttpRequest"
+
+    // AVOIDING CALLBACK HELL - PROMISES
+
+    return savana.async({
+      'url': 'test.json',
+      'method':'POST',
+      'headers': headers, 
+      'data': data,
+      'type': 'json'
+    }); 
+    
+    // AVOIDING CALLBACK HELL - PROMISES
+
+}).then(function(json){  // Then this belongs to JSON response
+    savana.debug(json);
+}).catch(function(err){
+    savana.debug(err, "error"); // Return of object "XMLHttpRequest"
+});
+</code>
+</pre>
+</figure>
+
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- url -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/url.html" name="url">URL()</a></h2>
+                          <p>Returns information url</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.url(); 
+// {hash: "", search: "?v5g4h", pathname: "/HELPERS/url.html", port: "", hostname: "localhost"…}
+</code>
+</pre>
+</figure>
+
+<p><b>Use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.url().pathname;
+// /HELPERS/url.html
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- Now -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/now.html" name="now">Now()</a></h2>
+                          <p>Returns the milliseconds date and current time</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.now(); 
+//1431650671177
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- Today -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/today.html" name="today">Today(type)</a></h2>
+                          <p>Returns the current date and time of day</p>
+                          <p><b>Type:</b> date and time</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.today("date"); 
+// 15/12/2015
+savana.today("time"); 
+// 22:11:10
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- Today -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/urlCurrent.html" name="urlCurrent">URLCurrent(type)</a></h2>
+                          <p>Returns the current browser URL</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.urlCurrent(); 
+// http://www.websitename.com.br
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- Redirect -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/redirect.html" name="redirect">Redirect(url)</a></h2>
+                          <p>Makes a redirect to another page</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.redirect("http://www.meusite.com.br");
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- Params -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/params.html" name="params">Params()</a></h2>
+                          <p>Returns an array of the parameters divided by "/" in the URL</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+Exemple of a url current: www.site.com/viex/edit
+savana.params(); 
+// ['view','edit'];
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- Have -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/have.html" name="have">Have(struct, compare, split)</a></h2>
+                          <p>Checks for a specific value in an array or text</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.have("ola mundo","world") 
+// false;
+savana.have("http://site.com/user/edit","add","/") 
+// false;
+savana.have("ola mundo","mundo") 
+// true;
+savana.have("http://site.com/user/edit","user","/") 
+// true;
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- isFunction -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/isFunction.html" name="isFunction">IsFunction(str)</a></h2>
+                          <p>Checks for a specific value in an array or text</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+avana.isFunction(str); // true or false
+// true or false
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- isObject -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/isObject.html" name="isObject">IsObject(str)</a></h2>
+                          <p>Checks whether the occurrence is an object</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.isObject(str); 
+// true or false
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- isString -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/isString.html" name="isString">IsString(str)</a></h2>
+                          <p>Checks if the occurrence is a string</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.isString(str);
+// true or false
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- isCPF -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/isCPF.html" name="isCPF">IsCPF(str)</a></h2>
+                          <p>Checks if the occurrence is a CPF</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.isCPF('123.456.789-09'); 
+// true
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- formatMoney -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/formatMoney.html" name="formatMoney">FormatMoney(number, decimals, dec_point, thousands_sep)</a></h2>
+                          <p>Converts a number in currency format</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.formatMoney("2000.91", 2, ",", ".", "R$") 
+// R$ 2.000,91
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- rewrite -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/rewrite.html" name="rewrite">Rewrite(str)</a></h2>
+                          <p>Remove spaces and special characters in strings</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.rewrite("Hello Word"); 
+// hello-word
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- isEmail -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/isEmail.html" name="isEmail">IsEmail(email)</a></h2>
+                          <p>Remove spaces and special characters in strings</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.isEmail("myname@email.com"); 
+// true
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- isNumber -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/isNumber.html" name="isNumber">IsNumber(str)</a></h2>
+                          <p>Checks if the occurrence is a number</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.isNumber(18);
+// true
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- isLetter -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/isLetter.html" name="isLetter">IsLetter(str)</a></h2>
+                          <p>Checks whether the occurrence are letters</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.isLetter('test');
+// true
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+
+                      <!-- isURL -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/isURL.html" name="isURL">IsURL(str)</a></h2>
+                          <p>Checks if the occurrence is a URL</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.isURL('http://www.site.com');
+// true
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- convertMoneyToFloat -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/convertMoneyToFloat.html" name="convertMoneyToFloat">ConvertMoneyToFloat(str, monetary_symbol)</a></h2>
+                          <p>Monetary value of conversion to float</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.convertMoneyToFloat("R$ 152.50","R$");
+// 15250
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- getValueBill -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/getValueBill.html" name="getValueBill">GetValueBill(price, descount, symbol)</a></h2>
+                          <p>Discount amount of billet</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+var bill = savana.getValueBill("R$ 250,00", 10, "R$"); 
+// ["descount": "R$ 25,00", "porcent_descount": 10, "total": "R$ 225,00"]
+bill.total 
+// R$ 225,00
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                       <!-- installment -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/installment.html" name="installment">Installment(value, parcmax, juros, valmin, symbol)</a></h2>
+                          <p>Take the value of the installment</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.installment("R$ 377,55", 10, 0, 50, "R$"); 
+// [parc: "7x", vl: "R$ 53,94", juros: null]
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- financing -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/financing.html" name="financing">Financing(value, parcmax, juros, valmin, symbol)</a></h2>
+                          <p>Financing with interest</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.financing("R$ 500,00", 10, 2, 100, "R$");
+// [parc: "5x", vl: "R$ 106,08", juros: "2% a.m"]
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- upperAllFirstLetter -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/upperAllFirstLetter.html" name="upperAllFirstLetter">UpperAllFirstLetter(str)</a></h2>
+                          <p>Leave the first letter of each word capitalized</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.upperAllFirstLetter("hello world"); 
+// Hello World
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- setCookie -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/setCookie.html" name="setCookie">
+                            SetCookie(name, value, times, path)</a>
+                          </h2>
+                          <p>Record cookie in the browser</p>
+                          <p><b>Times:</b> Time for the cookie is destroyed, Insert in Hours (1,2,3,4...)</p>
+                          <p><b>Path:</b> Opitional. (Default is "/")</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.setCookie("savana", "teste", 1);
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- getCookie -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/getCookie.html" name="getCookie">
+                            GetCookie(name)</a>
+                          </h2>
+                          <p>Take the value of the cookie in the browser</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.getCookie("savana");
+// teste
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- deleteCookie -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/deleteCookie.html" name="deleteCookie">
+                            DeleteCookie(name)</a>
+                          </h2>
+                          <p>Take the value of the cookie in the browser</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.deleteCookie("savana");
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- Percent -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/percent.html" name="percent">
+                            Percent(oldValue, newValue)</a>
+                          </h2>
+                          <p>Returns the percentage of a discount</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.percent("R$ 100,00","R$ 50,00", "R$"); 
+// [discount: 50, discount_format: "50%"]
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                       <!-- DiscountPercent -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/discountPercent.html" name="discountPercent">
+                            DiscountPercent(percent, value, symbol)</a>
+                          </h2>
+                          <p>Returns the percentage of a discount</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.discountPercent(10, "R$ 500,00", "R$")
+
+        [
+            discount_price: 50,
+            discount_price_format: "R$ 50,00",
+            length: 0,
+            total_price_with_discount: 450,
+            total_price_with_discount_format: "R$ 450,00",
+            total_price_with_increase: 550,
+            total_price_with_increase_format: "R$ 550,00"
+        ]
+
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- limitLetter -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/limitLetter.html" name="limitLetter">
+                            LimitLetter(str, first_qtd, max_qtd_letters)</a>
+                          </h2>
+                          <p>Limit letters in a string</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.limitLetter("Hello word", 0, 7); 
+// Hello w...
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- limitWord -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/limitWord.html" name="limitWord">
+                            LimitWord(str, max_qtd_words)</a>
+                          </h2>
+                          <p>Limit letters in a string</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.limitWord("Hello word today", 2); 
+// Hello word...
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- strUpper -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/strUpper.html" name="strUpper">
+                            StrUpper(str)</a>
+                          </h2>
+                          <p>Limit letters in a string</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.strUpper("Hello world"); 
+// HELLO WORLD
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- strUpper -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/strUpper.html" name="strUpper">
+                            StrUpper(str)</a>
+                          </h2>
+                          <p>String conversion to uppercase</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.strUpper("Hello world"); 
+// HELLO WORLD
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- strLower -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/strLower.html" name="strLower">
+                            StrLower(str)</a>
+                          </h2>
+                          <p>String conversion to lowercase</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.strLower("Hello world"); 
+// hello world
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- messageBox -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/messageBox.html" name="messageBox">
+                            MessageBox(msg, type)</a>
+                          </h2>
+                          <p>Alert box to the user</p>
+                          <p><b>Types:</b> error, success, warning, notice</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.messageBox("Hello world today now", "sucess"); 
+&lt;div class="alert-box sucess"&gt;&lt;span&gt;Hello world&lt;/span&gt;&lt;/div&gt;
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- loadPreloader -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/preloader.html" name="loadPreloader">
+                            LoadPreloader()</a>
+                          </h2>
+                          <p>Load loader page</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.loadPreloader();
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- showPreloader -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/preloader.html" name="showPreloader">
+                            showPreloader()</a>
+                          </h2>
+                          <p>Open loader</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.showPreloader();
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                       <!-- hidePreloader -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/preloader.html" name="hidePreloader">
+                            HidePreloader()</a>
+                          </h2>
+                          <p>Close loader</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.hidePreloader();
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- loadAlert -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/alert.html" name="loadAlert">
+                            LoadAlert()</a>
+                          </h2>
+                          <p>Loads the custom alert</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.loaderAlert();
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- loadAlert -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/alert.html" name="loadAlert">
+                            LoadAlert()</a>
+                          </h2>
+                          <p>Loads the custom alert</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.loaderAlert();
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- alert -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/alert.html" name="alert">
+                            Alert(msg)</a>
+                          </h2>
+                          <p>Opens the custom alert</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.alert("Hello world");
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- loadConfirm -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/loadConfirm.html" name="loadConfirm">
+                            LoadConfirm(msg)</a>
+                          </h2>
+                          <p>Load the box confirmation</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.loadConfirm()
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- Confirm -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/confirm.html" name="confirm">
+                            Confirm(msg, fn)</a>
+                          </h2>
+                          <p>Open a box confirmation to the User</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.confirm("Do you want close", function(resp){
+  if(resp){
+     // true
+  }else{
+    // false
+  }
+}); 
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- Extend -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/extend.html" name="extend">
+                            Extent(obj, props)</a>
+                          </h2>
+                          <p>Is the object inherit characteristics from another object</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+ savana.extend({...}, {...});
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                       <!-- CountObj -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/countObj.html" name="countObj">
+                            CountObj(obj)</a>
+                          </h2>
+                          <p>Returns the number of objects</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.countObj({...},{...},{...});
+// 3
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- getParams -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/getParams.html" name="getParams">
+                            GetParams(name, href)</a>
+                          </h2>
+                          <p>Grab the URL parameter</p>
+                          <p><b>href:</b> If empty take the current url of the page</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.getParams("og","http://www.site.com?og=123");
+// 123
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- isIE -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/isIE.html" name="isIE">
+                            IsIE()</a>
+                          </h2>
+                          <p>Checks whether the IE browser</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+if(savana.isIE()) { true } else { false }
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- ModalLoad -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/modal.html" name="modalLoad">
+                            ModalLoad(selector)</a>
+                          </h2>
+                          <p>Load the modal content</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+var modalTest = savana.modalLoad(".modal-test");
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- commandCloseModal -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/modal.html" name="commandCloseModal">
+                            CommandCloseModal()</a>
+                          </h2>
+                          <p>Command close modal</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+ savana.commandCloseModal()
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- commandOpenModal -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/modal.html" name="commandOpenModal">
+                            CommandOpenModal()</a>
+                          </h2>
+                          <p>Command close modal</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+ savana.commandOpenModal()
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- modalOpen -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/modal.html" name="modalOpen">
+                            ModalOpen(modal)</a>
+                          </h2>
+                          <p>Open modal</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+var modalTeste = savana.modalLoad(".modal-test");
+var modalTeste2 = savana.modalLoad(".modal-test2");
+// For the modal appears open
+savana.modalOpen(modalTeste2);
+</code>
+</pre>
+</figure>
+<p><b>Body</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+  &lt;div class="sjs-modal-hide modal-test"&gt;
+    &lt;div class="sjs-modal-content"&gt;
+      Content test 1
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="sjs-modal-hide modal-test2"&gt;
+    &lt;div class="sjs-modal-content"&gt;
+      Content test 2
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;p&gt;&lt;a href="#" class="sjs-modal-open" rel=".modal-test" title=""&gt;Modal test 1&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;a href="#" class="sjs-modal-open" rel=".modal-test2" title=""&gt;Modal test 2&lt;/a&gt;&lt;/p&gt;
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- elementExist -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/elementExist.html" name="elementExist">
+                            ElementExist(selector)</a>
+                          </h2>
+                          <p>Checks whether an element exists in the HTML</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+ if(savana.elementExist('div.test')) { // true } else { // false }
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
                     </div>
                 </div>
           </div>
@@ -929,7 +2049,7 @@ $savana(selector).isEmpty("html");
           </div>
         </div>
 </div>
-<!-- End Document
+<!-- &lt;ul id='list2'&gt;&lt;/ul&gt; End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <script type="text/javascript" src="savanajs/lib/js/savana.js"></script> 
 <script type="text/javascript" src="assets/javascripts/main.js"></script> 
