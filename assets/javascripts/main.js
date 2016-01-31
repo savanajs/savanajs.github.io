@@ -21,7 +21,7 @@ var Savana = {
 	},
 	controlMenuMobile: function(_self){
         $savana(_self.selectorBtnMenuMobile).on("click", function(){
-        	var $this = $savana(self);
+        	var $this = $savana(this);
         	$this.toggleClass("active");
         	if($this.hasClass("active")){
                _self.openMenuMobile(_self);
@@ -49,14 +49,14 @@ var Savana = {
            _self.bodyFadeOut();
            savana.eventStop();
            setTimeout(function(){
-              savana.redirect($savana(self).attr("href"));
+              savana.redirect($savana(this).attr("href"));
            },1300);
 		});
 	},
 	docClicked: function(){
 		$savana(".three.columns a").on("click", function(e){
 			$savana(".three.columns a").removeClass("active");
-			$savana(self).addClass("active");
+			$savana(this).addClass("active");
 		});
 	},
 	docColumn: function(){	
