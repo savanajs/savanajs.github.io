@@ -10,16 +10,12 @@
 
 $savana(document).done(function(e) {
 
-  var start_time = savana.time();
-
   // Add class or remove class in elements
   if($savana("ul li").eq(0).hasClass("lista-nova")){
     alert("Exists class!")
   }else{
     alert("Not exists class!")
   }
-
-  savana.endTime(start_time);
 
 });
 

@@ -10,14 +10,9 @@
 
 $savana(document).done(function(e) {
 
-  var start_time = savana.time();
-
   // Pega os valores e nomes de campos de formularios automaticamenete
   var inputs = $savana("form").serialize(true);
-
   console.log(inputs)
-
-  savana.endTime(start_time);
 
 });
 

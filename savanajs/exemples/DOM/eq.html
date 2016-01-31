@@ -10,12 +10,8 @@
 
 $savana(document).done(function(e) {
 
-  var start_time = savana.time();
-
   // Buscar elementos pela sua posição
   $savana("div.n1").child("div").eq(0).styles("border:1px solid red");
-
-  savana.endTime(start_time);
 
 });
 

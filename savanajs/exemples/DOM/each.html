@@ -9,15 +9,10 @@
 <script>
 
 $savana(document).done(function(e) {
-
-  var start_time = savana.time();
-
   // Literar elements
   $savana("ul").find("li").each(function(e){
     console.log($savana(self).content("text")); 
   })
-
-  savana.endTime(start_time);
 
 });
 

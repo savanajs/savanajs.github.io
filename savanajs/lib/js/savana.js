@@ -378,7 +378,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                         while(el && el !== element) {
                             if (el === p) {
                                 window.self = el;
-                                fn.call(event);
+                                fn(event);
                                 return this;
                             }
 

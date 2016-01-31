@@ -10,16 +10,12 @@
 
 $savana(document).done(function(e) {
 
-  var start_time = savana.time();
-
   // Verificar se um input radio ou checkbox esta clicado
   if($savana(".n1").isEmpty("text")){
       alert(true) // Vazio
   }else{
       alert(false) // Com conteudo
   }
-
-  savana.endTime(start_time);
 
 });
 
