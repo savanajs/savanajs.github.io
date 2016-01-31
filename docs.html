@@ -142,7 +142,7 @@
                            <li><a href="#isLetter">isLetter()</a></li>
                            <li><a href="#isURL">isURL()</a></li>
                            <li><a href="#convertMoneyToFloat">convertMoneyToFloat()</a></li>
-                           <li><a href="#getValueBil">getValueBil()</a></li>
+                           <li><a href="#getValueBill">getValueBill()</a></li>
                            <li><a href="#installment">installment()</a></li>
                            <li><a href="#financing">financing()</a></li>
                            <li><a href="#upperAllFirstLetter">upperAllFirstLetter()</a></li>
@@ -152,7 +152,6 @@
                            <li><a href="#discountPercent">discountPercent()</a></li>
                            <li><a href="#limitLetter">limitLetter()</a></li>
                            <li><a href="#limitWord">limitWord()</a></li>
-                           <li><a href="#dialogClose">dialogClose()</a></li>
                            <li><a href="#strUpper">strUpper()</a></li>
                            <li><a href="#strLower">strLower()</a></li>
                            <li><a href="#messageBox">messageBox()</a></li>
@@ -164,13 +163,12 @@
                            <li><a href="#confirm">confirm()</a></li>
                            <li><a href="#loadConfirm">loadConfirm()</a></li>
                            <li><a href="#extend">extend()</a></li>
-                           <li><a href="#time">time()</a></li>
                            <li><a href="#getParams">getParams()</a></li>
                            <li><a href="#urlCurrent">urlCurrent()</a></li>
                            <li><a href="#redirect">redirect()</a></li>
                            <li><a href="#now">now()</a></li>
                            <li><a href="#today">today()</a></li>
-                           <li><a href="#returnTo">returnTo()</a></li>
+                           <!--<li><a href="#returnTo">returnTo()</a></li>-->
                            <li class="title"><strong>Client-Side</strong></li>
                            <li><a href="#item">Item</a></li>
                            <li><a href="#item">Item</a></li>
@@ -337,7 +335,7 @@ $savana("a").on("click", function(e){
 
                       <!-- Delegate -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="/savanajs/exemples/DOM/delegate.html" name="Delegate">
+                          <h2><a target="_blank" href="/savanajs/exemples/DOM/delegate.html" name="delegate">
                             Delegate(event, element, callback)</a></h2>
                           <p>Call events dynamics (click, hover, change, keyup, etc)</p>
 
@@ -391,7 +389,7 @@ $savana("ul li").each(function(e){
 
                       <!-- Push -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="/savanajs/exemples/DOM/push.html" name="Push">
+                          <h2><a target="_blank" href="/savanajs/exemples/DOM/push.html" name="push">
                             Push(content, where, callback)</a></h2>
                           <p>Get an HTML element set</p>
                           <p><b>Where:</b> before and after</p>
@@ -408,7 +406,7 @@ $savana('ul li').push('&lt;li&gt;Nova LI&lt;/li&gt;','after');
 
                       <!-- Destroy -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="/savanajs/exemples/DOM/destroy.html" name="Destroy">
+                          <h2><a target="_blank" href="/savanajs/exemples/DOM/destroy.html" name="destroy">
                              Destroy(element)</a></h2>
                           <p>Remove HTML elements</p>
 <p><b>Example of use</b></p>
@@ -440,7 +438,7 @@ $savana("ul#list li").addClass("newClass")
 
                        <!-- ToogleClass -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="/savanajs/exemples/DOM/toggleClass.html" name="toogleClass">
+                          <h2><a target="_blank" href="/savanajs/exemples/DOM/toggleClass.html" name="toggleClass">
                              ToggleClass(className)</a></h2>
                           <p>Add or remove a class element if it exists or not</p>
 <p><b>Example of use</b></p>
@@ -523,7 +521,7 @@ $savana("ul#list li:nth-child(1)").removeAttr("rel");
 
                       <!-- Styles  -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="/savanajs/exemples/DOM/styles.html" name="Styles">
+                          <h2><a target="_blank" href="/savanajs/exemples/DOM/styles.html" name="styles">
                              Styles(styles)</a></h2>
                           <p>Add CSS styles of the elements</p>
 <p><b>Example of use</b></p>
@@ -555,7 +553,7 @@ $savana("ul > li").parent();
 
                       <!-- Parents  -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="/savanajs/exemples/DOM/parent.html" name="parent">
+                          <h2><a target="_blank" href="/savanajs/exemples/DOM/parent.html" name="parents">
                              Parents(element)</a></h2>
                           <p>Find the father of one element</p>
 <p><b>Example of use</b></p>
@@ -589,7 +587,7 @@ $savana("ul>li").insert("&lt;li&gt;Nova LI&lt;/li&gt;", "before");
                       <!-- Wrap  -->
                       <article class="bx-install">  
                           <h2><a target="_blank" href="/savanajs/exemples/DOM/wrap.html" name="wrap">
-                             Wrap(new_element, where)</a></h2>
+                             Wrap(start_element, end_element)</a></h2>
                           <p>Insert a parent element for an element</p>
                           <p><b>Where:</b> before and after</p>
 <p><b>Example of use</b></p>
@@ -755,7 +753,7 @@ $savana("ul").find("li");
 
                       <!-- child()  -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="/savanajs/exemples/DOM/child.html" name="find">
+                          <h2><a target="_blank" href="/savanajs/exemples/DOM/child.html" name="child">
                              Child(element)</a></h2>
                           <p>Search the sons of elements</p>
 <p><b>Example of use</b></p>
@@ -881,9 +879,9 @@ $savana(selector).position() // {x:"720","y":"500"}
 <!-- &lt;!DOCTYPE html&gt; -->
                       </article>
 
-                      <!-- position -->
+                      <!-- IsEmpty -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="/savanajs/exemples/DOM/position.html" name="position">
+                          <h2><a target="_blank" href="/savanajs/exemples/DOM/isEmpty.html" name="isEmpty">
                              IsEmpty(Type)</a></h2>
                           <p>Returns the X and Y of an element</p>
                           <p><b>Types:</b> html, text, val</p>
@@ -968,7 +966,7 @@ savana.debug("Ola mundo", "log");
 
                       <!-- toJSON -->
                       <article class="bx-install">  
-                          <h2><a name="ToJSON">ToJSON(str)</a></h2>
+                          <h2><a name="toJSON">ToJSON(str)</a></h2>
                           <p>String conversion JSON</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -998,7 +996,7 @@ savana.toXML(str);
 
                       <!-- async -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/async.html" name="async">Async(configs)</a></h2>
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/async.html" name="Async">Async(configs)</a></h2>
                           <p>Asynchronous makes access to other files with promise. (Does not work in earlier versions of IE9)</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -1081,7 +1079,7 @@ promise.then(function(string){
 
                       <!-- url -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/url.html" name="url">URL()</a></h2>
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/url.html" name="URL">URL()</a></h2>
                           <p>Returns information url</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -1235,7 +1233,7 @@ avana.isFunction(str); // true or false
 
                       <!-- isObject -->
                       <article class="bx-install">  
-                          <h2><a name="isString">IsObject(str)</a></h2>
+                          <h2><a name="isObject">IsObject(str)</a></h2>
                           <p>Checks whether the occurrence is an object</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -1810,7 +1808,7 @@ savana.confirm("Do you want close", function(resp){
                       <!-- Extend -->
                       <article class="bx-install">  
                           <h2>
-                            <a name="extent">Extent(obj, props)</a>
+                            <a name="extend">Extent(obj, props)</a>
                           </h2>
                           <p>Is the object inherit characteristics from another object</p>
 <p><b>Example of use</b></p>
@@ -1866,7 +1864,7 @@ savana.getParams("og","http://www.site.com?og=123");
 
                       <!-- isIE -->
                       <article class="bx-install">  
-                          <h2><a href="#" name="isIE">
+                          <h2><a name="isIE">
                             IsIE()</a>
                           </h2>
                           <p>Checks whether the IE browser</p>
