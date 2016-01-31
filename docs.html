@@ -440,7 +440,7 @@ $savana("ul#list li").addClass("newClass")
 
                        <!-- ToogleClass -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="/savanajs/exemples/DOM/toogleClass.html" name="toogleClass">
+                          <h2><a target="_blank" href="/savanajs/exemples/DOM/toggleClass.html" name="toogleClass">
                              ToggleClass(className)</a></h2>
                           <p>Add or remove a class element if it exists or not</p>
 <p><b>Example of use</b></p>
@@ -803,7 +803,7 @@ $savana("ul > li").first()
 
                        <!-- last() -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="/savanajs/exemples/DOM/first.html" name="last">
+                          <h2><a target="_blank" href="/savanajs/exemples/DOM/last.html" name="last">
                              Last()</a></h2>
                           <p>Search element in the last position</p>
 <p><b>Example of use</b></p>
@@ -900,14 +900,13 @@ $savana(selector).isEmpty("html");
 
                       <!-- clearForm -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="/savanajs/exemples/DOM/clearForm.html" name="clearForm">
-                             ClearForm(Type)</a></h2>
+                          <h2>ClearForm(elementForm)</h2>
                           <p>Reset form fields</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
 <pre>
 <code class="language-bash" data-lang="bash">
- $savana("form input").clearForm();
+ $savana("form").clearForm();
 </code>
 </pre>
 </figure>
@@ -921,7 +920,7 @@ $savana(selector).isEmpty("html");
 
                       <!-- removeAllSpace -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/removeAllSpace.html" name="removeAllSpace">RemoveAllSpace(str)</a></h2>
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/removeAllSpaces.html" name="removeAllSpace">RemoveAllSpace(str)</a></h2>
                           <p>Remove the empty spaces of an occurrence</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -937,7 +936,7 @@ savana.removeAllSpaces("Hello word");
 
                        <!-- getNumberOfString -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/getNumberOfString.html" name="getNumberOfString">GetNumberOfString(str)</a></h2>
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/getNumberOfString.html" name="getNumberOfString">GetNumberOfString(str)</a></h2>
                           <p>Just pick numbers from one occurrence</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -953,7 +952,7 @@ savana.getNumberOfString("I have 10 dogs");
 
                       <!-- debug -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/debug.html" name="debug">Debug(msg, type)</a></h2>
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/debug.html" name="debug">Debug(msg, type)</a></h2>
                           <p>Displays a message to the developer</p>
                           <p><b>Types:</b> log, error, debug, info, warn</p>
 <p><b>Example of use</b></p>
@@ -969,7 +968,7 @@ savana.debug("Ola mundo", "log");
 
                       <!-- toJSON -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/toJSON.html" name="toJSON">ToJSON(str)</a></h2>
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/toJSON.html" name="toJSON">ToJSON(str)</a></h2>
                           <p>String conversion JSON</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -984,7 +983,7 @@ savana.toJSON(str);
 
                       <!-- toXML -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/toXML.html" name="toXML">ToXML(str)</a></h2>
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/toXML.html" name="toXML">ToXML(str)</a></h2>
                           <p>String conversion XML</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -999,7 +998,7 @@ savana.toXML(str);
 
                       <!-- async -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/async.html" name="async">Async(configs)</a></h2>
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/async.html" name="async">Async(configs)</a></h2>
                           <p>Asynchronous makes access to other files with promise. (Does not work in earlier versions of IE9)</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -1082,7 +1081,7 @@ promise.then(function(string){
 
                       <!-- url -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/url.html" name="url">URL()</a></h2>
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/url.html" name="url">URL()</a></h2>
                           <p>Returns information url</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -1108,7 +1107,7 @@ savana.url().pathname;
 
                       <!-- Now -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/now.html" name="now">Now()</a></h2>
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/now.html" name="now">Now()</a></h2>
                           <p>Returns the milliseconds date and current time</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -1125,7 +1124,7 @@ savana.now();
 
                       <!-- Today -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/today.html" name="today">Today(type)</a></h2>
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/today.html" name="today">Today(type)</a></h2>
                           <p>Returns the current date and time of day</p>
                           <p><b>Type:</b> date and time</p>
 <p><b>Example of use</b></p>
@@ -1145,7 +1144,7 @@ savana.today("time");
 
                       <!-- Today -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/urlCurrent.html" name="urlCurrent">URLCurrent(type)</a></h2>
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/urlCurrent.html" name="urlCurrent">URLCurrent(type)</a></h2>
                           <p>Returns the current browser URL</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -1162,7 +1161,7 @@ savana.urlCurrent();
 
                       <!-- Redirect -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/redirect.html" name="redirect">Redirect(url)</a></h2>
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/redirect.html" name="redirect">Redirect(url)</a></h2>
                           <p>Makes a redirect to another page</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -1178,7 +1177,7 @@ savana.redirect("http://www.meusite.com.br");
 
                       <!-- Params -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/params.html" name="params">Params()</a></h2>
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/params.html" name="params">Params()</a></h2>
                           <p>Returns an array of the parameters divided by "/" in the URL</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -1196,7 +1195,7 @@ savana.params();
 
                       <!-- Have -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/have.html" name="have">Have(struct, compare, split)</a></h2>
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/have.html" name="have">Have(struct, compare, split)</a></h2>
                           <p>Checks for a specific value in an array or text</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -1219,7 +1218,7 @@ savana.have("http://site.com/user/edit","user","/")
 
                       <!-- isFunction -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/isFunction.html" name="isFunction">IsFunction(str)</a></h2>
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/isFunction.html" name="isFunction">IsFunction(str)</a></h2>
                           <p>Checks for a specific value in an array or text</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -1236,7 +1235,7 @@ avana.isFunction(str); // true or false
 
                       <!-- isObject -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/isObject.html" name="isObject">IsObject(str)</a></h2>
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/isObject.html" name="isObject">IsObject(str)</a></h2>
                           <p>Checks whether the occurrence is an object</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -1253,7 +1252,7 @@ savana.isObject(str);
 
                       <!-- isString -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/isString.html" name="isString">IsString(str)</a></h2>
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/isString.html" name="isString">IsString(str)</a></h2>
                           <p>Checks if the occurrence is a string</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -1270,7 +1269,7 @@ savana.isString(str);
 
                       <!-- isCPF -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/isCPF.html" name="isCPF">IsCPF(str)</a></h2>
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/isCPF.html" name="isCPF">IsCPF(str)</a></h2>
                           <p>Checks if the occurrence is a CPF</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -1287,7 +1286,7 @@ savana.isCPF('123.456.789-09');
 
                       <!-- formatMoney -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/formatMoney.html" name="formatMoney">FormatMoney(number, decimals, dec_point, thousands_sep)</a></h2>
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/formatMoney.html" name="formatMoney">FormatMoney(number, decimals, dec_point, thousands_sep)</a></h2>
                           <p>Converts a number in currency format</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -1304,7 +1303,7 @@ savana.formatMoney("2000.91", 2, ",", ".", "R$")
 
                       <!-- rewrite -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/rewrite.html" name="rewrite">Rewrite(str)</a></h2>
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/rewrite.html" name="rewrite">Rewrite(str)</a></h2>
                           <p>Remove spaces and special characters in strings</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -1321,7 +1320,7 @@ savana.rewrite("Hello Word");
 
                       <!-- isEmail -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/isEmail.html" name="isEmail">IsEmail(email)</a></h2>
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/isEmail.html" name="isEmail">IsEmail(email)</a></h2>
                           <p>Remove spaces and special characters in strings</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -1338,7 +1337,7 @@ savana.isEmail("myname@email.com");
 
                       <!-- isNumber -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/isNumber.html" name="isNumber">IsNumber(str)</a></h2>
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/isNumber.html" name="isNumber">IsNumber(str)</a></h2>
                           <p>Checks if the occurrence is a number</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -1355,7 +1354,7 @@ savana.isNumber(18);
 
                       <!-- isLetter -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/isLetter.html" name="isLetter">IsLetter(str)</a></h2>
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/isLetter.html" name="isLetter">IsLetter(str)</a></h2>
                           <p>Checks whether the occurrence are letters</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -1373,7 +1372,7 @@ savana.isLetter('test');
 
                       <!-- isURL -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/isURL.html" name="isURL">IsURL(str)</a></h2>
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/isURL.html" name="isURL">IsURL(str)</a></h2>
                           <p>Checks if the occurrence is a URL</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -1390,7 +1389,7 @@ savana.isURL('http://www.site.com');
 
                       <!-- convertMoneyToFloat -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/convertMoneyToFloat.html" name="convertMoneyToFloat">ConvertMoneyToFloat(str, monetary_symbol)</a></h2>
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/convertMoneyToFloat.html" name="convertMoneyToFloat">ConvertMoneyToFloat(str, monetary_symbol)</a></h2>
                           <p>Monetary value of conversion to float</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -1407,7 +1406,7 @@ savana.convertMoneyToFloat("R$ 152.50","R$");
 
                       <!-- getValueBill -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/getValueBill.html" name="getValueBill">GetValueBill(price, descount, symbol)</a></h2>
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/getValueBill.html" name="getValueBill">GetValueBill(price, descount, symbol)</a></h2>
                           <p>Discount amount of billet</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -1426,7 +1425,7 @@ bill.total
 
                        <!-- installment -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/installment.html" name="installment">Installment(value, parcmax, juros, valmin, symbol)</a></h2>
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/installment.html" name="installment">Installment(value, parcmax, juros, valmin, symbol)</a></h2>
                           <p>Take the value of the installment</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -1443,7 +1442,7 @@ savana.installment("R$ 377,55", 10, 0, 50, "R$");
 
                       <!-- financing -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/financing.html" name="financing">Financing(value, parcmax, juros, valmin, symbol)</a></h2>
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/financing.html" name="financing">Financing(value, parcmax, juros, valmin, symbol)</a></h2>
                           <p>Financing with interest</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -1460,7 +1459,7 @@ savana.financing("R$ 500,00", 10, 2, 100, "R$");
 
                       <!-- upperAllFirstLetter -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/upperAllFirstLetter.html" name="upperAllFirstLetter">UpperAllFirstLetter(str)</a></h2>
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/upperAllFirstLetter.html" name="upperAllFirstLetter">UpperAllFirstLetter(str)</a></h2>
                           <p>Leave the first letter of each word capitalized</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -1477,7 +1476,7 @@ savana.upperAllFirstLetter("hello world");
 
                       <!-- setCookie -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/setCookie.html" name="setCookie">
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/setCookie.html" name="setCookie">
                             SetCookie(name, value, times, path)</a>
                           </h2>
                           <p>Record cookie in the browser</p>
@@ -1497,7 +1496,7 @@ savana.setCookie("savana", "teste", 1);
 
                       <!-- getCookie -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/getCookie.html" name="getCookie">
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/getCookie.html" name="getCookie">
                             GetCookie(name)</a>
                           </h2>
                           <p>Take the value of the cookie in the browser</p>
@@ -1516,7 +1515,7 @@ savana.getCookie("savana");
 
                       <!-- deleteCookie -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/deleteCookie.html" name="deleteCookie">
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/deleteCookie.html" name="deleteCookie">
                             DeleteCookie(name)</a>
                           </h2>
                           <p>Take the value of the cookie in the browser</p>
@@ -1534,7 +1533,7 @@ savana.deleteCookie("savana");
 
                       <!-- Percent -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/percent.html" name="percent">
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/percent.html" name="percent">
                             Percent(oldValue, newValue)</a>
                           </h2>
                           <p>Returns the percentage of a discount</p>
@@ -1553,7 +1552,7 @@ savana.percent("R$ 100,00","R$ 50,00", "R$");
 
                        <!-- DiscountPercent -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/discountPercent.html" name="discountPercent">
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/discountPercent.html" name="discountPercent">
                             DiscountPercent(percent, value, symbol)</a>
                           </h2>
                           <p>Returns the percentage of a discount</p>
@@ -1582,7 +1581,7 @@ savana.discountPercent(10, "R$ 500,00", "R$")
 
                       <!-- limitLetter -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/limitLetter.html" name="limitLetter">
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/limitLetter.html" name="limitLetter">
                             LimitLetter(str, first_qtd, max_qtd_letters)</a>
                           </h2>
                           <p>Limit letters in a string</p>
@@ -1601,7 +1600,7 @@ savana.limitLetter("Hello word", 0, 7);
 
                       <!-- limitWord -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/limitWord.html" name="limitWord">
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/limitWord.html" name="limitWord">
                             LimitWord(str, max_qtd_words)</a>
                           </h2>
                           <p>Limit letters in a string</p>
@@ -1620,7 +1619,7 @@ savana.limitWord("Hello word today", 2);
 
                       <!-- strUpper -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/strUpper.html" name="strUpper">
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/strUpper.html" name="strUpper">
                             StrUpper(str)</a>
                           </h2>
                           <p>Limit letters in a string</p>
@@ -1639,7 +1638,7 @@ savana.strUpper("Hello world");
 
                       <!-- strUpper -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/strUpper.html" name="strUpper">
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/strUpper.html" name="strUpper">
                             StrUpper(str)</a>
                           </h2>
                           <p>String conversion to uppercase</p>
@@ -1658,7 +1657,7 @@ savana.strUpper("Hello world");
 
                       <!-- strLower -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/strLower.html" name="strLower">
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/strLower.html" name="strLower">
                             StrLower(str)</a>
                           </h2>
                           <p>String conversion to lowercase</p>
@@ -1677,7 +1676,7 @@ savana.strLower("Hello world");
 
                       <!-- messageBox -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/messageBox.html" name="messageBox">
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/messageBox.html" name="messageBox">
                             MessageBox(msg, type)</a>
                           </h2>
                           <p>Alert box to the user</p>
@@ -1697,7 +1696,7 @@ savana.messageBox("Hello world today now", "sucess");
 
                       <!-- loadPreloader -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/preloader.html" name="loadPreloader">
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/preloader.html" name="loadPreloader">
                             LoadPreloader()</a>
                           </h2>
                           <p>Load loader page</p>
@@ -1715,7 +1714,7 @@ savana.loadPreloader();
 
                       <!-- showPreloader -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/preloader.html" name="showPreloader">
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/preloader.html" name="showPreloader">
                             showPreloader()</a>
                           </h2>
                           <p>Open loader</p>
@@ -1733,7 +1732,7 @@ savana.showPreloader();
 
                        <!-- hidePreloader -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/preloader.html" name="hidePreloader">
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/preloader.html" name="hidePreloader">
                             HidePreloader()</a>
                           </h2>
                           <p>Close loader</p>
@@ -1751,7 +1750,7 @@ savana.hidePreloader();
 
                       <!-- loadAlert -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/alert.html" name="loadAlert">
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/alert.html" name="loadAlert">
                             LoadAlert()</a>
                           </h2>
                           <p>Loads the custom alert</p>
@@ -1769,7 +1768,7 @@ savana.loaderAlert();
 
                       <!-- loadAlert -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/alert.html" name="loadAlert">
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/alert.html" name="loadAlert">
                             LoadAlert()</a>
                           </h2>
                           <p>Loads the custom alert</p>
@@ -1787,7 +1786,7 @@ savana.loaderAlert();
 
                       <!-- alert -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/alert.html" name="alert">
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/alert.html" name="alert">
                             Alert(msg)</a>
                           </h2>
                           <p>Opens the custom alert</p>
@@ -1805,7 +1804,7 @@ savana.alert("Hello world");
 
                       <!-- loadConfirm -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/loadConfirm.html" name="loadConfirm">
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/loadConfirm.html" name="loadConfirm">
                             LoadConfirm(msg)</a>
                           </h2>
                           <p>Load the box confirmation</p>
@@ -1823,7 +1822,7 @@ savana.loadConfirm()
 
                       <!-- Confirm -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/confirm.html" name="confirm">
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/confirm.html" name="confirm">
                             Confirm(msg, fn)</a>
                           </h2>
                           <p>Open a box confirmation to the User</p>
@@ -1847,7 +1846,7 @@ savana.confirm("Do you want close", function(resp){
 
                       <!-- Extend -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/extend.html" name="extend">
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/extend.html" name="extend">
                             Extent(obj, props)</a>
                           </h2>
                           <p>Is the object inherit characteristics from another object</p>
@@ -1865,7 +1864,7 @@ savana.confirm("Do you want close", function(resp){
 
                        <!-- CountObj -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/countObj.html" name="countObj">
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/countObj.html" name="countObj">
                             CountObj(obj)</a>
                           </h2>
                           <p>Returns the number of objects</p>
@@ -1884,7 +1883,7 @@ savana.countObj({...},{...},{...});
 
                       <!-- getParams -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/getParams.html" name="getParams">
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/getParams.html" name="getParams">
                             GetParams(name, href)</a>
                           </h2>
                           <p>Grab the URL parameter</p>
@@ -1904,7 +1903,7 @@ savana.getParams("og","http://www.site.com?og=123");
 
                       <!-- isIE -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/isIE.html" name="isIE">
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/isIE.html" name="isIE">
                             IsIE()</a>
                           </h2>
                           <p>Checks whether the IE browser</p>
@@ -1922,7 +1921,7 @@ if(savana.isIE()) { true } else { false }
 
                       <!-- ModalLoad -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/modal.html" name="modalLoad">
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/modal.html" name="modalLoad">
                             ModalLoad(selector)</a>
                           </h2>
                           <p>Load the modal content</p>
@@ -1940,7 +1939,7 @@ var modalTest = savana.modalLoad(".modal-test");
 
                       <!-- commandCloseModal -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/modal.html" name="commandCloseModal">
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/modal.html" name="commandCloseModal">
                             CommandCloseModal()</a>
                           </h2>
                           <p>Command close modal</p>
@@ -1958,7 +1957,7 @@ var modalTest = savana.modalLoad(".modal-test");
 
                       <!-- commandOpenModal -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/modal.html" name="commandOpenModal">
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/modal.html" name="commandOpenModal">
                             CommandOpenModal()</a>
                           </h2>
                           <p>Command close modal</p>
@@ -1976,7 +1975,7 @@ var modalTest = savana.modalLoad(".modal-test");
 
                       <!-- modalOpen -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/modal.html" name="modalOpen">
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/modal.html" name="modalOpen">
                             ModalOpen(modal)</a>
                           </h2>
                           <p>Open modal</p>
@@ -2018,7 +2017,7 @@ savana.modalOpen(modalTeste2);
 
                       <!-- elementExist -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="//savanajs/exemples/HELPERS/elementExist.html" name="elementExist">
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/elementExist.html" name="elementExist">
                             ElementExist(selector)</a>
                           </h2>
                           <p>Checks whether an element exists in the HTML</p>

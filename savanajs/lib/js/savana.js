@@ -1061,7 +1061,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
         isSelected: function() {
 
-            if (this[0].selected) {
+            if (!$savana(this[0]).isEmpty("val")) {
                 return true;
             } else {
                 return;
@@ -1121,10 +1121,14 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         isEmpty: function(type) {
 
             if (!type) return;
-
-            if (savana.removeAllSpaces($savana(this[0]).content(type)).length) {
-                return;
-            } else {
+            var content = $savana(this[0]).content(type);
+            if(content){
+                if (savana.removeAllSpaces(content).length) {
+                    return false;
+                } else {
+                    return true;
+                }
+            }else{
                 return true;
             }
 
@@ -1134,7 +1138,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         // Reset form fields
         // -------------------------------------------------------------
         // Example of use:
-        // $savana("form input").clearForm();
+        // $savana("form").clearForm();
 
         clearForm: function() {
 
