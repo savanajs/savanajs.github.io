@@ -900,7 +900,7 @@ $savana(selector).isEmpty("html");
 
                       <!-- clearForm -->
                       <article class="bx-install">  
-                          <h2>ClearForm(elementForm)</h2>
+                          <h2><a name="clearForm">ClearForm(elementForm)</a></h2>
                           <p>Reset form fields</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -968,7 +968,7 @@ savana.debug("Ola mundo", "log");
 
                       <!-- toJSON -->
                       <article class="bx-install">  
-                          <h2>ToJSON(str)</h2>
+                          <h2><a name="ToJSON">ToJSON(str)</a></h2>
                           <p>String conversion JSON</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -983,7 +983,7 @@ savana.toJSON(str);
 
                       <!-- toXML -->
                       <article class="bx-install">  
-                          <h2>ToXML(str)</h2>
+                          <h2><a name="toXML">ToXML(str)</a></h2>
                           <p>String conversion XML</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -1161,7 +1161,7 @@ savana.urlCurrent();
 
                       <!-- Redirect -->
                       <article class="bx-install">  
-                          <h2>Redirect(url)</h2>
+                          <h2><a name="redirect">Redirect(url)</a></h2>
                           <p>Makes a redirect to another page</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -1218,7 +1218,7 @@ savana.have("http://site.com/user/edit","user","/")
 
                       <!-- isFunction -->
                       <article class="bx-install">  
-                          <h2>IsFunction(str)</h2>
+                          <h2><a name="isFunction">IsFunction(str)</a></h2>
                           <p>Checks for a specific value in an array or text</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -1235,7 +1235,7 @@ avana.isFunction(str); // true or false
 
                       <!-- isObject -->
                       <article class="bx-install">  
-                          <h2>IsObject(str)</h2>
+                          <h2><a name="isString">IsObject(str)</a></h2>
                           <p>Checks whether the occurrence is an object</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -1252,7 +1252,7 @@ savana.isObject(str);
 
                       <!-- isString -->
                       <article class="bx-install">  
-                          <h2>IsString(str)</h2>
+                          <h2><a name="isString">IsString(str)</a></h2>
                           <p>Checks if the occurrence is a string</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -1636,25 +1636,6 @@ savana.strUpper("Hello world");
 <!-- &lt;!DOCTYPE html&gt; -->
                       </article>
 
-                      <!-- strUpper -->
-                      <article class="bx-install">  
-                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/strUpper.html" name="strUpper">
-                            StrUpper(str)</a>
-                          </h2>
-                          <p>String conversion to uppercase</p>
-<p><b>Example of use</b></p>
-<figure class="highlight">
-<pre>
-<code class="language-bash" data-lang="bash">
-savana.strUpper("Hello world"); 
-// HELLO WORLD
-</code>
-</pre>
-</figure>
-
-<!-- &lt;!DOCTYPE html&gt; -->
-                      </article>
-
                       <!-- strLower -->
                       <article class="bx-install">  
                           <h2><a target="_blank" href="/savanajs/exemples/HELPERS/strLower.html" name="strLower">
@@ -1766,24 +1747,6 @@ savana.loaderAlert();
 <!-- &lt;!DOCTYPE html&gt; -->
                       </article>
 
-                      <!-- loadAlert -->
-                      <article class="bx-install">  
-                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/alert.html" name="loadAlert">
-                            LoadAlert()</a>
-                          </h2>
-                          <p>Loads the custom alert</p>
-<p><b>Example of use</b></p>
-<figure class="highlight">
-<pre>
-<code class="language-bash" data-lang="bash">
-savana.loaderAlert();
-</code>
-</pre>
-</figure>
-
-<!-- &lt;!DOCTYPE html&gt; -->
-                      </article>
-
                       <!-- alert -->
                       <article class="bx-install">  
                           <h2><a target="_blank" href="/savanajs/exemples/HELPERS/alert.html" name="alert">
@@ -1804,7 +1767,7 @@ savana.alert("Hello world");
 
                       <!-- loadConfirm -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/loadConfirm.html" name="loadConfirm">
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/confirm.html" name="loadConfirm">
                             LoadConfirm(msg)</a>
                           </h2>
                           <p>Load the box confirmation</p>
@@ -1846,8 +1809,8 @@ savana.confirm("Do you want close", function(resp){
 
                       <!-- Extend -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/extend.html" name="extend">
-                            Extent(obj, props)</a>
+                          <h2>
+                            <a name="extent">Extent(obj, props)</a>
                           </h2>
                           <p>Is the object inherit characteristics from another object</p>
 <p><b>Example of use</b></p>
@@ -1864,8 +1827,8 @@ savana.confirm("Do you want close", function(resp){
 
                        <!-- CountObj -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/countObj.html" name="countObj">
-                            CountObj(obj)</a>
+                          <h2>
+                            <a name="countObj">CountObj(obj)</a>
                           </h2>
                           <p>Returns the number of objects</p>
 <p><b>Example of use</b></p>
@@ -1883,7 +1846,7 @@ savana.countObj({...},{...},{...});
 
                       <!-- getParams -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/getParams.html" name="getParams">
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/getParams.html?v=54564" name="getParams">
                             GetParams(name, href)</a>
                           </h2>
                           <p>Grab the URL parameter</p>
@@ -1903,7 +1866,7 @@ savana.getParams("og","http://www.site.com?og=123");
 
                       <!-- isIE -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/isIE.html" name="isIE">
+                          <h2><a href="#" name="isIE">
                             IsIE()</a>
                           </h2>
                           <p>Checks whether the IE browser</p>
@@ -1975,7 +1938,7 @@ var modalTest = savana.modalLoad(".modal-test");
 
                       <!-- modalOpen -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/modal.html" name="modalOpen">
+                          <h2><a name="modalOpen">
                             ModalOpen(modal)</a>
                           </h2>
                           <p>Open modal</p>
@@ -2017,7 +1980,7 @@ savana.modalOpen(modalTeste2);
 
                       <!-- elementExist -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/elementExist.html" name="elementExist">
+                          <h2><a name="elementExist">
                             ElementExist(selector)</a>
                           </h2>
                           <p>Checks whether an element exists in the HTML</p>
