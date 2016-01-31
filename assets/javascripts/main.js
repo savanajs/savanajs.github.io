@@ -7,6 +7,8 @@ var Savana = {
 		_self.showLoaderPage();
 		_self.controlMenuMobile(_self);
 		_self.controlBtnBodyFadeOut(_self);
+		_self.docClicked();
+		_self.docColumn();
 	},
 	initLoaderPader: function() {
 		savana.loadPreloader();
@@ -45,11 +47,35 @@ var Savana = {
 		$savana("a.btn-body-fade").on("click", function(e){
 			Savana.showLoaderPage();
            _self.bodyFadeOut();
-           e.preventDefault();
+           savana.eventStop();
            setTimeout(function(){
               savana.redirect($savana(self).attr("href"));
            },1300);
 		});
+	},
+	docClicked: function(){
+		$savana(".three.columns a").on("click", function(e){
+			$savana(".three.columns a").removeClass("active");
+			$savana(self).addClass("active");
+		});
+	},
+	docColumn: function(){	
+		var asideHeight = $savana("aside.three.columns").size()['h'];
+		var bodyWidth = $savana("body").size()['w']
+
+		$savana(window).scroll(function(e){
+
+          if(bodyWidth > 1000){
+
+	            if(document.body.scrollTop > asideHeight){
+	            	$savana("aside.three.columns").addClass("float")
+	            }else{
+	            	$savana("aside.three.columns").removeClass("float")
+	            }
+
+           }
+
+        });
 	}
 }
 

@@ -559,17 +559,43 @@ li.title {
   text-decoration: none !important;
 }
 
+/* line 468, ../sass/main.scss */
+.box-install b {
+  color: #427ac1;
+}
+
+/* line 472, ../sass/main.scss */
+.three.columns a.active {
+  font-weight: bold;
+  color: #427ac1;
+}
+
+/* line 477, ../sass/main.scss */
+aside.three.columns.float {
+  position: fixed;
+  z-index: 999999;
+  top: 10px;
+  width: 211px;
+  height: 700px;
+  overflow-y: auto;
+}
+
+/* line 486, ../sass/main.scss */
+.nine.columns {
+  float: right;
+}
+
 /* Mobile first queries */
 /* Larger than desktop */
 @media (max-width: 1000px) {
-  /* line 472, ../sass/main.scss */
+  /* line 494, ../sass/main.scss */
   figure > img {
     width: 100%;
   }
 }
 /* Larger than phablet */
 @media (max-width: 550px) {
-  /* line 480, ../sass/main.scss */
+  /* line 502, ../sass/main.scss */
   #bx-menu {
     width: 80%;
     float: none;
@@ -583,55 +609,55 @@ li.title {
     border-right: 1px solid #e5e5e5;
   }
 
-  /* line 493, ../sass/main.scss */
+  /* line 515, ../sass/main.scss */
   #bx-menu ul {
     margin: 0px 0px 0px 0px !important;
   }
 
-  /* line 497, ../sass/main.scss */
+  /* line 519, ../sass/main.scss */
   #bx-menu ul li {
     display: block !important;
     text-align: left;
     margin: 0px;
   }
 
-  /* line 503, ../sass/main.scss */
+  /* line 525, ../sass/main.scss */
   #bx-menu ul li:hover {
     background-color: #f5f5f5;
   }
 
-  /* line 507, ../sass/main.scss */
+  /* line 529, ../sass/main.scss */
   #menu-mobile {
     display: block;
   }
 
-  /* line 511, ../sass/main.scss */
+  /* line 533, ../sass/main.scss */
   div#banner > .container > .row > hgroup {
     padding-top: 50px;
   }
 
-  /* line 515, ../sass/main.scss */
+  /* line 537, ../sass/main.scss */
   .bx-button-github {
     margin-bottom: 80px;
   }
 
-  /* line 519, ../sass/main.scss */
+  /* line 541, ../sass/main.scss */
   div#banner > .container > .row > hgroup > h1 > span > strong {
     font-size: 0.4em;
   }
 
-  /* line 523, ../sass/main.scss */
+  /* line 545, ../sass/main.scss */
   div#banner > .container > .row > hgroup > h2 {
     font-size: 1.3em;
     margin-top: 10px;
   }
 
-  /* line 528, ../sass/main.scss */
+  /* line 550, ../sass/main.scss */
   footer#footer .footer-bx-right, #credits, #footer {
     text-align: center;
   }
 
-  /* line 532, ../sass/main.scss */
+  /* line 554, ../sass/main.scss */
   #footer h1#logo-footer {
     margin: 0 auto;
   }

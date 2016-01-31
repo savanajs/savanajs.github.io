@@ -465,6 +465,28 @@ li.title {
 	text-decoration: none!important;
 }
 
+.box-install b {
+	color: #427ac1;
+}
+
+.three.columns a.active {
+	font-weight: bold;
+	color: #427ac1;
+}
+
+aside.three.columns.float {
+	position: fixed;
+	z-index: 999999;
+	top: 10px;
+	width: 211px;
+	height: 700px;
+	overflow-y: auto;
+}
+
+.nine.columns{
+   float: right;
+}
+
 /* Mobile first queries */
 
 /* Larger than desktop */

@@ -328,6 +328,20 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             };
         },
 
+        // Scroll - $savana(window).scroll(function(event){});
+        // Initiator Framework after the onload window
+        // --------------------------------------------------
+        // Example of use:
+        // $savana(window).scroll(function(e){
+        //   // Yout code here
+        // });
+
+        scroll: function(fn) {
+            window.onscroll = function(events) {
+                fn(events); 
+            };
+        },
+
         // On - $savana(selector).on(event, function(event){});
         // Call events (click, hover, change, keyup, etc)
         // ---------------------------------------------------
