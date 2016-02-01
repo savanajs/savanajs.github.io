@@ -45,11 +45,12 @@ var Savana = {
 	},
 	controlBtnBodyFadeOut: function(_self){
 		$savana("a.btn-body-fade").on("click", function(e){
+			var $this = $savana(this);
 			Savana.showLoaderPage();
            _self.bodyFadeOut();
            savana.eventStop();
            setTimeout(function(){
-              savana.redirect($savana(this).attr("href"));
+              savana.redirect($this.attr("href"));
            },1300);
 		});
 	},
