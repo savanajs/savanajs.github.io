@@ -1,4 +1,4 @@
-var Savana = {
+var SavanaJS = {
 	selectorBtnMenuMobile: "#menu-mobile",
 	selectorMenuMobile: "#bx-menu",
 	init: function() {
@@ -44,9 +44,9 @@ var Savana = {
 		$savana(".wrapper").addClass("fadeOut");
 	},
 	controlBtnBodyFadeOut: function(_self){
-		$savana("a.btn-body-fade").on("click", function(e){
+		$savana("a.btn-body-fade").on("click", function(g,e){
 			var $this = $savana(this);
-			Savana.showLoaderPage();
+			SavanaJS.showLoaderPage();
            _self.bodyFadeOut();
            savana.eventStop();
            setTimeout(function(){
@@ -81,9 +81,9 @@ var Savana = {
 }
 
 $savana(document).done(function(e) {
-    Savana.init();
+    SavanaJS.init();
 });
 
 $savana(window).onload(function(e) {
-	Savana.hideLoaderPage();
+	SavanaJS.hideLoaderPage();
 });
