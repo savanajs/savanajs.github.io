@@ -89,7 +89,9 @@
                            <li><a href="#Done">done()</a></li>
                            <li><a href="#OnLoad">onLoad()</a></li>
                            <li><a href="#On">on()</a></li>
+                           <li><a href="#delegate">delegate()</a></li>
                            <li><a href="#Content">content()</a></li>
+                           <li><a href="#Each">each()</a></li>
                            <li><a href="#push">push()</a></li>
                            <li><a href="#destroy">destroy()</a></li>
                            <li><a href="#addClass">addClass()</a></li>
@@ -120,7 +122,8 @@
                            <li><a href="#size">size()</a></li>
                            <li><a href="#position">position()</a></li>
                            <li><a href="#isEmpty">isEmpty()</a></li>
-                           <li><a href="#delegate">delegate()</a></li>
+                           <li><a href="#clearForm">clearForm()</a></li>
+                           
                            <li class="title"><strong>Helpers - savana.</strong></li>
                            <li><a href="#removeAllSpace">removeAllSpace()</a></li>
                            <li><a href="#getNumberOfString">getNumberOfString()</a></li>
@@ -129,6 +132,10 @@
                            <li><a href="#toXML">toXML()</a></li>
                            <li><a href="#Async">Async()</a></li>
                            <li><a href="#URL">URL()</a></li>
+                           <li><a href="#now">now()</a></li>
+                           <li><a href="#today">today()</a></li>
+                           <li><a href="#urlCurrent">urlCurrent()</a></li>
+                           <li><a href="#redirect">redirect()</a></li>
                            <li><a href="#params">params()</a></li>
                            <li><a href="#have">have()</a></li>
                            <li><a href="#isFunction">isFunction()</a></li>
@@ -146,9 +153,10 @@
                            <li><a href="#installment">installment()</a></li>
                            <li><a href="#financing">financing()</a></li>
                            <li><a href="#upperAllFirstLetter">upperAllFirstLetter()</a></li>
-                           <li><a href="#setCookie">debug()</a></li>
-                           <li><a href="#percent">percent()</a></li>
+                           <li><a href="#setCookie">setCookie()</a></li>
+                           <li><a href="#getCookie">getCookie()</a></li>
                            <li><a href="#deleteCookie">deleteCookie()</a></li>
+                           <li><a href="#percent">percent()</a></li>                        
                            <li><a href="#discountPercent">discountPercent()</a></li>
                            <li><a href="#limitLetter">limitLetter()</a></li>
                            <li><a href="#limitWord">limitWord()</a></li>
@@ -160,14 +168,18 @@
                            <li><a href="#hidePreloader">hidePreloader()</a></li>
                            <li><a href="#loadAlert">loadAlert()</a></li>
                            <li><a href="#alert">alert()</a></li>
-                           <li><a href="#confirm">confirm()</a></li>
                            <li><a href="#loadConfirm">loadConfirm()</a></li>
+                           <li><a href="#confirm">confirm()</a></li>
                            <li><a href="#extend">extend()</a></li>
+                           <li><a href="#countObj">CountObj()</a></li>
                            <li><a href="#getParams">getParams()</a></li>
-                           <li><a href="#urlCurrent">urlCurrent()</a></li>
-                           <li><a href="#redirect">redirect()</a></li>
-                           <li><a href="#now">now()</a></li>
-                           <li><a href="#today">today()</a></li>
+                           <li><a href="#isIE">isIE()</a></li>
+                           <li><a href="#modalLoad">modalLoad()</a></li>
+                           <li><a href="#cCloseModal">commandCloseModal()</a></li>
+                           <li><a href="#cOpenModal">commandOpenModal()</a></li>
+                           <li><a href="#modalOpen">modalOpen()</a></li>
+                           <li><a href="#elementExist">ElementExist()</a></li>
+                           
                            <!--<li><a href="#returnTo">returnTo()</a></li>-->
                            <li class="title"><strong>Client-Side</strong></li>
                            <li><a href="#item">Item</a></li>
@@ -205,6 +217,7 @@
       <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"<b>lib/css/savana.min.css</b>"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
 
       <span class="c">&lt;!--[if lt IE 9]&gt;
+        &lt;script src="<b>lib/css/addEventListener-IE.min.js</b>"&gt;&lt;/script&gt;
         &lt;script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"&gt;&lt;/script&gt;
         &lt;script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"&gt;&lt;/script&gt;
       &lt;![endif]--&gt;</span>
@@ -326,7 +339,7 @@ $savana(window).onload(function(e){
 <pre>
 <code class="language-bash" data-lang="bash">
 $savana("a").on("click", function(e){
-  $savana(self).content("text");
+  $savana(this).content("text");
 });
 </code>
 </pre>
@@ -344,7 +357,7 @@ $savana("a").on("click", function(e){
 <pre>
 <code class="language-bash" data-lang="bash">
 $savana("body").delegate("click", "li" function(e){
-  $savana(self).content("text");
+  $savana(this).content("text");
 });
 </code>
 </pre>
@@ -380,7 +393,7 @@ $savana("li").content("text");
 <pre>
 <code class="language-bash" data-lang="bash">
 $savana("ul li").each(function(e){
-  $savana(self).content("text");
+  $savana(this).content("text");
 });
 </code>
 </pre>
@@ -1900,7 +1913,7 @@ var modalTest = savana.modalLoad(".modal-test");
 
                       <!-- commandCloseModal -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/modal.html" name="commandCloseModal">
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/modal.html" name="cCloseModal">
                             CommandCloseModal()</a>
                           </h2>
                           <p>Command close modal</p>
@@ -1918,7 +1931,7 @@ var modalTest = savana.modalLoad(".modal-test");
 
                       <!-- commandOpenModal -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/modal.html" name="commandOpenModal">
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/modal.html" name="cOpenModal">
                             CommandOpenModal()</a>
                           </h2>
                           <p>Command close modal</p>

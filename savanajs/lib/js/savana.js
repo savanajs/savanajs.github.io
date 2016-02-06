@@ -99,7 +99,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  * 2.25 -- setCookie .................................. Record cookie in the browser
  * 2.26 -- getCookie .................................. Take the value of the cookie in the browser
  * 2.27 -- deleteCookie ............................... Delete the browser cookie
- * 2.28 -- 
+ * 2.28 -- isIE ....................................... Verify if the browser is IE
  * 2.29 -- percent .................................... Returns the percentage of a discount
  * 2.30 -- discountPercent ............................ Calculating a percentage discount
  * 2.31 -- limitLetter ................................ Limit letters in a string
