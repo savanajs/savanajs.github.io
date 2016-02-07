@@ -1,11 +1,14 @@
 var SavanaJS = {
 	selectorBtnMenuMobile: "#menu-mobile",
 	selectorMenuMobile: "#bx-menu",
+	selectorBtnMenuMobileAside: "a.btn-menu-aside",
+	selectorMenuMobileAside: "aside.three.columns",
 	init: function() {
 		var _self = this;
 		_self.initLoaderPader();
 		_self.showLoaderPage();
 		_self.controlMenuMobile(_self);
+		_self.controlMenuMobileAside(_self);
 		_self.controlBtnBodyFadeOut(_self);
 		_self.docClicked();
 		_self.docColumn();
@@ -39,6 +42,27 @@ var SavanaJS = {
         $savana(_self.selectorMenuMobile).removeClass("bounceInLeft");
 		$savana(_self.selectorMenuMobile).addClass("bounceOutLeft");
 	},
+	controlMenuMobileAside: function(_self){
+        $savana(_self.selectorBtnMenuMobileAside).on("click", function(e){
+        	var $this = $savana(this);
+        	$this.toggleClass("active");
+        	if($this.hasClass("active")){
+               _self.openMenuMobileAside(_self);
+        	}else{
+               _self.closeMenuMobileAside(_self);
+        	}
+        	savana.eventStop(e);
+        });
+	},
+	openMenuMobileAside: function(_self){
+        $savana(_self.selectorMenuMobileAside).show();
+        $savana(_self.selectorMenuMobileAside).removeClass("bounceOutLeft");
+        $savana(_self.selectorMenuMobileAside).addClass("bounceInLeft");
+	},
+	closeMenuMobileAside: function(_self){
+        $savana(_self.selectorMenuMobileAside).removeClass("bounceInLeft");
+		$savana(_self.selectorMenuMobileAside).addClass("bounceOutLeft");
+	},
 	bodyFadeOut: function(){
 		$savana(".wrapper").removeClass("fadeIn");
 		$savana(".wrapper").addClass("fadeOut");
@@ -61,12 +85,12 @@ var SavanaJS = {
 		});
 	},
 	docColumn: function(){	
-		var asideHeight = $savana("aside.three.columns").size()['h'];
+		var asideHeight = $savana("aside.three.columns").size()['h'] + 300;
 		var bodyWidth = $savana("body").size()['w']
 
 		$savana(window).scroll(function(e){
 
-          if(bodyWidth > 1000){
+          if(bodyWidth > 100){
 
 	            if(document.body.scrollTop > asideHeight){
 	            	$savana("aside.three.columns").addClass("float")

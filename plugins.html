@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
@@ -32,9 +33,10 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <![endif]-->
 </head>
-<body id="plugins">
+<body id="docs">
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <a href="#menu" class="btn-menu-aside">Menu</a>
 <div id="wrapper" class="wrapper animated fadeIn">
         <div id="page-bar-loader"></div>
 
@@ -78,24 +80,162 @@
 
           <div class="container">
                 <div class="row">
-                    <aside class="three columns">
+                    <aside class="three columns animated">
                        <ul>
-                           <li><strong>Getting Start</strong></li>
-                           <li><a href="#install">Install</a></li>
-                           <li><a href="#download">Download</a></li>
-                           <li><a href="#compatility">Compatility</a></li>
+                           <li class="title"><strong>Getting Start</strong></li>
+                           <li><a href="#Building-your-plugin">Building your plugin</a></li>
+                           <li><a href="#Use-simple-singleton">Use simple singleton</a></li>
+                           <li><a href="#Private-singleton">Private singleton</a></li>
+                           <li class="title"><strong>Plugins</strong></li>   
+                           <li><a href="#Sanava-form-validation">Sanava form validation</a></li>
+                           <li><a href="#Savana-mobile-menu">Savana mobile menu</a></li>         
                        </ul>
                     </aside>
                     <div class="nine columns">
                       <article class="bx-install">
                           <hgroup>
-                              <h1>Plugins</h1>
+                              <h1>Getting Start</h1>
                           </hgroup>  
-                          <h2><a name="install">Install</a></h2>
-                          <p class="alert-warning alert">Enter the css file "<b>savana-0.0.1.min.css</b>" the <b>head</b> of your page, and the js file "<b>savana-0.0.1.min.js</b>" at the end of your <b>body</b></p>
+                          <h2><a name="Building-your-plugin">Building your plugin</a></h2>
+                          <p class="alert-warning alert">Enter the css file "<b>savana.min.css</b>" the <b>head</b> of your page, and the js file "<b>savana.min.js</b>" at the end of your <b>body</b></p>
                           <p class="alert-info alert">The file "<b><a href="http://daneden.me/animate" target="_blank">animate.css</a></b>" is optional!</p>
+                          <p><b>Exemple:</b> savana.helloWorld.js:</p>
+                          <figure class="highlight box-install">
+
+<pre>
+  <code class="language-html" data-lang="html">
+     
+!(function($savana, undefined) {
+
+    'use strict';
+
+    $savana.fn.helloWorld = function(params) {
+
+        var target = this; // Selector
+
+        var config = savana.extend({
+            msg: 'Hello World!'
+        }, params);
+
+        // Overall control of the form, which is called in your startup
+        // Your code here
+        // Use simple singleton
+        var controlGeneral = {
+
+            init: function(){
+                $savana(target).content("text", config.msg)
+            }
+     
+        };
+
+        controlGeneral.init();
+
+    };
+
+})($savana);
+
+  </code>
+</pre>
+                          </figure>
+
+                          <p><b>Use:</b></p>
+                          <figure class="highlight box-install">
+
+<pre>
+ <code class="language-html" data-lang="html">
+    $savana("body").helloWorld({
+       msg: "Hello new world!"
+    });
+ </code>
+</pre>
+                          </figure>
+
+                          <p><b>Files organization for use</b></p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">
+savana.helloWorld/
+│ 
+lib/
+├── css/
+│   ├── animate.min.css
+│   └── savana.min.css
+└── js/
+    ├── addEventListener-IE.min.js
+    ├── savana.helloWorld.js
+    └── savana.min.js
+</code></pre>
+</figure>
                       </article> 
 
+                      <article class="bx-install">
+                          <h2><a name="Use-simple-singleton">Use simple singleton</a></h2>
+                          <p><b>Exemple:</b></p>
+                          <figure class="highlight box-install">
+
+<pre>
+  <code class="language-html" data-lang="html">
+     
+var clienteSingleton = {
+  nome: "Joao",
+  email: "joao@mail.com",
+  getMessage: function() {
+    console.log('Nome: '+ this.nome +' Email: '+ this.email);
+  }
+};
+
+clienteSingleton.getMessage();
+
+  </code>
+</pre>
+                          </figure>
+
+                      </article> 
+
+                      <article class="bx-install">
+                          <h2><a name="Private-singleton">Use private singleton</a></h2>
+                          <p><b>Exemple:</b></p>
+                          <figure class="highlight box-install">
+
+<pre>
+  <code class="language-html" data-lang="html">
+     
+// Implementing a singleton with private attributes.
+
+var clienteSingleton = function() {
+  // Private attributes and functions area.
+
+  var atributoPrivado = 'Variavel privada';
+  function mostrarVariavel() {
+    console.log(atributoPrivado);
+  }
+
+  // Public area attributes and functions.
+  // This area can be accessed from the private area.
+
+  return {
+    funcaoPublica: function() {
+      mostrarVariavel();
+    },
+    atributoPublico: 'Variável Pública'
+  };
+};
+
+// Running Singleton.
+var cliente = clienteSingleton();
+
+// Printing 'Private Variable'
+cliente.funcaoPublica();
+
+// Printing 'Variable Public'
+console.log(cliente.atributoPublico);
+
+  </code>
+</pre>
+                          </figure>
+
+                      </article> 
+                      
+
+                 
                     </div>
                 </div>
           </div>
@@ -112,7 +252,7 @@
           </div>
         </div>
 </div>
-<!-- End Document
+<!-- &lt;ul id='list2'&gt;&lt;/ul&gt; End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <script type="text/javascript" src="savanajs/lib/js/savana.js"></script> 
 <script type="text/javascript" src="assets/javascripts/main.js"></script> 

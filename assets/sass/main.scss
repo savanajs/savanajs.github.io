@@ -58,10 +58,45 @@ p {
 
 figure {
 	margin: 0px;
+	text-overflow: clip;
+	width: 100%;
+}
+
+figure pre {
+	text-overflow: clip;
+	display: block;
+	width: 100%;
+}
+
+figure pre code {
+	width: 100%;
 }
 
 div#wrapper {
 	padding-bottom: 15px;
+}
+
+a.btn-menu-aside{
+	color: 666;
+	font-size: 14px;
+	padding: 5px 10px;
+	border: 1px solid #ccc;
+	@include border-radius(4px, 4px); 
+	display: inline-block;
+	text-align: center;
+	width: 50px;
+	font-weight: bold;
+	background: #f5f5f5;
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	z-index: 9999;
+	@include box-shadow(rgba(#333, 0.2) 0 0 5px);
+	display: none;
+}
+
+a.btn-menu-aside:hover{
+	border: 1px solid #aaa;
 }
 
 /* HEADER */
@@ -129,6 +164,8 @@ header#header ul#menu > li {
 
 #content aside ul {
 	margin-bottom: 10px;
+	display: block;
+	height: 100%;
 }
 
 #content aside ul li {
@@ -494,6 +531,24 @@ aside.three.columns.float {
 	figure > img{
        width: 100%;
 	}
+	#content aside {
+		display: none;
+	}
+	#content .container .nine.columns{
+		width: 100%;
+	}
+	aside.three.columns {
+		width: 70%;
+		position: fixed;
+		left: 0px;
+		top: 0px;
+		z-index: 9999;
+		overflow-y: auto;
+		height: 100%;
+	}
+	a.btn-menu-aside{
+       display: block;
+	}
 }
 
 /* Larger than phablet */
@@ -554,6 +609,11 @@ aside.three.columns.float {
 	#footer h1#logo-footer {
         margin: 0 auto;
 	}
+
+	#content aside {
+		display: none;
+	}
+
 
 }
 
