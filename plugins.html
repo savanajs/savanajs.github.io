@@ -87,7 +87,7 @@
                            <li><a href="#Use-simple-singleton">Use simple singleton</a></li>
                            <li><a href="#Private-singleton">Private singleton</a></li>
                            <li class="title"><strong>Plugins</strong></li>   
-                           <li><a href="#Sanava-form-validation">Sanava form validation</a></li>
+                           <li><a href="#Sanava-form-validation">Savana form validation</a></li>
                            <li><a href="#Savana-mobile-menu">Savana mobile menu</a></li>         
                        </ul>
                     </aside>
@@ -109,9 +109,9 @@
 
     'use strict';
 
-    $savana.fn.helloWorld = function(params) {
+    $savana.fn.helloworld = function(params) {
 
-        var target = this; // Selector
+        var target = this[0]; // Selector
 
         var config = savana.extend({
             msg: 'Hello World!'
@@ -121,7 +121,6 @@
         // Your code here
         // Use simple singleton
         var controlGeneral = {
-
             init: function(){
                 $savana(target).content("text", config.msg)
             }
@@ -143,7 +142,7 @@
 
 <pre>
  <code class="language-html" data-lang="html">
-    $savana("body").helloWorld({
+    $savana("body").helloworld({
        msg: "Hello new world!"
     });
  </code>
@@ -152,7 +151,7 @@
 
                           <p><b>Files organization for use</b></p>
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">
-savana.helloWorld/
+savana.helloworld/
 │ 
 lib/
 ├── css/
@@ -160,7 +159,7 @@ lib/
 │   └── savana.min.css
 └── js/
     ├── addEventListener-IE.min.js
-    ├── savana.helloWorld.js
+    ├── savana.helloworld.js
     └── savana.min.js
 </code></pre>
 </figure>
@@ -233,8 +232,167 @@ console.log(cliente.atributoPublico);
                           </figure>
 
                       </article> 
-                      
 
+                      <!-- Download -->
+                      <article class="bx-install">
+                          <h2><a name="download">Download</a></h2>
+                          <p id="bx-download-button">      
+                            <a href="https://github.com/savanajs/savanajs/archive/master.zip" class="btn-download animated bounceIn">
+                              <span class="download-button-left">
+                                Download
+                                <span>Savana.helloword.js</span>
+                              </span>
+                              <span class="download-button-right">
+                                  <i class="fa fa-cloud-download"></i>
+                              </span>
+                            </a>             
+                          </p><!-- /#bx-download-button -->
+                      </article>   
+                      
+                      <article class="bx-install">
+                          <h1>Plugins</h1>
+                          <h2><a name="Private-singleton">Savana form validation</a></h2>
+                          <p><b>Use:</b></p>
+                          <figure class="highlight box-install">
+
+<pre>
+  <code class="language-html" data-lang="html">
+     
+    $savana(window).onload(function(e){
+
+        var $formValidations = $savana("form#form-exemplo").formValidations(); // Load plugin
+            $formValidations.masks(); // Show masks
+
+            $savana("form#form-exemplo").on("submit", function(e){        
+                  var form = $formValidations.validations(); // Validations
+                  if(form.hasError){ // Case errors
+                     savana.eventStop(e); // Stop script
+                  }else{
+                     // submit ok
+                  }
+                }   
+            });
+
+    });
+
+  </code>
+</pre>
+                          </figure>
+
+                          <p><b>All params:</b></p>
+                          <figure class="highlight box-install">
+
+<pre>
+  <code class="language-html" data-lang="html">
+     
+     {
+            requeredClassName: 'ht-required',
+            validateEmailClassName: 'ht-valid-email',
+            validateCPFClassName: 'ht-valid-cpf',
+            validateLastanameClassName: 'ht-valid-name-and-lastname',
+            validateNumberClassName: 'ht-valid-number',
+            validateLetterClassName: 'ht-valid-letter',
+            maskCEPClassName: 'ht-mask-cep',
+            maskCPFClassName: 'ht-mask-cpf',
+            maskCNPJClassName: 'ht-mask-cnpj',
+            maskPhoneClassName: 'ht-mask-phone',
+            maskRGClassName: 'ht-mask-rg',
+            maskDataNascClassName: 'ht-mask-date',
+            maskNumberClassName: 'ht-mask-number',
+            maskLetterClassName: 'ht-mask-letters',
+            msgRequered: "O campo &lt;b&gt;'{&}'&lt;/b&gt; é de tipo obrigatório!",
+            msgEmailValidate: "O campo &lt;b&gt;'{&}'&lt;/b&gt; está no formato inválido!",
+            msgCPFValidate: "O campo &lt;b&gt;'{&}'&lt;/b&gt; está no formato inválido!",
+            msgNameAndLastnameValidate: "O campo &lt;b&gt;'{&}'&lt;/b&gt; está inválido, digite seu sobrenome!",
+            msgNumberValidate: "O campo &lt;b&gt;'{&}'&lt;/b&gt; está inválido, digite apenas numeros!",
+            msgLetterValidate: "O campo &lt;b&gt;'{&}'&lt;/b&gt; está inválido, digite apenas letras!",
+            msgForUserOfInputRequered: "&lt;p&gt;&lt;span&gt;*&lt;/span&gt; Campos obrigatórios!&lt;/p&gt;",
+            placeholderMaskCEP: "Ex: 99999-999",
+            placeholderMaskNumber: "Ex: 99999...",
+            placeholderMaskDate: "Ex: 31/12/1980",
+            placeholderMaskCPF: "Ex: 999.999.999-99",
+            placeholderMaskCNPJ: "Ex: 99.999.999/9999-99",
+            placeholderMaskRG: "Ex: 99.999.999-9",
+            placeholderMaskPhone: "Ex: (11) 9999-99999"
+        };
+
+  </code>
+</pre>
+                          </figure>
+
+<p>
+  <b>HTML:</b><br />
+  Enter the attribute is the label to identify the field in the error message <br />
+  Use the classes for validation and masks <br /><br />
+  <h5>Classes</h5>
+  <b>ht-required:</b> Required field<br />
+  <b>ht-valid-email:</b> Email validation<br />
+  <b>ht-valid-cpf:</b> CPF validation<br />
+  <b>ht-valid-name-and-lastname:</b> Name validation and surname<br />
+  <b>ht-valid-letter:</b> Validation letters<br />
+  <b>ht-valid-number:</b> Validation numbers<br />
+  <b>ht-mask-cep:</b> CEP mask<br />
+  <b>ht-mask-cpf:</b> CPF mask<br />
+  <b>ht-mask-cnpj:</b> CNPJ mask<br />
+  <b>ht-mask-phone:</b> Phone mask<br />
+  <b>ht-mask-rg:</b> RG mask<br />
+  <b>ht-mask-date:</b> Date mask<br />
+  <b>ht-mask-number:</b> Number mask<br />
+  <b>ht-mask-letters:</b> Letters mask<br />
+</p>
+                           <figure class="highlight box-install">
+
+<pre>
+  <code class="language-html" data-lang="html">   
+&lt;form id="form-exemplo" action="Script_do_Formulario.php" method="post"&gt;
+&lt;!-- DADOS PESSOAIS--&gt;
+&lt;fieldset&gt;
+ &lt;legend&gt;Dados Pessoais&lt;/legend&gt;
+ &lt;table cellspacing="10"&gt;
+  &lt;tr&gt;
+   &lt;td&gt;
+    &lt;label <b>for="email"</b>&gt;Email: &lt;/label&gt;
+   &lt;/td&gt;
+   &lt;td align="left"&gt;
+    &lt;input type="text" <b>name="email"</b> id="email" class=""&gt;
+   &lt;/td&gt;
+   &lt;td&gt;
+    &lt;label <b>for="nome"</b>&gt;Nome: &lt;/label&gt;
+   &lt;/td&gt;
+   &lt;td align="left"&gt;
+    &lt;input type="text" <b>name="nome"</b> id="nome" <b>class="ht-required ht-valid-name-and-lastname 
+    ht-valid-letter ht-mask-letters"</b>&gt;
+   &lt;/td&gt;
+  &lt;/tr&gt;
+ &lt;/table&gt;
+&lt;/fieldset&gt;
+&lt;br /&gt;
+&lt;input type="submit"&gt;
+&lt;input type="reset" value="Limpar"&gt;
+&lt;/form&gt;
+
+  </code>
+</pre>
+                          </figure>
+
+                      </article> 
+
+                      <!-- Download -->
+                      <article class="bx-install">
+                          <h2><a name="download">Download</a></h2>
+                          <p id="bx-download-button">      
+                            <a href="https://github.com/savanajs/savanajs/archive/master.zip" class="btn-download animated bounceIn">
+                              <span class="download-button-left">
+                                Download
+                                <span>Savana.form.validations.js 0.0.1</span>
+                              </span>
+                              <span class="download-button-right">
+                                  <i class="fa fa-cloud-download"></i>
+                              </span>
+                            </a>             
+                          </p><!-- /#bx-download-button -->
+                      </article>   
+                      
                  
                     </div>
                 </div>
