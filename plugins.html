@@ -49,7 +49,7 @@
                          <ul id="menu">
                              <li><a title="Documentation" alt="Documentation" class="btn-body-fade" href="/docs">Documentation</a></li>
                              <li><a class="btn-body-fade" href="/plugins">Plugins</a></li>
-                             <li><a alt="You also collaborate in this project" title="You also collaborate in this project" class="btn-body-fade btn-github-top" target="_blank" href="https://github.com/savanajs/savanajs"><i class="fa fa-github"></i> GitHub</a></li>
+                             <li><a alt="You also collaborate in this project" title="You also collaborate in this project" class="btn-github-top" target="_blank" href="https://github.com/savanajs/savanajs"><i class="fa fa-github"></i> GitHub</a></li>
                          </ul>
                       </nav>
                     </div>
@@ -86,8 +86,9 @@
                            <li><a href="#Building-your-plugin">Building your plugin</a></li>
                            <li><a href="#Use-simple-singleton">Use simple singleton</a></li>
                            <li><a href="#Private-singleton">Private singleton</a></li>
+                           <li><a href="#Savana-Object-Create">Savana Object Create</a></li>
                            <li class="title"><strong>Plugins</strong></li>   
-                           <li><a href="#Sanava-form-validation">Savana form validation</a></li>
+                           <li><a href="#Savana-form-validation">Savana form validation</a></li>
                            <li><a href="#Savana-mobile-menu">Savana mobile menu</a></li>         
                        </ul>
                     </aside>
@@ -233,11 +234,71 @@ console.log(cliente.atributoPublico);
 
                       </article> 
 
+                      <article class="bx-install">
+                          <h2><a target="_blank" href="/savanajs/exemples/OO/index.html" name="Savana-Object-Create">Savana Object Create</a></h2>
+                          <p>Savana Create Object oriented paradigm simulates the classic objects in javascript</p>
+                          <p><b>Exemple:</b></p>
+                          <figure class="highlight box-install">
+
+<pre>
+  <code class="language-html" data-lang="html">
+     
+       var Mamifero = $SavanaObj.Create(function(){
+
+              this.olhos = "Preto"; // this -> public
+              this.pelo = "castalho"; // this -> public
+
+              this._init(function(){ // Initialization
+             
+              });
+
+              this.andar = function(){ // Method public
+                alert("andando")
+              }
+
+              this.falar = function(){ // Method public
+                alert("falando")
+              }
+
+       });
+
+       var Pessoa = $SavanaObj.Create(function(){
+
+              this.name = "Rafael"; // this -> public
+              this.idade = "30";    
+              var _senha = 12345678 // private with(_variable)
+
+              this._init(function(){ // Constructor
+                _methodPrivate();
+              });
+
+              this.methodPublic = function(){ // Method public
+                alert("methodPublic")
+              }
+
+              function _methodPrivate(){ // Method private with(_fun)
+                alert("methodPrivate")
+              }
+
+        }, Mamifero); // Extend
+
+        console.log(Mamifero)
+        console.log(Pessoa)
+        Pessoa.methodPublic();
+        Pessoa.andar();
+
+  </code>
+</pre>
+                          </figure>
+
+                      </article> 
+
                       <!-- Download -->
                       <article class="bx-install">
                           <h2><a name="download">Download</a></h2>
+                          <p>Sample framework for building plugins to SavanaJS</p>
                           <p id="bx-download-button">      
-                            <a href="https://github.com/savanajs/savanajs/archive/master.zip" class="btn-download animated bounceIn">
+                            <a href="https://github.com/savanajs/savana.helloworld/archive/master.zip" class="btn-download animated bounceIn">
                               <span class="download-button-left">
                                 Download
                                 <span>Savana.helloword.js</span>
@@ -251,7 +312,8 @@ console.log(cliente.atributoPublico);
                       
                       <article class="bx-install">
                           <h1>Plugins</h1>
-                          <h2><a name="Private-singleton">Savana form validation</a></h2>
+                          <h2><a name="Savana-form-validation">Savana form validation</a></h2>
+                          <p>Simple forms of validation and mask field pattern</p>
                           <p><b>Use:</b></p>
                           <figure class="highlight box-install">
 
@@ -380,8 +442,9 @@ console.log(cliente.atributoPublico);
                       <!-- Download -->
                       <article class="bx-install">
                           <h2><a name="download">Download</a></h2>
+                          <p>Simple forms of validation and mask field pattern</p>
                           <p id="bx-download-button">      
-                            <a href="https://github.com/savanajs/savanajs/archive/master.zip" class="btn-download animated bounceIn">
+                            <a href="https://github.com/savanajs/savana.form.validation/archive/master.zip" class="btn-download animated bounceIn">
                               <span class="download-button-left">
                                 Download
                                 <span>Savana.form.validations.js 0.0.1</span>

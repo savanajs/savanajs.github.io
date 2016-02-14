@@ -3,6 +3,7 @@ var SavanaJS = {
 	selectorMenuMobile: "#bx-menu",
 	selectorBtnMenuMobileAside: "a.btn-menu-aside",
 	selectorMenuMobileAside: "aside.three.columns",
+	selectorNameMethod: "#content aside + .columns h2",
 	init: function() {
 		var _self = this;
 		_self.initLoaderPader();
@@ -12,6 +13,14 @@ var SavanaJS = {
 		_self.controlBtnBodyFadeOut(_self);
 		_self.docClicked();
 		_self.docColumn();
+		_self.insertLabelOfExemplo(_self);
+	},
+	insertLabelOfExemplo: function(_self){
+        $savana(_self.selectorNameMethod).each(function(){
+        	var $this = $savana(this);
+        	if($this.child("a").attr('href'))
+        	   $this.push("<span> < See the exemple of method</span>","afer");
+        });
 	},
 	initLoaderPader: function() {
 		savana.loadPreloader();

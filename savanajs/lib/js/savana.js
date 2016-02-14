@@ -67,9 +67,10 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  * 1.32 - isSelected .................................. Verifica se um elemento checkbox ou radio esta selecionado
  * 1.33 - size ........................................ Returns the size in width and height of an element
  * 1.34 - position .................................... Returns the X and Y of an element
- * 1.35 - isEmpty ..................................... Verify that the contents of an element is empty
- * 1.36 - delegate .................................... Call events dynamics. (click, hover, change, keyup, etc)
- * 1.37 - scroll ...................................... Event in scrolling of browser (window)
+ * 1.35 - countDown ................................... Returns a countdown
+ * 1.36 - isEmpty ..................................... Verify that the contents of an element is empty
+ * 1.37 - delegate .................................... Call events dynamics. (click, hover, change, keyup, etc)
+ * 1.38 - scroll ...................................... Event in scrolling of browser (window)
  
  * 2 ---- HELPERS - savana.fn();
  *
@@ -307,20 +308,14 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
     };
 
-    // ObjectJS - $ObjectJS.Class(fn, extent);
+    // ObjectJS - $SavanaObj.Class(fn, extent);
     // Create objects in script in a simpler form
     // ..........................................................
-
-    var ObjectJS = function() {
-
-      // Private attributes and functions area.
-      // Public area attributes and functions.
-      // This area can be accessed from the private area.
 
       // Exemple use:
 
       /*
-      var Mamifero = $ObjectJS.Class(function(){
+      var Mamifero = $SavanaObj.Create(function(){
 
               this.olhos = "Preto"; // this -> public
               this.pelo = "castalho"; // this -> public
@@ -339,7 +334,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
        });
 
-       var Pessoa = $ObjectJS.Class(function(){
+       var Pessoa = $SavanaObj.Create(function(){
 
               this.name = "Rafael"; // this -> public
               this.idade = "30";    
@@ -364,10 +359,16 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         Pessoa.methodPublic();
         Pessoa.andar();
 
-      */
+    */
+
+    var ObjectJS = function() {
+
+      // Private attributes and functions area.
+      // Public area attributes and functions.
+      // This area can be accessed from the private area.
 
       return {
-        Class: function(fn, ext) {
+        Create: function(fn, ext) {
             var obj = {
                 _init: function(fn){
                     fn();
@@ -450,6 +451,9 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                     fn(event);
                 },0);
               }
+
+              return null;
+
         },
 
         // Onload - $savana(document).done(function(event){});
@@ -461,13 +465,14 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         // });
 
         onload: function(fn) {
-            window.onload = function(events) {
+            this[0].onload = function(events) {
                 fn(events);
             };
+            return null;
         },
 
         // Scroll - $savana(window).scroll(function(event){});
-        // Initiator Framework after the onload window
+        // Page scroll event
         // --------------------------------------------------
         // Example of use:
         // $savana(window).scroll(function(e){
@@ -475,7 +480,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         // });
 
         scroll: function(fn) {
-            window.onscroll = function(events) {
+            this[0].onscroll = function(events) {
                 fn(events); 
             };
         },
@@ -536,6 +541,8 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                         }
                     }
                 });
+
+            return false;
 
         },
 
@@ -1228,6 +1235,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
             var width = this[0].offsetWidth;
             var height = this[0].offsetHeight;
+
             return {
                 w: width,
                 h: height
@@ -1257,6 +1265,104 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 x: xPosition,
                 y: yPosition
             };
+
+        },
+
+        // countDown - $savana(selector).countDown()
+        // -----------------------------------------------
+        // You need a value at least.
+        // Example of use:
+        // $savana(selector).countDown('DD/MM/YY', 'HH:MM:SS'); - It can be used "today" at the first parameter.
+
+        countDown: function(date, hours) {
+
+            var clock = this[0];
+            var endtime = time = yearval = monthval = dayval = hoursval = minutesval = secondsval = null;
+
+                endtime = new Date();
+
+                if(date) {
+                    if(date != 'today') {
+                        date = date.split('/');
+
+                        dayval = date[0];
+                        monthval = date[1] - 1;
+                        yearval = date[2];
+                    } else {
+                        dayval = endtime.getDate();
+                        monthval = endtime.getMonth();
+                        yearval = endtime.getFullYear();
+                        if(!hours) {
+                            dayval = endtime.getDate() + 1;
+                            hours = '00:00';
+                        }
+                    }
+                }
+
+                if(hours) {
+                    hours = hours.split(':');
+
+                    hoursval = parseInt(hours[0]) || null;
+                    minutesval = parseInt(hours[1]) || null;
+                    secondsval = parseInt(hours[2]) || null;
+                }
+
+                if(date && hours) {
+                    endtime.setDate(dayval);
+                    endtime.setMonth(monthval);
+                    endtime.setYear(yearval);
+                    endtime.setHours(hoursval);
+                    endtime.setMinutes(minutesval);
+                    endtime.setSeconds(secondsval);
+                } else {
+                    if(date) {
+                        endtime.setDate(dayval);
+                        endtime.setMonth(monthval);
+                        endtime.setYear(yearval);
+                    } else {
+                        if(hours) {
+                            endtime.setHours(endtime.getHours() + hoursval);
+                            endtime.setMinutes(endtime.getMinutes() + minutesval);
+                            endtime.setSeconds(endtime.getSeconds() + secondsval);
+                        } else {
+                            console.error('You do not put parameters for the countdown!');
+                        }
+                    }
+                }
+
+                if(date || hours) {
+                    if(new Date(yearval, monthval, dayval, hoursval, minutesval, secondsval) < new Date()) {
+                        console.info('The date is less than the current date.');
+                    }
+                }
+
+                time = Date.parse(endtime) - Date.parse(new Date());
+
+            if(time > 0) clock.style.display = 'block';
+
+            var timeinterval = setInterval(function() {
+                
+                    time = Date.parse(endtime) - Date.parse(new Date());
+                var days = Math.floor(time / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((time / (1000 * 60 * 60)) % 24);
+                var minutes = Math.floor((time / 1000 / 60) % 60);
+                var seconds = Math.floor((time / 1000) % 60);
+
+                if(time < 0) {
+                    clock.style.display = 'none';
+                    clearInterval(timeinterval);
+                } else {
+                    if(days < 10) days = '0' + days;
+                    if(hours < 10) hours = '0' + hours;
+                    if(minutes < 10) minutes = '0' + minutes;
+                    if(seconds < 10) seconds = '0' + seconds;
+                }
+
+                clock.innerHTML = '<div class="js-days"><span class="js-number js-number-days">' + days + '</span><span class="js-label js-label-days">Days</span></div><span class="js-divider js-divider-first">:</span><div class="js-hours"><span class="js-number js-number-hours">' + hours + '</span><span class="js-label js-label-hours">Hours</span></div><span class="js-divider js-divider-second">:</span><div class="js-minutes"><span class="js-number js-number-minutes">' + minutes + '</span><span class="js-label js-label-minutes">Minutes</span></div><span class="js-divider js-divider-third">:</span><div class="js-seconds"><span class="js-number js-number-seconds">' + seconds + '</span><span class="js-label js-label-seconds">Seconds</span></div>';
+
+            }, 1000);
+
+            return null;
 
         },
 
@@ -1400,7 +1506,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             return parser.parseFromString(str, "text/xml");
         },
 
-        // Async - savana.ajax(configs)
+        // Async - savana.async(configs)
 
         /*
             Asynchronous makes access to other files with promise. (Does not work in earlier versions of IE9)
@@ -1537,12 +1643,26 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         // savana.today("time"); => 22:11:10
 
         today: function(type) {
+
             var date = new Date();
+            
             if(type == "date"){
                 return date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear();
             }else if(type == "time"){
-                return date.getHours() + ":" + date.getMinutes() + ":" + date.getHours();
+
+                var hours = date.getHours();
+                if(hours < 10) hours = '0' + hours;
+
+                var minutes = date.getMinutes();
+                if(minutes < 10) minutes = '0' + minutes;
+
+                var seconds = date.getSeconds();
+                if(seconds < 10) seconds = '0' + seconds;
+
+                return hours + ":" + minutes + ":" + seconds;
+
             }
+            
         },
       
         // URL Current - savana.urlCurrent();  
@@ -3057,7 +3177,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         window.savana = savana;
     }
 
-    if(!window.$ObjectJS)
-        window.$ObjectJS = ObjectJS();
+    if(!window.$SavanaObj)
+        window.$SavanaObj = ObjectJS();
 
 })();

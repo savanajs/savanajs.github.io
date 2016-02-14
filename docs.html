@@ -49,7 +49,7 @@
                          <ul id="menu">
                              <li><a title="Documentation" alt="Documentation" class="btn-body-fade" href="/docs">Documentation</a></li>
                              <li><a class="btn-body-fade" href="/plugins">Plugins</a></li>
-                             <li><a alt="You also collaborate in this project" title="You also collaborate in this project" class="btn-body-fade btn-github-top" target="_blank" href="https://github.com/savanajs/savanajs"><i class="fa fa-github"></i> GitHub</a></li>
+                             <li><a alt="You also collaborate in this project" title="You also collaborate in this project" class="btn-github-top" target="_blank" href="https://github.com/savanajs/savanajs"><i class="fa fa-github"></i> GitHub</a></li>
                          </ul>
                       </nav>
                     </div>
@@ -89,6 +89,7 @@
                            <li class="title"><strong>DOM - $savana(selector).</strong></li>
                            <li><a href="#Done">done()</a></li>
                            <li><a href="#OnLoad">onLoad()</a></li>
+                           <li><a href="#Scroll">scroll()</a></li>
                            <li><a href="#On">on()</a></li>
                            <li><a href="#delegate">delegate()</a></li>
                            <li><a href="#Content">content()</a></li>
@@ -132,6 +133,7 @@
                            <li><a href="#toJSON">toJSON()</a></li>
                            <li><a href="#toXML">toXML()</a></li>
                            <li><a href="#Async">Async()</a></li>
+                           <li><a href="#Ajax">Ajax()</a></li>
                            <li><a href="#URL">URL()</a></li>
                            <li><a href="#now">now()</a></li>
                            <li><a href="#today">today()</a></li>
@@ -180,7 +182,9 @@
                            <li><a href="#cOpenModal">commandOpenModal()</a></li>
                            <li><a href="#modalOpen">modalOpen()</a></li>
                            <li><a href="#elementExist">ElementExist()</a></li>
-                           
+                           <li><a href="#whatDevice">whatDevice()</a></li>
+                           <li><a href="#whatBrowser">whatBrowser()</a></li>
+
                            <!--<li><a href="#returnTo">returnTo()</a></li>-->
                            <li class="title"><strong>Client-Side</strong></li>
                            <li><a href="#item">Item</a></li>
@@ -328,6 +332,24 @@ $savana(window).onload(function(e){
 </pre>
 </figure>
                       </article>     
+
+                      <!-- Scroll -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/DOM/scroll.html" name="Scroll">
+                            Scroll(callback)</a></h2>
+                          <p>Page scroll event</p>
+
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+$savana(window).scroll(function(e){
+  Your code here ...   
+});
+</code>
+</pre>
+</figure>
+                      </article>    
 
                        <!-- On -->
                       <article class="bx-install">  
@@ -1087,6 +1109,38 @@ promise.then(function(string){
 </pre>
 </figure>
 
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- Ajax -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/ajax.html" name="Ajax">Ajax(configs)</a></h2>
+                          <p>Asynchronous makes access to other </p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+   var headers = [{'Content-type':'application/x-www-form-urlencoded'}]; // Not required
+                var data = "name=Rafael&age=27"; // Not required
+                var success, error;
+                var config = 
+                {
+                  'url': '../data/test.php', // Access path
+                  'method':'POST', // Method of shipment (POST, GET, DELETE ...)
+                  'headers': headers, // Headers information
+                  'data': data, // Parameters shipping
+                  'type': 'string' // Response type - (json, xml, string)
+                }
+
+                savana.ajax(config, function(r){
+                    console.log(r)
+                }, function(){
+                    console.log(e)
+                });
+</code>
+</pre>
+</figure>
 
 <!-- &lt;!DOCTYPE html&gt; -->
                       </article>
@@ -2001,6 +2055,43 @@ savana.modalOpen(modalTeste2);
 <pre>
 <code class="language-bash" data-lang="bash">
  if(savana.elementExist('div.test')) { // true } else { // false }
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+
+                      <!-- whatDevice -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/whatDevice.html" name="whatDevice">
+                            WhatDevice()</a>
+                          </h2>
+                          <p>Show o device of user</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+ savana.whatDevice(); // desktop, tablet, device
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- whatBrowser -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/whatBrowser.html" name="whatBrowser">
+                           WhatBrowser()</a>
+                          </h2>
+                          <p>Verifiy what is the browser</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+ savana.whatBrowser(); // IE12, IE11, IE10, IE9, IE8, IE7, Chrome, Firefox, Safari and Opera
 </code>
 </pre>
 </figure>
