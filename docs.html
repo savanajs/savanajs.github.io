@@ -127,6 +127,7 @@
                            <li><a href="#clearForm">clearForm()</a></li>
                            
                            <li class="title"><strong>Helpers - savana.</strong></li>
+                           <li><a href="#config">config()</a></li>
                            <li><a href="#removeAllSpace">removeAllSpace()</a></li>
                            <li><a href="#getNumberOfString">getNumberOfString()</a></li>
                            <li><a href="#debug">debug()</a></li>
@@ -186,10 +187,19 @@
                            <li><a href="#whatBrowser">whatBrowser()</a></li>
 
                            <!--<li><a href="#returnTo">returnTo()</a></li>-->
-                           <li class="title"><strong>Client-Side</strong></li>
-                           <li><a href="#item">Item</a></li>
-                           <li><a href="#item">Item</a></li>
-                           <li><a href="#item">Item</a></li>
+                           <li class="title"><strong>Client-Side - savana.</strong></li>
+                           <li><a href="#item"><b>Model()</b></a></li>
+                           <li><a href="#item">modelOrderBy()</a></li>
+                           <li><a href="#item">modelInsert()</a></li>
+                           <li><a href="#item">modelDelete()</a></li>
+                           <li><a href="#item">modelUpdate()</a></li>
+                           <li><a href="#item">modelSearch()</a></li>
+                           <li><a href="#item"><b>View()</b></a></li>
+                           <li><a href="#item">render()</a></li>
+                           <li><a href="#item">output()</a></li>
+                           <li><a href="#item">setValuesInForm(()</a></li>
+                           <li><a href="#item"><b>Router()</b></a></li>
+                           <li><a href="#item">loadRouter()</a></li>
                        </ul>
                     </aside>
                     <div class="nine columns">
@@ -234,6 +244,8 @@
   <span class="nt">&lt;/html&gt;</span></code>
 </pre>
                           </figure>
+
+                          <p class="alert-warning alert">The file "<b>addEventListener-IE.min.js</b>" It will only be used in older versions of IE.</b></p>
 
                           <p><b>Files organization for use</b></p>
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash">
@@ -302,7 +314,7 @@ lib/
                       <!-- Done -->
                       <article class="bx-install">
                           <h2><a target="_blank" href="/savanajs/exemples/DOM/document-done.html" name="Done">Done(callback)</a></h2>
-                          <p>Initiator framework</p>
+                          <p>Initiator standard framework</p>
 
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -337,7 +349,7 @@ $savana(window).onload(function(e){
                       <article class="bx-install">  
                           <h2><a target="_blank" href="/savanajs/exemples/DOM/scroll.html" name="Scroll">
                             Scroll(callback)</a></h2>
-                          <p>Page scroll event</p>
+                          <p>Initiator Framework after page scroll</p>
 
 <p><b>Example of use</b></p>
 <figure class="highlight">
@@ -433,7 +445,7 @@ $savana("ul li").each(function(e){
 <figure class="highlight">
 <pre>
 <code class="language-bash" data-lang="bash">
-$savana('ul li').push('&lt;li&gt;Nova LI&lt;/li&gt;','after');
+$savana('ul').push('&lt;li&gt;Nova LI&lt;/li&gt;','after');
 </code>
 </pre>
 </figure>
@@ -952,6 +964,24 @@ $savana(selector).isEmpty("html");
                       </hgroup>
                       <p>Helpers are ready methods to simplify the development of web applications. Some useful helpers that we can find are cookie managers, text limiters, capture parameters in the URL, email validation, custom alert box, modal, loader etc.</p>
 
+                      <!-- config -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/config.html" name="config">Config(configs)</a></h2>
+                          <p>Config default of framework</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.config({
+   debug: false, // Does not show the debug
+   alert: false, // Does not show the alert
+});
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
                       <!-- removeAllSpace -->
                       <article class="bx-install">  
                           <h2><a target="_blank" href="/savanajs/exemples/HELPERS/removeAllSpaces.html" name="removeAllSpace">RemoveAllSpace(str)</a></h2>
@@ -1133,10 +1163,10 @@ promise.then(function(string){
                   'type': 'string' // Response type - (json, xml, string)
                 }
 
-                savana.ajax(config, function(r){
-                    console.log(r)
-                }, function(){
-                    console.log(e)
+                savana.ajax(config, function(res){
+                    console.log(res)
+                }, function(error){
+                    console.log(error)
                 });
 </code>
 </pre>
@@ -1249,7 +1279,7 @@ savana.redirect("http://www.meusite.com.br");
 <figure class="highlight">
 <pre>
 <code class="language-bash" data-lang="bash">
-Exemple of a url current: www.site.com/viex/edit
+Exemple of a url current: www.site.com/view/edit
 savana.params(); 
 // ['view','edit'];
 </code>
@@ -1584,7 +1614,7 @@ savana.getCookie("savana");
                           <h2><a target="_blank" href="/savanajs/exemples/HELPERS/deleteCookie.html" name="deleteCookie">
                             DeleteCookie(name)</a>
                           </h2>
-                          <p>Take the value of the cookie in the browser</p>
+                          <p>Delete the cookie in the browser</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
 <pre>
@@ -1621,7 +1651,7 @@ savana.percent("R$ 100,00","R$ 50,00", "R$");
                           <h2><a target="_blank" href="/savanajs/exemples/HELPERS/discountPercent.html" name="discountPercent">
                             DiscountPercent(percent, value, symbol)</a>
                           </h2>
-                          <p>Returns the percentage of a discount</p>
+                          <p>Returns a discount amount or adding a set value</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
 <pre>
@@ -1669,7 +1699,7 @@ savana.limitLetter("Hello word", 0, 7);
                           <h2><a target="_blank" href="/savanajs/exemples/HELPERS/limitWord.html" name="limitWord">
                             LimitWord(str, max_qtd_words)</a>
                           </h2>
-                          <p>Limit letters in a string</p>
+                          <p>Limit works in a string</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
 <pre>
@@ -1688,7 +1718,7 @@ savana.limitWord("Hello word today", 2);
                           <h2><a target="_blank" href="/savanajs/exemples/HELPERS/strUpper.html" name="strUpper">
                             StrUpper(str)</a>
                           </h2>
-                          <p>Limit letters in a string</p>
+                          <p>String conversion to uppercase</p>
 <p><b>Example of use</b></p>
 <figure class="highlight">
 <pre>
@@ -1876,7 +1906,7 @@ savana.confirm("Do you want close", function(resp){
                       <!-- Extend -->
                       <article class="bx-install">  
                           <h2>
-                            <a name="extend">Extent(obj, props)</a>
+                            <a name="extend">Extend(obj, props)</a>
                           </h2>
                           <p>Is the object inherit characteristics from another object</p>
 <p><b>Example of use</b></p>
