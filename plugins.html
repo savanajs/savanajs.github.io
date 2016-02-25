@@ -88,8 +88,9 @@
                            <li><a href="#Private-singleton">Private singleton</a></li>
                            <li><a href="#Savana-Object-Create">Savana Object Create</a></li>
                            <li class="title"><strong>Plugins</strong></li>   
-                           <li><a href="#Savana-form-validation">Savana form validation</a></li>
-                           <li><a href="#Savana-mobile-menu">Savana mobile menu</a></li>         
+                           <li><a href="#Savana-form-validation">Savana Form Validation</a></li>
+                           <li><a href="#Savana-mobile-menu">Savana Mobile Menu</a></li>
+                           <li><a href="#Savana-regressive-counter">Savana Regressive Counter</a></li>        
                        </ul>
                     </aside>
                     <div class="nine columns">
@@ -318,8 +319,8 @@ console.log(cliente.atributoPublico);
                       
                       <article class="bx-install">
                           <h1>Plugins</h1>
-                          <h2><a name="Savana-form-validation">Savana form validation</a></h2>
-                          <p>Simple forms of validation and mask field pattern</p>
+                          <h2><a name="Savana-form-validation">Savana Form Validation</a></h2>
+                          <p>Contribute to this project on <a href="#">github</a></p>
                           <p><b>Use:</b></p>
                           <figure class="highlight box-install">
 
@@ -448,7 +449,7 @@ console.log(cliente.atributoPublico);
                       <!-- Download -->
                       <article class="bx-install">
                           <h2><a name="download">Download</a></h2>
-                          <p>Simple forms of validation and mask field pattern</p>
+                          <p>Contribute to this project on <a href="#">github</a></p>
                           <p id="bx-download-button">      
                             <a href="https://github.com/savanajs/savana.form.validation/archive/master.zip" class="btn-download animated bounceIn">
                               <span class="download-button-left">
@@ -461,6 +462,217 @@ console.log(cliente.atributoPublico);
                             </a>             
                           </p><!-- /#bx-download-button -->
                       </article>   
+
+                      <!-- Download -->
+                       <article class="bx-install">
+                          <h2><a target="_blank" name="Savana-mobile-menu">Savana Mobile Menu</a></h2>
+                          <p>Simples contador regressivo para seu website</p>
+                          <p><b>Use:</b></p>
+                          <figure class="highlight box-install">
+
+<pre>
+  <code class="language-html" data-lang="html">
+     
+    $savana(document).done(function(e){
+
+        $savana("body").mobilemenu({
+           classMenu: 'ul.menu-mobile-nivel-1', // Hide in Mobile
+           classMenuNivel1: 'ul.menu-mobile-nivel-1', // Identifier main menu
+           classMenuNivel2: 'ul.menu-mobile-nivel-2' // Primary identifier of the sub menu
+        });
+        
+    });
+
+  </code>
+</pre>
+
+
+                          </figure>
+
+                          <p><b>All params:</b></p>
+                          <figure class="highlight box-install">
+
+<pre>
+  <code class="language-html" data-lang="html">
+     
+      {
+            classMenu: 'ul.menu-mobile-nivel-1', // Hide in Mobile
+            titleDefault: "Menu princiapal", // title defaulf of menu
+            classBtnMenuMobile: "a.sjs-btn-menu", // Class menu button
+            insertBtnMenuMobileAfter: "body", // Insert menu button after....
+            classMenuNivel1: 'ul.menu-mobile-nivel-1', // Identifier main menu
+            classMenuNivel2: 'ul.menu-mobile-nivel-2', // Primary identifier of the sub menu
+            classAside: '.make-all-aside', // General container side of categories...
+            classAsideNavs: '.make-nav', // Container side of categories
+            classAsideFilter: '.make-filter', // Container side of filter
+            classMegamenu: 'div.megamenu', // Class of megamenu
+            classBackMenu: 'p.sjs-menu-back > a', // Class back button menu
+            asideFloat: true, // Leave overall container fixed categories
+        }
+
+  </code>
+</pre>
+
+
+                          </figure>
+
+                          <p><b>Exemple HTML</b></p>
+                          <figure class="highlight box-install">
+
+<pre>
+  <code class="language-html" data-lang="html">
+     
+      &lt;nav&gt;
+          &lt;div class="container"&gt;
+            &lt;div class="row"&gt;
+              &lt;ul class="menu-mobile-nivel-1 sjs-main-menu"&gt;
+                  &lt;li&gt;
+                    &lt;a href="#menu1"&gt;Menu 1&lt;/a&gt;
+                    &lt;div class="megamenu"&gt;
+                       &lt;ul class="menu-mobile-nivel-2"&gt;
+                            &lt;li&gt;
+                              &lt;h2&gt;&lt;a href="#item2"&gt;Sub-item1&lt;/a&gt;&lt;/h2&gt;
+                              &lt;ul class="menu-mobile-nivel-3"&gt;
+                                  &lt;li&gt;&lt;a href="#item2"&gt;Sub-item1 Item 1&lt;/a&gt;&lt;/li&gt;
+                                  &lt;li&gt;&lt;a href="#item3"&gt;Sub-item1 Item 2&lt;/a&gt;&lt;/li&gt;
+                                  &lt;li&gt;&lt;a href="#item4"&gt;Sub-item1 Item 3&lt;/a&gt;&lt;/li&gt;
+                                  &lt;li&gt;&lt;a href="#item5"&gt;Sub-item1 Item 4&lt;/a&gt;&lt;/li&gt;
+                                  &lt;li&gt;&lt;a href="#item6"&gt;Sub-item1 Item 5&lt;/a&gt;&lt;/li&gt;
+                                  &lt;li&gt;&lt;a href="#item7"&gt;Sub-item1 Item 6&lt;/a&gt;&lt;/li&gt;
+                             &lt;/ul&gt;
+                            &lt;/li&gt;
+                             &lt;li&gt;
+                              &lt;h2&gt;&lt;a href="#item2"&gt;Sub-item2&lt;/a&gt;&lt;/h2&gt;
+                              &lt;ul class="menu-mobile-nivel-3"&gt;
+                                  &lt;li&gt;&lt;a href="#item2"&gt;Sub-item2 Item 1&lt;/a&gt;&lt;/li&gt;
+                                  &lt;li&gt;&lt;a href="#item3"&gt;Sub-item2 Item 2&lt;/a&gt;&lt;/li&gt;
+                                  &lt;li&gt;&lt;a href="#item4"&gt;Sub-item2 Item 3&lt;/a&gt;&lt;/li&gt;
+                                  &lt;li&gt;&lt;a href="#item5"&gt;Sub-item2 Item 4&lt;/a&gt;&lt;/li&gt;
+                                  &lt;li&gt;&lt;a href="#item6"&gt;Sub-item2 Item 5&lt;/a&gt;&lt;/li&gt;
+                                  &lt;li&gt;&lt;a href="#item7"&gt;Sub-item2 Item 6&lt;/a&gt;&lt;/li&gt;
+                             &lt;/ul&gt;
+                            &lt;/li&gt;
+                             &lt;li&gt;
+                              &lt;h2&gt;&lt;a href="#item2"&gt;Sub-item3&lt;/a&gt;&lt;/h2&gt;
+                              &lt;ul class="menu-mobile-nivel-3"&gt;
+                                  &lt;li&gt;&lt;a href="#item2"&gt;Sub-item3 Item 1&lt;/a&gt;&lt;/li&gt;
+                                  &lt;li&gt;&lt;a href="#item3"&gt;Sub-item3 Item 2&lt;/a&gt;&lt;/li&gt;
+                                  &lt;li&gt;&lt;a href="#item4"&gt;Sub-item3 Item 3&lt;/a&gt;&lt;/li&gt;
+                                  &lt;li&gt;&lt;a href="#item5"&gt;Sub-item3 Item 4&lt;/a&gt;&lt;/li&gt;
+                                  &lt;li&gt;&lt;a href="#item6"&gt;Sub-item3 Item 5&lt;/a&gt;&lt;/li&gt;
+                                  &lt;li&gt;&lt;a href="#item7"&gt;Sub-item3 Item 6&lt;/a&gt;&lt;/li&gt;
+                             &lt;/ul&gt;
+                            &lt;/li&gt;
+                             &lt;li&gt;
+                              &lt;h2&gt;&lt;a href="#item2"&gt;Sub-item4&lt;/a&gt;&lt;/h2&gt;
+                              &lt;ul class="menu-mobile-nivel-3"&gt;
+                                  &lt;li&gt;&lt;a href="#item2"&gt;Sub-item3 Item 1&lt;/a&gt;&lt;/li&gt;
+                                  &lt;li&gt;&lt;a href="#item3"&gt;Sub-item3Item 2&lt;/a&gt;&lt;/li&gt;
+                                  &lt;li&gt;&lt;a href="#item4"&gt;Sub-item3 Item 3&lt;/a&gt;&lt;/li&gt;
+                                  &lt;li&gt;&lt;a href="#item5"&gt;Sub-item3 Item 4&lt;/a&gt;&lt;/li&gt;
+                                  &lt;li&gt;&lt;a href="#item6"&gt;Sub-item3 Item 5&lt;/a&gt;&lt;/li&gt;
+                                  &lt;li&gt;&lt;a href="#item7"&gt;Sub-item3 Item 6&lt;/a&gt;&lt;/li&gt;
+                             &lt;/ul&gt;
+                            &lt;/li&gt;
+                             &lt;li&gt;
+                              &lt;h2&gt;&lt;a href="#item2"&gt;Sub-item5&lt;/a&gt;&lt;/h2&gt;                             
+                            &lt;/li&gt;
+                       &lt;/ul&gt;
+                    &lt;/div&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#menu2"&gt;Menu 2&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#menu3"&gt;Menu 3&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#menu4"&gt;Menu 4&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#menu5"&gt;Menu 5&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#menu6"&gt;Menu 6&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#menu7"&gt;Menu 7&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/nav&gt;
+
+  </code>
+</pre>
+
+
+                          </figure>
+
+                      </article> 
+
+                       <!-- Download -->
+                      <article class="bx-install">
+                          <h2><a name="download">Download</a></h2>
+                          <p>Contribute to this project on <a href="https://github.com/savanajs/savana.mobilemenu">github</a></p>
+                          <p id="bx-download-button">      
+                            <a href="https://github.com/savanajs/savana.mobilemenu/archive/master.zip" class="btn-download animated bounceIn">
+                              <span class="download-button-left">
+                                Download
+                                <span>Savana.menumobile.js 0.0.1</span>
+                              </span>
+                              <span class="download-button-right">
+                                  <i class="fa fa-cloud-download"></i>
+                              </span>
+                            </a>             
+                          </p><!-- /#bx-download-button -->
+                      </article>   
+
+                      <!-- Download -->
+
+                      <article class="bx-install">
+                          <h2><a target="_blank" name="Savana-regressive-counter">Savana Regressive Counter</a></h2>
+                          <p>Simple countdown timer to your website</p>
+                          <p><b>Use:</b></p>
+                          <figure class="highlight box-install">
+
+<pre>
+  <code class="language-html" data-lang="html">
+     
+    $savana(document).done(function(e){
+
+        $savana('.clock').regressiveCounter('25/11/2016', '00:00'); // End date
+        
+    });
+
+  </code>
+</pre>
+
+
+                          </figure>
+
+                          <p><b>Exemple HTML</b></p>
+                          <figure class="highlight box-install">
+
+<pre>
+  <code class="language-html" data-lang="html">
+     
+   &lt;div class="clock"&gt;&lt;/div&gt;
+      
+  </code>
+</pre>
+
+
+                          </figure>
+
+                      </article> 
+
+                       <!-- Download -->
+                      <article class="bx-install">
+                          <h2><a name="download">Download</a></h2>
+                          <p>Contribute to this project on <a href="https://github.com/savanajs/savana.regressive.counter">github</a></p>
+                          <p id="bx-download-button">      
+                            <a href="https://github.com/savanajs/savana.regressive.counter/archive/master.zip" class="btn-download animated bounceIn">
+                              <span class="download-button-left">
+                                Download
+                                <span>regressive.counter.js 0.0.1</span>
+                              </span>
+                              <span class="download-button-right">
+                                  <i class="fa fa-cloud-download"></i>
+                              </span>
+                            </a>             
+                          </p><!-- /#bx-download-button -->
+                      </article>   
+
+                      <!-- Download -->
                       
                  
                     </div>
