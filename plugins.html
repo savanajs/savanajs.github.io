@@ -90,7 +90,9 @@
                            <li class="title"><strong>Plugins</strong></li>   
                            <li><a href="#Savana-form-validation">Savana Form Validation</a></li>
                            <li><a href="#Savana-mobile-menu">Savana Mobile Menu</a></li>
-                           <li><a href="#Savana-regressive-counter">Savana Regressive Counter</a></li>        
+                           <li><a href="#Savana-regressive-counter">Savana Regressive Counter</a></li>
+                           <li><a href="#Savana-modal">Savana Modal</a></li>
+                           <!--<li><a href="#Savana-object-cookie">Savana Object Cookie</a></li>-->            
                        </ul>
                     </aside>
                     <div class="nine columns">
@@ -664,6 +666,92 @@ console.log(cliente.atributoPublico);
                               <span class="download-button-left">
                                 Download
                                 <span>regressive.counter.js 0.0.1</span>
+                              </span>
+                              <span class="download-button-right">
+                                  <i class="fa fa-cloud-download"></i>
+                              </span>
+                            </a>             
+                          </p><!-- /#bx-download-button -->
+                      </article>   
+
+                      <!-- Download -->
+
+                      <!-- Download -->
+
+                      <article class="bx-install">
+                          <h2><a target="_blank" name="Savana-modal">Savana Modal</a></h2>
+                          <p>Simple modal to your website</p>
+                          <p><b>Use:</b></p>
+                          <figure class="highlight box-install">
+
+<pre>
+  <code class="language-html" data-lang="html">
+     
+    $savana(document).done(function(e){
+
+        // Launcher plugin
+        var modal = $savana("body").modal();
+
+        // HTML plugin loader
+        var modalTeste = modal.modalLoad(".modal-test");
+        var modalTeste2 = modal.modalLoad(".modal-test2");
+
+        // Leave the modal opens by default when the page loads
+        modal.modalOpen(modalTeste2);
+        
+    });
+
+  </code>
+</pre>
+
+
+                          </figure>
+
+                          <p><b>Exemple HTML</b></p>
+                          <figure class="highlight box-install">
+
+<pre>
+  <code class="language-html" data-lang="html">
+     
+ &lt;!-- // HTML Modal --&gt;
+ &lt;!-- The class "sjs-modal-hide, sjs-modal-content and sjs-modal-open is required" --&gt;
+
+  &lt;div class="sjs-modal-hide modal-test"&gt;
+    &lt;div class="sjs-modal-content"&gt;
+      Content test 1
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="sjs-modal-hide modal-test2"&gt;
+    &lt;div class="sjs-modal-content"&gt;
+      Content test 2
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- // HTML Modal --&gt;
+
+  &lt;!-- // Modal open click --&gt;
+  &lt;!-- rel is the class of modal html --&gt;
+  &lt;p&gt;&lt;a href="#" class="sjs-modal-open" rel=".modal-test" title=""&gt;Modal test 1&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;a href="#" class="sjs-modal-open" rel=".modal-test2" title=""&gt;Modal test 2&lt;/a&gt;&lt;/p&gt;
+  &lt;!-- // Modal open click --&gt;
+      
+  </code>
+</pre>
+
+
+                          </figure>
+
+                      </article> 
+
+                       <!-- Download -->
+                      <article class="bx-install">
+                          <h2><a name="download">Download</a></h2>
+                          <p>Contribute to this project on <a href="https://github.com/savanajs/savana.modal">github</a></p>
+                          <p id="bx-download-button">      
+                            <a href="https://github.com/savanajs/savana.modal/archive/master.zip" class="btn-download animated bounceIn">
+                              <span class="download-button-left">
+                                Download
+                                <span>savana.modal.js 0.0.1</span>
                               </span>
                               <span class="download-button-right">
                                   <i class="fa fa-cloud-download"></i>
