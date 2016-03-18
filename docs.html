@@ -1208,23 +1208,28 @@ promise.then(function(string){
 <figure class="highlight">
 <pre>
 <code class="language-bash" data-lang="bash">
-   var headers = [{'Content-type':'application/x-www-form-urlencoded'}]; // Not required
-                var data = "name=Rafael&age=27"; // Not required
-                var success, error;
-                var config = 
-                {
-                  'url': '../data/test.php', // Access path
-                  'method':'POST', // Method of shipment (POST, GET, DELETE ...)
-                  'headers': headers, // Headers information
-                  'data': data, // Parameters shipping
-                  'type': 'string' // Response type - (json, xml, string)
-                }
+  $savana(document).done(function(e) {
 
-                savana.ajax(config, function(res){
-                    console.log(res)
-                }, function(error){
-                    console.log(error)
-                });
+      var headers = [{'Content-type':'application/x-www-form-urlencoded'}]; // Not required
+      var data = "name=Rafael&age=27"; // Not required
+      var success, error;
+
+      savana.ajax({
+            url: '../data/test.php', // Access path
+            method:'POST', // Method of shipment (POST, GET, DELETE ...)
+            headers: headers, // Headers information
+            data: data, // Parameters shipping
+            type: 'string', // Response type - (json, xml, string)
+            success: function(resp){
+               console.log(resp);
+            },
+            error: function(error){
+               console.error(error);
+            }
+          }
+      );
+
+  });
 </code>
 </pre>
 </figure>

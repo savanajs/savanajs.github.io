@@ -246,7 +246,7 @@ console.log(cliente.atributoPublico);
 <pre>
   <code class="language-html" data-lang="html">
      
-       var Mammal = SavanaObject.Create(function(){
+       var Mammal = savana.createClass(function(){
 
           this.eyes = "Preto"; // this -> public
           this.fur = "castalho"; // this -> public
@@ -265,7 +265,7 @@ console.log(cliente.atributoPublico);
 
        });
 
-       var Person = SavanaObject.Create(function(){
+       var Person = savana.createClass(function(){
 
           this.name = "Rafael"; // this -> public
           this.age = 30;    
