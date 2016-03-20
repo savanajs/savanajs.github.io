@@ -290,35 +290,41 @@ div#banner > .container > .row > hgroup > h1 {
 }
 
 /* line 256, ../sass/main.scss */
+div#banner > .container > .row > hgroup > h1 em {
+  font-size: 0.3em;
+  font-weight: 100;
+}
+
+/* line 261, ../sass/main.scss */
 div#banner > .container > .row > hgroup > h1 > span > span > b {
   color: #7ac142;
 }
 
-/* line 260, ../sass/main.scss */
+/* line 265, ../sass/main.scss */
 div#banner > .container > .row > hgroup > h1 > span {
   display: inline-block;
 }
 
-/* line 264, ../sass/main.scss */
+/* line 269, ../sass/main.scss */
 div#banner > .container > .row > hgroup > h1 > span > strong {
   display: block;
   font-size: 0.3em;
   font-weight: 100 !important;
 }
 
-/* line 270, ../sass/main.scss */
+/* line 275, ../sass/main.scss */
 div#banner > .container > .row > hgroup > h2 {
   color: #fff;
   font-size: 1.5em;
   font-weight: 100;
 }
 
-/* line 276, ../sass/main.scss */
+/* line 281, ../sass/main.scss */
 div#banner > .container > .row > hgroup > h2 > span {
   color: #7ac142;
 }
 
-/* line 280, ../sass/main.scss */
+/* line 285, ../sass/main.scss */
 a.btn-download {
   background-color: #427ac1;
   display: inline-block;
@@ -329,14 +335,14 @@ a.btn-download {
   width: 270px;
 }
 
-/* line 290, ../sass/main.scss */
+/* line 295, ../sass/main.scss */
 a.btn-download > span {
   display: inline-block;
   padding: 10px 15px;
   box-sizing: border-box;
 }
 
-/* line 296, ../sass/main.scss */
+/* line 301, ../sass/main.scss */
 a.btn-download > span + span {
   background-color: #33629d;
   height: 100%;
@@ -348,38 +354,38 @@ a.btn-download > span + span {
   text-align: center;
 }
 
-/* line 307, ../sass/main.scss */
+/* line 312, ../sass/main.scss */
 a.btn-download > span + span i {
   margin-top: 3px;
   float: left;
   position: relative;
 }
 
-/* line 313, ../sass/main.scss */
+/* line 318, ../sass/main.scss */
 a.btn-download > span > span {
   display: block;
   font-size: 0.6em;
   font-weight: 100;
 }
 
-/* line 319, ../sass/main.scss */
+/* line 324, ../sass/main.scss */
 a.btn-download:hover {
   text-decoration: none;
   background-color: #4b81c4;
   /*tint($color, $percentage)*/
 }
 
-/* line 325, ../sass/main.scss */
+/* line 330, ../sass/main.scss */
 #bx-download-button {
   margin-bottom: 20px;
 }
 
-/* line 329, ../sass/main.scss */
+/* line 334, ../sass/main.scss */
 .bx-button-github {
   margin-bottom: 235px;
 }
 
-/* line 333, ../sass/main.scss */
+/* line 338, ../sass/main.scss */
 a.btn-github {
   width: 135px;
   height: 59px;
@@ -395,14 +401,14 @@ a.btn-github {
   overflow: hidden;
 }
 
-/* line 345, ../sass/main.scss */
+/* line 350, ../sass/main.scss */
 a.btn-github:hover {
   text-decoration: none;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
 }
 
-/* line 350, ../sass/main.scss */
+/* line 355, ../sass/main.scss */
 div.bx-cretids-bg-image {
   background-color: rgba(0, 0, 0, 0.5);
   text-align: center;
@@ -413,27 +419,27 @@ div.bx-cretids-bg-image {
   width: 100%;
 }
 
-/* line 360, ../sass/main.scss */
+/* line 365, ../sass/main.scss */
 div.bx-cretids-bg-image a {
   color: #fff;
   text-decoration: underline;
   font-size: 0.9em;
 }
 
-/* line 366, ../sass/main.scss */
+/* line 371, ../sass/main.scss */
 div.bx-cretids-bg-image a:hover {
   color: #7ac142;
 }
 
 /* FOOTER */
 /*............................................................................................................................*/
-/* line 372, ../sass/main.scss */
+/* line 377, ../sass/main.scss */
 footer#footer {
   background: url("../images/ico-grass.jpg") repeat-x 0 top #7ac142;
   padding: 80px 0px 10px 0px;
 }
 
-/* line 377, ../sass/main.scss */
+/* line 382, ../sass/main.scss */
 footer#footer #logo-footer {
   background: url("../images/sprite.png") no-repeat -145px -4px;
   width: 230px;
@@ -442,19 +448,19 @@ footer#footer #logo-footer {
   font-size: 1px;
 }
 
-/* line 385, ../sass/main.scss */
+/* line 390, ../sass/main.scss */
 footer#footer .bx-button-github {
   margin: 30px 0px 10px 10px;
 }
 
-/* line 389, ../sass/main.scss */
+/* line 394, ../sass/main.scss */
 footer#footer .footer-bx-right {
   text-align: right;
 }
 
 /* CREDITS */
 /*............................................................................................................................*/
-/* line 396, ../sass/main.scss */
+/* line 401, ../sass/main.scss */
 #credits > .container > .row > #bx-credits {
   font-size: 0.9em;
   color: #1c1b1b;
@@ -463,7 +469,7 @@ footer#footer .footer-bx-right {
 
 /* DOCS */
 /*............................................................................................................................*/
-/* line 405, ../sass/main.scss */
+/* line 410, ../sass/main.scss */
 .get-start-info {
   background-color: #7ac142;
   padding: 40px 0px;
@@ -471,40 +477,40 @@ footer#footer .footer-bx-right {
   margin-bottom: 20px;
 }
 
-/* line 412, ../sass/main.scss */
+/* line 417, ../sass/main.scss */
 .get-start-info h1 {
   font-size: 3.5em;
 }
 
-/* line 416, ../sass/main.scss */
+/* line 421, ../sass/main.scss */
 .get-start-info h2 {
   font-size: 1.5em;
 }
 
-/* line 420, ../sass/main.scss */
+/* line 425, ../sass/main.scss */
 #content aside {
   background-color: #f5f5f5;
   box-sizing: border-box;
   padding: 20px 10px;
 }
 
-/* line 426, ../sass/main.scss */
+/* line 431, ../sass/main.scss */
 #content aside ul {
   list-style: none;
 }
 
-/* line 430, ../sass/main.scss */
+/* line 435, ../sass/main.scss */
 #content aside ul li strong {
   color: #7ac142;
 }
 
-/* line 434, ../sass/main.scss */
+/* line 439, ../sass/main.scss */
 #content aside + .columns h1 {
   font-size: 2.5em;
   margin-top: 15px;
 }
 
-/* line 439, ../sass/main.scss */
+/* line 444, ../sass/main.scss */
 #content aside + .columns h2 {
   font-size: 2em;
   margin: 10px 0px;
@@ -512,25 +518,25 @@ footer#footer .footer-bx-right {
   border-bottom: 1px solid #e5e5e5;
 }
 
-/* line 446, ../sass/main.scss */
+/* line 451, ../sass/main.scss */
 #content aside + .columns h2 span {
   font-size: 14px;
   color: #427ac1 !important;
 }
 
-/* line 451, ../sass/main.scss */
+/* line 456, ../sass/main.scss */
 #content aside + .columns article {
   margin-bottom: 50px;
 }
 
-/* line 455, ../sass/main.scss */
+/* line 460, ../sass/main.scss */
 li.title {
   margin: 5px 0px !important;
 }
 
 /* ALERTS */
 /*............................................................................................................................*/
-/* line 462, ../sass/main.scss */
+/* line 467, ../sass/main.scss */
 .alert {
   padding: 15px;
   margin-bottom: 20px;
@@ -538,28 +544,28 @@ li.title {
   border-radius: 4px;
 }
 
-/* line 463, ../sass/main.scss */
+/* line 468, ../sass/main.scss */
 .alert-info {
   color: #31708f;
   background-color: #d9edf7;
   border-color: #bce8f1;
 }
 
-/* line 464, ../sass/main.scss */
+/* line 469, ../sass/main.scss */
 .alert-success {
   color: #3c763d;
   background-color: #dff0d8;
   border-color: #d6e9c6;
 }
 
-/* line 465, ../sass/main.scss */
+/* line 470, ../sass/main.scss */
 .alert-warning {
   color: #8a6d3b;
   background-color: #fcf8e3;
   border-color: #faebcc;
 }
 
-/* line 466, ../sass/main.scss */
+/* line 471, ../sass/main.scss */
 .alert-danger {
   color: #a94442;
   background-color: #f2dede;
@@ -568,7 +574,7 @@ li.title {
 
 /* Btn hithub */
 /* .................................................................... */
-/* line 471, ../sass/main.scss */
+/* line 476, ../sass/main.scss */
 .btn-github-top {
   -moz-box-shadow: 0px 1px 0px 0px #fff6af;
   -webkit-box-shadow: 0px 1px 0px 0px #fff6af;
@@ -596,7 +602,7 @@ li.title {
   text-shadow: 0px 1px 0px #ffee66;
 }
 
-/* line 497, ../sass/main.scss */
+/* line 502, ../sass/main.scss */
 .btn-github-top:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffab23), color-stop(1, #ffec64));
   background: -moz-linear-gradient(top, #ffab23 5%, #ffec64 100%);
@@ -610,18 +616,18 @@ li.title {
   text-decoration: none !important;
 }
 
-/* line 510, ../sass/main.scss */
+/* line 515, ../sass/main.scss */
 .box-install b {
   color: #427ac1;
 }
 
-/* line 514, ../sass/main.scss */
+/* line 519, ../sass/main.scss */
 .three.columns a.active {
   font-weight: bold;
   color: #427ac1;
 }
 
-/* line 519, ../sass/main.scss */
+/* line 524, ../sass/main.scss */
 aside.three.columns.float {
   position: fixed;
   z-index: 999999;
@@ -631,7 +637,7 @@ aside.three.columns.float {
   overflow-y: auto;
 }
 
-/* line 528, ../sass/main.scss */
+/* line 533, ../sass/main.scss */
 .nine.columns {
   float: right;
 }
@@ -639,22 +645,22 @@ aside.three.columns.float {
 /* Mobile first queries */
 /* Larger than desktop */
 @media (max-width: 1000px) {
-  /* line 536, ../sass/main.scss */
+  /* line 541, ../sass/main.scss */
   figure > img {
     width: 100%;
   }
 
-  /* line 539, ../sass/main.scss */
+  /* line 544, ../sass/main.scss */
   #content aside {
     display: none;
   }
 
-  /* line 542, ../sass/main.scss */
+  /* line 547, ../sass/main.scss */
   #content .container .nine.columns {
     width: 100%;
   }
 
-  /* line 545, ../sass/main.scss */
+  /* line 550, ../sass/main.scss */
   aside.three.columns {
     width: 70%;
     position: fixed;
@@ -665,14 +671,14 @@ aside.three.columns.float {
     height: 100%;
   }
 
-  /* line 554, ../sass/main.scss */
+  /* line 559, ../sass/main.scss */
   a.btn-menu-aside {
     display: block;
   }
 }
 /* Larger than phablet */
 @media (max-width: 550px) {
-  /* line 562, ../sass/main.scss */
+  /* line 567, ../sass/main.scss */
   #bx-menu {
     width: 80%;
     float: none;
@@ -686,60 +692,60 @@ aside.three.columns.float {
     border-right: 1px solid #e5e5e5;
   }
 
-  /* line 575, ../sass/main.scss */
+  /* line 580, ../sass/main.scss */
   #bx-menu ul {
     margin: 0px 0px 0px 0px !important;
   }
 
-  /* line 579, ../sass/main.scss */
+  /* line 584, ../sass/main.scss */
   #bx-menu ul li {
     display: block !important;
     text-align: left;
     margin: 0px;
   }
 
-  /* line 585, ../sass/main.scss */
+  /* line 590, ../sass/main.scss */
   #bx-menu ul li:hover {
     background-color: #f5f5f5;
   }
 
-  /* line 589, ../sass/main.scss */
+  /* line 594, ../sass/main.scss */
   #menu-mobile {
     display: block;
   }
 
-  /* line 593, ../sass/main.scss */
+  /* line 598, ../sass/main.scss */
   div#banner > .container > .row > hgroup {
     padding-top: 50px;
   }
 
-  /* line 597, ../sass/main.scss */
+  /* line 602, ../sass/main.scss */
   .bx-button-github {
     margin-bottom: 80px;
   }
 
-  /* line 601, ../sass/main.scss */
+  /* line 606, ../sass/main.scss */
   div#banner > .container > .row > hgroup > h1 > span > strong {
     font-size: 0.4em;
   }
 
-  /* line 605, ../sass/main.scss */
+  /* line 610, ../sass/main.scss */
   div#banner > .container > .row > hgroup > h2 {
     font-size: 1.3em;
     margin-top: 10px;
   }
 
-  /* line 610, ../sass/main.scss */
+  /* line 615, ../sass/main.scss */
   footer#footer .footer-bx-right, #credits, #footer {
     text-align: center;
   }
 
-  /* line 614, ../sass/main.scss */
+  /* line 619, ../sass/main.scss */
   #footer h1#logo-footer {
     margin: 0 auto;
   }
 
-  /* line 618, ../sass/main.scss */
+  /* line 623, ../sass/main.scss */
   #content aside {
     display: none;
   }

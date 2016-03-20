@@ -253,6 +253,11 @@ div#banner > .container > .row > hgroup > h1 {
 	margin-bottom: 0px;
 }
 
+div#banner > .container > .row > hgroup > h1 em {
+	font-size: 0.3em;
+	font-weight: 100;
+}
+
 div#banner > .container > .row > hgroup > h1 > span > span > b {
    color: $color_primary;
 }

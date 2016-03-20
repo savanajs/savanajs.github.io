@@ -86,13 +86,11 @@
                            <li><a href="#Building-your-plugin">Building your plugin</a></li>
                            <li><a href="#Use-simple-singleton">Use simple singleton</a></li>
                            <li><a href="#Private-singleton">Private singleton</a></li>
-                           <li><a href="#Savana-Object-Create">Savana Object Create</a></li>
                            <li class="title"><strong>Plugins</strong></li>   
                            <li><a href="#Savana-form-validation">Savana Form Validation</a></li>
                            <li><a href="#Savana-mobile-menu">Savana Mobile Menu</a></li>
                            <li><a href="#Savana-regressive-counter">Savana Regressive Counter</a></li>
-                           <li><a href="#Savana-modal">Savana Modal</a></li>
-                           <!--<li><a href="#Savana-object-cookie">Savana Object Cookie</a></li>-->            
+                           <li><a href="#Savana-modal">Savana Modal</a></li>          
                        </ul>
                     </aside>
                     <div class="nine columns">
@@ -230,71 +228,6 @@ cliente.funcaoPublica();
 
 // Printing 'Variable Public'
 console.log(cliente.atributoPublico);
-
-  </code>
-</pre>
-                          </figure>
-
-                      </article> 
-
-                      <article class="bx-install">
-                          <h2><a target="_blank" href="/savanajs/exemples/OO/index.html" name="Savana-Object-Create">Savana Object Create</a></h2>
-                          <p>Savana Create Object oriented paradigm simulates the classic objects in javascript</p>
-                          <p><b>Exemple:</b></p>
-                          <figure class="highlight box-install">
-
-<pre>
-  <code class="language-html" data-lang="html">
-     
-       var Mammal = savana.createClass(function(){
-
-          this.eyes = "Preto"; // this -> public
-          this.fur = "castalho"; // this -> public
-
-          this._init(function(){ // Initialization
-         
-          });
-
-          this.walk = function(){ // Method public
-            alert("Walking")
-          }
-
-          this.speak = function(){ // Method public
-            alert("Speaking")
-          }
-
-       });
-
-       var Person = savana.createClass(function(){
-
-          this.name = "Rafael"; // this -> public
-          this.age = 30;    
-          var _password = 12345678 // private with(_variable)
-
-          this._init(function(){ // Constructor
-            _methodPrivate();
-          });
-
-          this.methodPublic = function(){ // Method public
-            alert("methodPublic")
-          }
-
-          this.showPassword = function(){
-             alert(_password);
-          }
-
-          function _methodPrivate(){ // Method private with(_fun)
-            alert("methodPrivate");
-          }
-
-       }, Mammal); // Extend
-
-       console.log(Mammal)
-       console.log(Person)
-       Person.methodPublic();
-       Person.walk();
-       alert(Person._password); // Undefined
-       Person.showPassword();
 
   </code>
 </pre>

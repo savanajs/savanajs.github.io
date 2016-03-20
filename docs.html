@@ -71,7 +71,7 @@
                  <div class="row">
                     <hgroup>
                         <h1>Documentation</h1>
-                        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id enim elit. Mauris lacus ipsum, sagittis sit amet semper in, elementum et orci. </h2>
+                        <h2>Just below we see the documentation and examples of use of framework </h2>
                     </hgroup>
                   </div>
             </div>
@@ -128,10 +128,12 @@
                            <li><a href="#position">position()</a></li>
                            <li><a href="#isEmpty">isEmpty()</a></li>
                            <li><a href="#clearForm">clearForm()</a></li>
+                           <li><a href="#load">load()</a></li>
                            
                            <li class="title"><strong>Helpers - savana.</strong></li>
                            <li><a href="#config">config()</a></li>
                            <li><a href="#removeAllSpace">removeAllSpace()</a></li>
+                           <li><a href="#convertHTML">convertHTML()</a></li>
                            <li><a href="#getNumberOfString">getNumberOfString()</a></li>
                            <li><a href="#debug">debug()</a></li>
                            <li><a href="#toJSON">toJSON()</a></li>
@@ -178,7 +180,6 @@
                            <li><a href="#loadConfirm">loadConfirm()</a></li>
                            <li><a href="#confirm">confirm()</a></li>
                            <li><a href="#extend">extend()</a></li>
-                           <li><a href="#countObj">CountObj()</a></li>
                            <li><a href="#getParams">getParams()</a></li>
                            <li><a href="#isIE">isIE()</a></li>
                            <li><a href="#modalLoad">modalLoad()</a></li>
@@ -188,6 +189,7 @@
                            <li><a href="#elementExist">ElementExist()</a></li>
                            <li><a href="#whatDevice">whatDevice()</a></li>
                            <li><a href="#whatBrowser">whatBrowser()</a></li>
+                           <li><a href="#createClass">createClass()</a></li>
 
                            <!--<li><a href="#returnTo">returnTo()</a></li>-->
                            <li class="title"><strong>Client-Side - savana.</strong></li>
@@ -1016,6 +1018,21 @@ $savana(selector).isEmpty("html");
 <!-- &lt;!DOCTYPE html&gt; -->
                       </article>
 
+                      <!-- clearForm -->
+                      <article class="bx-install">  
+                          <h2><a name="load">Load(url, element, fn)</a></h2>
+                          <p>Get content from an external page</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+ $savana(".content").load("../data/test.html",".siderbar", function(resp){});
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
                       <hgroup>
                         <h1>HELPERS</h1>
                       </hgroup>
@@ -1049,6 +1066,21 @@ savana.config({
 <code class="language-bash" data-lang="bash">
 savana.removeAllSpaces("Hello word");
 // Helloword;
+</code>
+</pre>
+</figure>
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
+
+                      <!-- convertHTML -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/convertHTML.html" name="convertHTML">ConvertHTML(str)</a></h2>
+                          <p>Convert a content string to HTML</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+savana.convertHTML("&lt;div&gt;content&lt;/div&gt;");
 </code>
 </pre>
 </figure>
@@ -1137,7 +1169,7 @@ var config = {
               'method':'POST', // Shipping method (POST, GET, DELETE ...)
               'headers': headers, // Headers Info
               'data': data, // Parameters shipping
-              'type': 'string' // Response type - (json, XML, string)
+              'type': 'string' // Response type - (json, XML, string, html)
 }
 </code>
 </pre>
@@ -1219,7 +1251,7 @@ promise.then(function(string){
             method:'POST', // Method of shipment (POST, GET, DELETE ...)
             headers: headers, // Headers information
             data: data, // Parameters shipping
-            type: 'string', // Response type - (json, xml, string)
+            type: 'string', // Response type - (json, xml, string and html)
             success: function(resp){
                console.log(resp);
             },
@@ -2165,7 +2197,7 @@ savana.modalOpen(modalTeste2);
 <figure class="highlight">
 <pre>
 <code class="language-bash" data-lang="bash">
- savana.whatDevice(); // desktop, tablet, device
+ savana.whatDevice(); // desktop, tablet, mobile
 </code>
 </pre>
 </figure>
@@ -2190,6 +2222,72 @@ savana.modalOpen(modalTeste2);
 
 <!-- &lt;!DOCTYPE html&gt; -->
                       </article>
+
+
+                      <article class="bx-install">
+                          <h2><a target="_blank" href="/savanajs/exemples/OO/createClass.html" name="createClass">CreateClass()</a></h2>
+                          <p>Oriented paradigm simulates the classic objects in javascript</p>
+                          <p><b>Exemple:</b></p>
+                          <figure class="highlight box-install">
+
+<pre>
+  <code class="language-html" data-lang="html">
+     
+       var Mammal = savana.createClass(function(){
+
+          this.eyes = "Preto"; // this -> public
+          this.fur = "castalho"; // this -> public
+
+          this._init(function(){ // Initialization
+         
+          });
+
+          this.walk = function(){ // Method public
+            alert("Walking")
+          }
+
+          this.speak = function(){ // Method public
+            alert("Speaking")
+          }
+
+       });
+
+       var Person = savana.createClass(function(){
+
+          this.name = "Rafael"; // this -> public
+          this.age = 30;    
+          var _password = 12345678 // private with(_variable)
+
+          this._init(function(){ // Constructor
+            _methodPrivate();
+          });
+
+          this.methodPublic = function(){ // Method public
+            alert("methodPublic")
+          }
+
+          this.showPassword = function(){
+             alert(_password);
+          }
+
+          function _methodPrivate(){ // Method private with(_fun)
+            alert("methodPrivate");
+          }
+
+       }, Mammal); // Extend
+
+       console.log(Mammal)
+       console.log(Person)
+       Person.methodPublic();
+       Person.walk();
+       alert(Person._password); // Undefined
+       Person.showPassword();
+
+  </code>
+</pre>
+                          </figure>
+
+                      </article> 
                     </div>
                 </div>
           </div>
