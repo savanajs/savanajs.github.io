@@ -182,11 +182,7 @@
                            <li><a href="#extend">extend()</a></li>
                            <li><a href="#getParams">getParams()</a></li>
                            <li><a href="#isIE">isIE()</a></li>
-                           <li><a href="#modalLoad">modalLoad()</a></li>
-                           <li><a href="#cCloseModal">commandCloseModal()</a></li>
-                           <li><a href="#cOpenModal">commandOpenModal()</a></li>
-                           <li><a href="#modalOpen">modalOpen()</a></li>
-                           <li><a href="#elementExist">ElementExist()</a></li>
+                           <li><a href="#elementExist">elementExist()</a></li>
                            <li><a href="#whatDevice">whatDevice()</a></li>
                            <li><a href="#whatBrowser">whatBrowser()</a></li>
                            <li><a href="#createClass">createClass()</a></li>
@@ -237,7 +233,7 @@
       <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"<b>lib/css/savana.min.css</b>"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
 
       <span class="c">&lt;!--[if lt IE 9]&gt;
-        &lt;script src="<b>lib/css/addEventListener-IE.min.js</b>"&gt;&lt;/script&gt;
+        &lt;script src="<b>lib/js/addEventListener-IE.min.js</b>"&gt;&lt;/script&gt;
         &lt;script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"&gt;&lt;/script&gt;
         &lt;script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"&gt;&lt;/script&gt;
       &lt;![endif]--&gt;</span>
@@ -298,7 +294,7 @@ lib/
                                 <td>Supported</td>  
                               </tr>
                               <tr>
-                                <td><b>IE8 and higher</b></td>
+                                <td><b>IE9 and higher</b></td>
                                 <td>Supported</td>  
                               </tr>
                               <tr>
@@ -2072,102 +2068,7 @@ if(savana.isIE()) { true } else { false }
 <!-- &lt;!DOCTYPE html&gt; -->
                       </article>
 
-                      <!-- ModalLoad -->
-                      <article class="bx-install">  
-                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/modal.html" name="modalLoad">
-                            ModalLoad(selector)</a>
-                          </h2>
-                          <p>Load the modal content</p>
-<p><b>Example of use</b></p>
-<figure class="highlight">
-<pre>
-<code class="language-bash" data-lang="bash">
-var modalTest = savana.modalLoad(".modal-test");
-</code>
-</pre>
-</figure>
-
-<!-- &lt;!DOCTYPE html&gt; -->
-                      </article>
-
-                      <!-- commandCloseModal -->
-                      <article class="bx-install">  
-                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/modal.html" name="cCloseModal">
-                            CommandCloseModal()</a>
-                          </h2>
-                          <p>Command close modal</p>
-<p><b>Example of use</b></p>
-<figure class="highlight">
-<pre>
-<code class="language-bash" data-lang="bash">
- savana.commandCloseModal()
-</code>
-</pre>
-</figure>
-
-<!-- &lt;!DOCTYPE html&gt; -->
-                      </article>
-
-                      <!-- commandOpenModal -->
-                      <article class="bx-install">  
-                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/modal.html" name="cOpenModal">
-                            CommandOpenModal()</a>
-                          </h2>
-                          <p>Command close modal</p>
-<p><b>Example of use</b></p>
-<figure class="highlight">
-<pre>
-<code class="language-bash" data-lang="bash">
- savana.commandOpenModal()
-</code>
-</pre>
-</figure>
-
-<!-- &lt;!DOCTYPE html&gt; -->
-                      </article>
-
-                      <!-- modalOpen -->
-                      <article class="bx-install">  
-                          <h2><a name="modalOpen">
-                            ModalOpen(modal)</a>
-                          </h2>
-                          <p>Open modal</p>
-<p><b>Example of use</b></p>
-<figure class="highlight">
-<pre>
-<code class="language-bash" data-lang="bash">
-var modalTeste = savana.modalLoad(".modal-test");
-var modalTeste2 = savana.modalLoad(".modal-test2");
-// For the modal appears open
-savana.modalOpen(modalTeste2);
-</code>
-</pre>
-</figure>
-<p><b>Body</b></p>
-<figure class="highlight">
-<pre>
-<code class="language-bash" data-lang="bash">
-  &lt;div class="sjs-modal-hide modal-test"&gt;
-    &lt;div class="sjs-modal-content"&gt;
-      Content test 1
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;div class="sjs-modal-hide modal-test2"&gt;
-    &lt;div class="sjs-modal-content"&gt;
-      Content test 2
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;p&gt;&lt;a href="#" class="sjs-modal-open" rel=".modal-test" title=""&gt;Modal test 1&lt;/a&gt;&lt;/p&gt;
-  &lt;p&gt;&lt;a href="#" class="sjs-modal-open" rel=".modal-test2" title=""&gt;Modal test 2&lt;/a&gt;&lt;/p&gt;
-</code>
-</pre>
-</figure>
-
-<!-- &lt;!DOCTYPE html&gt; -->
-                      </article>
-
+  
                       <!-- elementExist -->
                       <article class="bx-install">  
                           <h2><a name="elementExist">
@@ -2238,7 +2139,7 @@ savana.modalOpen(modalTeste2);
           this.eyes = "Preto"; // this -> public
           this.fur = "castalho"; // this -> public
 
-          this._init(function(){ // Initialization
+          this.construct(function(){ // Initialization
          
           });
 
@@ -2258,7 +2159,7 @@ savana.modalOpen(modalTeste2);
           this.age = 30;    
           var _password = 12345678 // private with(_variable)
 
-          this._init(function(){ // Constructor
+          this.construct(function(){ // Constructor
             _methodPrivate();
           });
 
@@ -2282,6 +2183,168 @@ savana.modalOpen(modalTeste2);
        Person.walk();
        alert(Person._password); // Undefined
        Person.showPassword();
+
+  </code>
+</pre>
+                          </figure>
+
+                          <p><b>Polymorphism:</b></p>
+                          <figure class="highlight box-install">
+
+<pre>
+  <code class="language-html" data-lang="html">
+
+       var Mammal = savana.createClass(function(){
+          this.speak = function(){ // Method public
+            alert("Speaking");
+          }
+       });
+     
+       var Person = savana.createClass(function(){
+
+         this.speak = function(){ // Method public
+            alert("Blablabla");
+          }
+
+       },Mammal); 
+
+       var Dog = savana.createClass(function(){
+
+         this.speak = function(){ // Method public
+            alert("Auauauauau");
+          }
+
+       },Person);
+
+       Mammal.speak(); // Speaking
+       Person.speak(); // Blablabla
+       Dog.speak();    // Auauauauau
+
+  </code>
+</pre>
+                          </figure>
+
+                          <p><b>Constructor:</b></p>
+                          <figure class="highlight box-install">
+
+<pre>
+  <code class="language-html" data-lang="html">
+     
+       var Person = savana.createClass(function(){
+
+          this.construct(function(){ // Initialization
+             // Method starts automatically when the class is called
+          });
+
+       }); 
+
+  </code>
+</pre>
+                          </figure>
+
+                          <p><b>Encapsulation:</b></p>
+                          <figure class="highlight box-install">
+
+<pre>
+  <code class="language-html" data-lang="html">
+     
+       var Person = savana.createClass(function(){
+
+          // Attributes publics and privates
+          this.name = "Rafael"; // this -> public
+          var _password = 123456789; // var -> private
+
+          // Methods publics and privates
+          this.showPassword = function(){} // The function with this is a method public
+          function _methodPrivate(){} // The function without this is a method private
+
+       }); 
+
+  </code>
+</pre>
+                          </figure>
+
+                          <p><b>Inheritance:</b></p>
+                          <figure class="highlight box-install">
+
+<pre>
+  <code class="language-html" data-lang="html">
+
+       var Mammal = savana.createClass(function(){
+            // Your code
+       });
+     
+       var Person = savana.createClass(function(){
+          // Your code
+       }, Mammal); // Mammal is Inheritance
+
+  </code>
+</pre>
+                          </figure>
+
+                          <p><b>Getters and Setters:</b></p>
+                          <figure class="highlight box-install">
+
+<pre>
+  <code class="language-html" data-lang="html">
+
+       var Person = savana.createClass(function(){
+
+         this.name;
+         this.gender;
+         this.city;
+         var _password;
+
+         // Setters
+
+         this.set_name = function(name){ 
+             this.name = name;
+         }
+
+         this.set_gender = function(gender){ 
+             this.gender = gender;
+         }
+
+         this.set_city = function(city){ 
+             this.city = city;
+         }
+
+         this.set_password = function(pwd){ 
+             _password = pwd;
+         }
+
+         // Getters
+
+         this.get_name = function(){ 
+             return this.name;
+         }
+
+         this.get_gender = function(){ 
+             return this.gender;
+         }
+
+         this.get_city = function(){ 
+             return this.city;
+         }
+
+         this.get_password = function(){ 
+             return _password;
+         }
+
+         this.getUserInfo = function(){
+            return "My name is " + this.get_name() + " - Sex: " + this.get_gender() + " - city: " 
+            + this.get_city() + " - password: " + this.get_password();
+         }
+
+       }); 
+
+       Person.set_name("Rafael");
+       Person.set_gender("Male");
+       Person.set_city("Barueri");
+       Person.set_password(123456789);
+
+       console.log(Person.getUserInfo()); 
+       // My name is Rafael - Sex: Male - city: Barueri - password: 123456789
 
   </code>
 </pre>
