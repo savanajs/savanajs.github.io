@@ -186,6 +186,7 @@
                            <li><a href="#whatDevice">whatDevice()</a></li>
                            <li><a href="#whatBrowser">whatBrowser()</a></li>
                            <li><a href="#createClass">createClass()</a></li>
+                           <li><a href="#daysDifferenceBetweenDates">daysDifferenceBetweenDates()</a></li>
 
                            <!--<li><a href="#returnTo">returnTo()</a></li>-->
                            <li class="title"><strong>Client-Side - savana.</strong></li>
@@ -1925,7 +1926,7 @@ savana.hidePreloader();
 <figure class="highlight">
 <pre>
 <code class="language-bash" data-lang="bash">
-savana.loaderAlert();
+savana.loadAlert();
 </code>
 </pre>
 </figure>
@@ -2351,6 +2352,25 @@ if(savana.isIE()) { true } else { false }
                           </figure>
 
                       </article> 
+
+                      <!-- whatBrowser -->
+                      <article class="bx-install">  
+                          <h2><a target="_blank" href="/savanajs/exemples/HELPERS/daysDifferenceBetweenDates.html" name="daysDifferenceBetweenDates">
+                           DaysDifferenceBetweenDates(new Date(2016, 10, 20), new Date(2016, 10, 30))</a>
+                          </h2>
+                          <p>Returns the day difference between a start date and end date</p>
+<p><b>Example of use</b></p>
+<figure class="highlight">
+<pre>
+<code class="language-bash" data-lang="bash">
+ savana.daysDifferenceBetweenDates(new Date(2016, 10, 20), new Date(2016, 10, 30)); 
+ // return 10 to 10 days
+</code>
+</pre>
+</figure>
+
+<!-- &lt;!DOCTYPE html&gt; -->
+                      </article>
                     </div>
                 </div>
           </div>
