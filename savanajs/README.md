@@ -7,7 +7,7 @@
 <link href="lib/css/savana.min.css" rel="stylesheet">
 ```
 ### Use:
-```html
+```javascript
 $savana(document).done(function(e) {
   Your code here ...   
 });
