@@ -5,7 +5,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Docs | Savana js</title>
+  <title>Documentation | Savana js</title>
   <meta name="description" content="">
   <meta name="author" content="Rafael Cruz">
   <!-- Mobile Specific Metas 1
@@ -92,7 +92,6 @@
                            <li><a href="#Scroll">scroll()</a></li>
                            <li><a href="#On">on()</a></li>
                            <li><a href="#delegate">delegate()</a></li>
-                           <li><a href="#Content">content()</a></li>
                            <li><a href="#html">html()</a></li>
                            <li><a href="#Text">text()</a></li>
                            <li><a href="#Val">val()</a></li>
@@ -278,8 +277,15 @@ lib/
                               </span>
                             </a>             
                           </p><!-- /#bx-download-button -->
+                          <!--
                           <p><b>Download Bower</b></p>
-                          <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>bower install savanajs</code></pre></figure>
+                          <figure class="highlight">
+                            <pre>
+                                <code class="language-bash" data-lang="bash">
+                                      <span class="gp">$ </span>bower install savanajs</code>
+                            </pre>
+                          </figure>
+                          -->
                       </article>   
                       <!-- Compatility -->
                       <article class="bx-install">
@@ -295,7 +301,7 @@ lib/
                                 <td>Supported</td>  
                               </tr>
                               <tr>
-                                <td><b>IE9 and higher</b></td>
+                                <td><b>IE9+</b></td>
                                 <td>Supported</td>  
                               </tr>
                               <tr>
@@ -376,7 +382,7 @@ $savana(window).scroll(function(e){
 <pre>
 <code class="language-bash" data-lang="bash">
 $savana("a").on("click", function(e){
-  $savana(this).content("text");
+  $savana(this).text();
 });
 </code>
 </pre>
@@ -394,35 +400,16 @@ $savana("a").on("click", function(e){
 <pre>
 <code class="language-bash" data-lang="bash">
 $savana("body").delegate("click", "li" function(e){
-  $savana(this).content("text");
+  $savana(this).text();
 });
 </code>
 </pre>
 </figure>
                       </article>      
-
-                      <!-- Content -->
-                      <article class="bx-install">  
-                          <h2><a target="_blank" href="/savanajs/exemples/DOM/content.html" name="Content">
-                            Content(type, value)</a></h2>
-                          <p>Insert and capture text, HTML or values of elements</p>
-<p><b>Types:</b> html, text e val</p>
-<p><b>Example of use</b></p>
-<figure class="highlight">
-<pre>
-<code class="language-bash" data-lang="bash">
-// Set
-$savana("li").content("text", "New text");
-// Get
-$savana("li").content("text");
-</code>
-</pre>
-</figure>
-                      </article>   
-
+ 
                        <!-- HTML -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="/savanajs/exemples/DOM/content.html" name="html">
+                          <h2><a target="_blank" href="/savanajs/exemples/DOM/html.html" name="html">
                             html()</a></h2>
                           <p>Insert and capture HTML content</p>
 <p><b>Example of use</b></p>
@@ -440,7 +427,7 @@ $savana("li").html("text");
 
                        <!-- Text -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="/savanajs/exemples/DOM/content.html" name="html">
+                          <h2><a target="_blank" href="/savanajs/exemples/DOM/text.html" name="html">
                             Text()</a></h2>
                           <p>Insert and capture text content</p>
 <p><b>Example of use</b></p>
@@ -458,7 +445,7 @@ $savana("li").text("text");
 
                        <!-- Val -->
                       <article class="bx-install">  
-                          <h2><a target="_blank" href="/savanajs/exemples/DOM/content.html" name="html">
+                          <h2><a target="_blank" href="/savanajs/exemples/DOM/val.html" name="html">
                             Val()</a></h2>
                           <p>Insert and capture value content</p>
 <p><b>Example of use</b></p>
@@ -484,7 +471,7 @@ $savana("input").val("text");
 <pre>
 <code class="language-bash" data-lang="bash">
 $savana("ul li").each(function(e){
-  $savana(this).content("text");
+  $savana(this).text();
 });
 </code>
 </pre>
